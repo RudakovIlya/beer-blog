@@ -1,3 +1,2 @@
-export function foo () {
-  console.log('Foo function')
-}
+import {someFoo} from "./test";
+someFoo()

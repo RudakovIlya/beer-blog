@@ -1,3 +1,3 @@
-import {foo} from './index'
-
-foo()
+export function someFoo() {
+  console.log('Foo function')
+}
