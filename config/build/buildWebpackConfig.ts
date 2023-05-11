@@ -1,11 +1,12 @@
-import {BuildOptions} from "./types/config";
 import webpack from "webpack";
+import {BuildOptions} from "./types/config";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolvers} from "./buildResolvers";
 import {buildPlugins} from "./buildPlugins";
+import {buildDevServer} from "./buildDevServer";
 
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
-  const {mode, paths} = options
+  const {mode, paths, isDev} = options
 
   return {
     mode: mode,
@@ -29,5 +30,8 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
       clean: true
     },
     plugins: buildPlugins(options),
+    /* Devtool: Allows you to track in which file an error occurred, because. it will be hard to find an error in the compiled bundle file */
+    devtool: isDev ? 'inline-source-map' : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined
   }
 }
