@@ -1,8 +1,8 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+import path from 'path'
+import webpack from 'webpack';
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
+const config: webpack.Configuration = {
   mode: "development",
   /* entry: Entry is the starting point of the application */
   entry: path.resolve(__dirname, 'src', 'index.ts'),
@@ -22,7 +22,7 @@ module.exports = {
   /* resolve: */
   resolve: {
     /* extensions: When importing, do not specify the extension of these files "import Component from './component" */
-    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   /* output: Where will we put the assembly of our application */
   output: {
@@ -40,3 +40,4 @@ module.exports = {
     new HtmlWebpackPlugin({template: path.resolve(__dirname, 'public', 'index.html')}),
   ],
 };
+export default config

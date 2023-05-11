@@ -1,11 +1,22 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    /* noImplicitAny: Highlights places where the type is not specified */
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "ESNext",
     "target": "es5",
     "jsx": "react",
+    /* allowJs: allows you to process not only js files, but also ts */
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    /* esModuleInterop: Allows you to work with packages that use common js as normal packages with "import" (require() module.exports) = common js */
+    "esModuleInterop": true,
+    /* allowSyntheticDefaultImports: Allows you to use regular imports without the asterisk "import React from 'react'" instead of "import as React from 'react'" */
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }
