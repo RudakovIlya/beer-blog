@@ -1,2 +1,3 @@
 import {someFoo} from "./test";
-someFoo()
+
+someFoo(22)
