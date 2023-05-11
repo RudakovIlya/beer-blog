@@ -16,7 +16,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
     module: {
       /* rules: Configuring loaders, they allow you to process files that go beyond js
       (png, jpg, gif, svg, scss, ts and other) */
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     /* resolve: */
     resolve: buildResolvers(),
@@ -30,7 +30,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
       clean: true
     },
     plugins: buildPlugins(options),
-    /* Devtool: Allows you to track in which file an error occurred, because. it will be hard to find an error in the compiled bundle file */
+    /* devtool: Allows you to track in which file an error occurred, because. it will be hard to find an error in the compiled bundle file */
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer(options) : undefined
   }
