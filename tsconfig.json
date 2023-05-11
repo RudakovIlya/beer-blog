@@ -12,7 +12,8 @@
     /* esModuleInterop: Allows you to work with packages that use common js as normal packages with "import" (require() module.exports) = common js */
     "esModuleInterop": true,
     /* allowSyntheticDefaultImports: Allows you to use regular imports without the asterisk "import React from 'react'" instead of "import as React from 'react'" */
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./"
   },
   "ts-node": {
     "compilerOptions": {
