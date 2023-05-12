@@ -4,6 +4,7 @@ export interface BuildPaths {
   entry: string
   build: string
   html: string
+  src: string
 }
 
 export interface BuildOptions {
@@ -15,5 +16,5 @@ export interface BuildOptions {
 
 export interface BuildEnv {
   mode: BuildMode
-  port : number
+  port: number
 }

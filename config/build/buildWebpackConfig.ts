@@ -19,7 +19,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
       rules: buildLoaders(options),
     },
     /* resolve: */
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     /* output: Where will we put the assembly of our application */
     output: {
       /* "[name].[contenthash].js": Solving the problem of caching files in the browser.
