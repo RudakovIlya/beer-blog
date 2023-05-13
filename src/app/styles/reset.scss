@@ -1,79 +1,79 @@
 * {
-  padding: 0;
-  margin: 0;
-  border: 0
+    padding: 0;
+    margin: 0;
+    border: 0
 }
 
 ::-moz-selection {
-  background: #5f50d0
+    background: #5f50d0
 }
 
 ::selection {
-  background: #5f50d0
+    background: #5f50d0
 }
 
 *, :after, :before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 :active, :focus {
-  outline: 0
+    outline: 0
 }
 
 a:active, a:focus {
-  outline: 0
+    outline: 0
 }
 
 aside, footer, header, nav {
-  display: block
+    display: block
 }
 
 body, html {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
 }
 
 button, input, textarea, select {
-  font-family: inherit
+    font-family: inherit
 }
 
 input::-ms-clear {
-  display: none
+    display: none
 }
 
 button {
-  cursor: pointer
+    cursor: pointer
 }
 
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0
+    padding: 0;
+    border: 0
 }
 
 a, a:visited {
-  color: inherit;
-  text-decoration: none
+    color: inherit;
+    text-decoration: none
 }
 
 a:hover {
-  text-decoration: none
+    text-decoration: none
 }
 
 ul li {
-  list-style: none
+    list-style: none
 }
 
 img {
-  vertical-align: top
+    vertical-align: top
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: inherit
+    font-size: inherit;
+    font-weight: inherit
 }
 
 #root {
-  height: 100%;
+    height: 100%;
 }
