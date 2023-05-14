@@ -11,6 +11,7 @@ export const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
         loader: "css-loader",
         options: {
           modules: {
+            /* auto: Determines for which styles to apply the generation of a unique class, and for which not */
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
             localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
           }
