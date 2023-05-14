@@ -1,8 +1,9 @@
 import {FC} from "react";
 import {clsx} from "shared/lib";
-import cls from './ThemeSwitcher.module.scss'
 import {useTheme} from "app/providers/ThemeProvider";
 import {MdOutlineBrightness6} from "react-icons/md";
+import {Button} from "shared/ui/Button/Button";
+import cls from './ThemeSwitcher.module.scss'
 
 interface Props {
   className?: string
@@ -11,8 +12,8 @@ interface Props {
 export const ThemeSwitcher: FC<Props> = ({className}) => {
   const {theme, onChangeTheme} = useTheme()
   return (
-    <button onClick={onChangeTheme} className={clsx(cls.switcher, {}, className)}>
+    <Button onClick={onChangeTheme} className={clsx(cls.switcher, {}, className)}>
       <MdOutlineBrightness6 color={theme === 'dark' ? '#262626' : '#F3F6F9'} size={30}/>
-    </button>
+    </Button>
   )
 };

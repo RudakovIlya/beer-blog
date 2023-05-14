@@ -44,7 +44,8 @@ input::-ms-clear {
 }
 
 button {
-    cursor: pointer
+    cursor: pointer;
+    background-color: transparent;
 }
 
 button::-moz-focus-inner {

@@ -1,10 +1,10 @@
 import {clsx} from "shared/lib";
-import {Outlet} from 'react-router-dom';
-import {useTheme} from "app/providers/ThemeProvider";
 import {Suspense} from "react";
 import {Navbar} from "widgets/Navbar";
-import './styles/index.scss'
 import {Sidebar} from "widgets/Sidebar";
+import {useTheme} from "app/providers/ThemeProvider";
+import {ContentProvider} from "app/providers/ContentProvider";
+import './styles/index.scss'
 
 export const App = () => {
 
@@ -12,15 +12,13 @@ export const App = () => {
 
   return (
     <div className={clsx('app', {}, theme)}>
-      <Navbar/>
-      <div className={'content-page'}>
-        <Sidebar/>
-        <Suspense fallback={<div>Loading...</div>}>
-          <div className={'page'}>
-            <Outlet/>
-          </div>
-        </Suspense>
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar/>
+        <div className={'content-page'}>
+          <Sidebar/>
+          <ContentProvider/>
+        </div>
+      </Suspense>
     </div>
   );
 };

@@ -1,0 +1,33 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    position: fixed;
+    top: 120px;
+    right: -100%;
+    width: 160px;
+    padding: 15px;
+    border-radius: 8px 0 0 8px;
+    background-color: var(--inverted-bg-color);
+    transition: all .3s ease-in-out;
+
+    &.open {
+        right: 0;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.button {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--inverted-bg-color);
+    border-radius: 8px 0 0 8px;
+}
