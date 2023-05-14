@@ -10,3 +10,12 @@
     min-height: 100vh;
     transition: all .3s ease;
 }
+
+.content-page {
+    display: flex;
+}
+
+.page {
+    flex: 1;
+    padding: 20px;
+}

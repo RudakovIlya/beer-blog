@@ -1,0 +1,13 @@
+.switcher {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--inverted-bg-color);
+    border-radius: 8px 0 0 8px;
+}

@@ -1,21 +1,26 @@
 import {clsx} from "shared/lib";
-import {Link, Outlet} from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 import {useTheme} from "app/providers/ThemeProvider";
-import './styles/index.scss'
 import {Suspense} from "react";
+import {Navbar} from "widgets/Navbar";
+import './styles/index.scss'
+import {Sidebar} from "widgets/Sidebar";
 
 export const App = () => {
 
-  const {theme, onChangeTheme} = useTheme()
+  const {theme} = useTheme()
 
   return (
     <div className={clsx('app', {}, theme)}>
-      <button onClick={onChangeTheme}>switch theme</button>
-      <Link to={'/'}>Home</Link>
-      <Link to={'/about'}>About</Link>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet/>
-      </Suspense>
+      <Navbar/>
+      <div className={'content-page'}>
+        <Sidebar/>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className={'page'}>
+            <Outlet/>
+          </div>
+        </Suspense>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,26 @@
+.navlink {
+    display: inline-block;
+    position: relative;
+    color: var(--inverted-primary-color);
+    transition: width 0.2s ease;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        border-right: 5px;
+        background-color: var(--inverted-secondary-color);
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &.active:after {
+        width: 100%;
+    }
+}

@@ -2,23 +2,20 @@ import {RouteObject} from "react-router-dom";
 import {MainPage} from "pages/MainPage";
 import {AboutPage} from "pages/AboutPage";
 
-export enum ROUTES {
-  MAIN = 'main',
-  ABOUT = 'about'
-}
+type ROUTES = 'main' | 'about'
 
 export const RoutePath: Record<ROUTES, string> = {
-  [ROUTES.MAIN]: '/',
-  [ROUTES.ABOUT]: 'about',
-}
+  main: '/',
+  about: 'about',
+} as const
 
 export const routeConfig: Record<ROUTES, RouteObject> = {
-  [ROUTES.MAIN]: {
+  main: {
     index: true,
     element: <MainPage/>,
   },
-  [ROUTES.ABOUT]: {
-    path: RoutePath[ROUTES.ABOUT],
+  about: {
+    path: RoutePath.about,
     element: <AboutPage/>,
   },
 }
