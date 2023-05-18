@@ -12,7 +12,9 @@ export const App = () => {
 
   return (
     <div className={clsx('app', {}, theme)}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={
+        <div>Loading...</div>
+      }>
         <Navbar/>
         <div className={'content-page'}>
           <Sidebar/>
