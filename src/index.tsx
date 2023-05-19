@@ -4,7 +4,6 @@ import {router} from "app/providers/router";
 import {RouterProvider} from "react-router-dom";
 import "shared/config/i18n/i18n";
 
-
 render(
   <ThemeProvider>
     <RouterProvider router={router}/>
