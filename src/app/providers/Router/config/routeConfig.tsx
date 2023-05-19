@@ -2,6 +2,7 @@ import {RouteObject} from "react-router-dom";
 import {MainPage} from "pages/MainPage";
 import {AboutPage} from "pages/AboutPage";
 
+
 type ROUTES = 'main' | 'about'
 
 export const RoutePath: Record<ROUTES, string> = {
