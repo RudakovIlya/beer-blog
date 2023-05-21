@@ -6,7 +6,7 @@ describe('clsx', () => {
     fistClass = 'some-class'
   })
   test('expect some-class', () => {
-    expect(clsx(fistClass, {})).toBe('some-class')
+    expect(clsx(fistClass, {})).toBe(fistClass)
   })
   test('expect some-class with mods: active-class, and without selected', () => {
     expect(clsx(fistClass, { 'active-class': true, selected: false })).toBe('some-class active-class')
