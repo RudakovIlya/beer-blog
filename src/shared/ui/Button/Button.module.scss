@@ -1,10 +1,11 @@
 .button {
-
     &.primary {
+        color: red;
 
     }
 
     &.small {
+        color: orange;
     }
 
     &:disabled {

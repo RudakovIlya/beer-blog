@@ -4,7 +4,7 @@
     color: var(--inverted-primary-color);
     transition: width 0.2s ease;
 
-    &:after {
+    &::after {
         content: '';
         position: absolute;
         bottom: -3px;
@@ -20,7 +20,7 @@
         width: 100%;
     }
 
-    &.active:after {
+    &.active::after {
         width: 100%;
     }
 }

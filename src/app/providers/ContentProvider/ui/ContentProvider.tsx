@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const ContentProvider: FC<Props> = () => (
-  <Suspense fallback={<div>{'Loading...'}</div>}>
+  <Suspense fallback={<div>{''}</div>}>
     <div className={'page'}>
       <Outlet />
     </div>

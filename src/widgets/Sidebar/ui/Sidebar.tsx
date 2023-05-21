@@ -13,7 +13,7 @@ export const Sidebar: FC<Props> = ({ className }) => {
 
   return (
     <aside className={clsx(cls.sidebar, { [cls.collapsed]: collapsed }, className)}>
-      <button type={'button'} onClick={onToggle}>{'Collapsed'}</button>
+      <button type={'button'} onClick={onToggle}>{''}</button>
     </aside>
   )
 }
