@@ -1,16 +1,14 @@
 .button {
-    &.primary {
-        color: red;
+  &.primary {
+    color: red;
+  }
 
-    }
+  &.small {
+    color: orange;
+  }
 
-    &.small {
-        color: orange;
-    }
-
-    &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
-
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
