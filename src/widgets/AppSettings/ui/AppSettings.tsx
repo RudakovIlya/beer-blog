@@ -1,12 +1,13 @@
 import {FC} from "react";
 import {clsx} from "shared/lib";
-import cls from './AppSettings.module.scss'
 import {Button} from "shared/ui/Button/Button";
 import {IoIosSettings} from "react-icons/io";
 import {useTheme} from "app/providers/ThemeProvider";
-import {LangSwitcher} from "widgets/LangSwitcher";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import {useCollapsed} from "shared/hooks";
+import {LangSwitcher} from "features/LangSwitcher";
+import {ThemeSwitcher} from "features/ThemeSwitcher";
+
+import cls from './AppSettings.module.scss'
 
 interface Props {
   className?: string

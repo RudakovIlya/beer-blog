@@ -30,4 +30,12 @@
     justify-content: center;
     background: var(--inverted-bg-color);
     border-radius: 8px 0 0 8px;
+
+    svg {
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover svg {
+        transform: rotate(180deg);
+    }
 }

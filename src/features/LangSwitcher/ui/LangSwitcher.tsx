@@ -11,8 +11,8 @@ interface Props {
 export const LangSwitcher: FC<Props> = ({className}) => {
   const {t, i18n} = useTranslation()
 
-  const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
+  const toggleLang = ():void => {
+    void i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
   }
 
   return (
