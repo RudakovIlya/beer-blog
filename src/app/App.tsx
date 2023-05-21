@@ -16,7 +16,7 @@ export const App = () => {
       <Suspense fallback={<PageLoader />}>
         <Navbar />
         <div className={'content-page'}>
-          <Sidebar />
+          {/* <Sidebar /> */}
           <ContentProvider />
         </div>
       </Suspense>

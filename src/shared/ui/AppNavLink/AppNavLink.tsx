@@ -13,9 +13,11 @@ isActive: boolean,
 }
 
 export const AppNavLink: FC<Props> = ({ className, children, ...otherProps }) => {
-  const activeClass = ({ isActive }: isActiveProps) => clsx(cls.navlink, {
-    [cls.active]: isActive,
-  }, className)
+  const activeClass = ({ isActive }: isActiveProps) => {
+    return clsx(cls.navlink, {
+      [cls.active]: isActive,
+    }, className)
+  }
   return (
     <NavLink {...otherProps} className={activeClass}>
       {children}
