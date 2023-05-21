@@ -1,5 +1,5 @@
-import {ButtonHTMLAttributes, FC} from "react";
-import {clsx} from "shared/lib";
+import { ButtonHTMLAttributes, FC } from 'react'
+import { clsx } from 'shared/lib'
 import cls from './Button.module.scss'
 
 type ButtonVariant = 'clear' | 'icon' | 'primary' | 'secondary' | 'outline'
@@ -12,7 +12,9 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<Props> = (props) => {
-  const {className, variant = 'primary', size = 'medium', children, ...otherProps} = props
+  const {
+    className, variant = 'primary', size = 'medium', children, ...otherProps
+  } = props
 
   const additionalClasses = [cls[variant], cls[size], className]
 
@@ -21,4 +23,4 @@ export const Button: FC<Props> = (props) => {
       {children}
     </button>
   )
-};
+}

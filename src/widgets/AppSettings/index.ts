@@ -1,1 +1,1 @@
-export {AppSettings} from './ui/AppSettings'
+export { AppSettings } from './ui/AppSettings'

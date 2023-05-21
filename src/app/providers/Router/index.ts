@@ -1,1 +1,1 @@
-export {router} from './ui/router'
+export { router } from './ui/router'

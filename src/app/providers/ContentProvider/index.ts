@@ -1,1 +1,1 @@
-export {ContentProvider} from './ui/ContentProvider'
+export { ContentProvider } from './ui/ContentProvider'

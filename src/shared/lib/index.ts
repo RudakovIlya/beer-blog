@@ -1,1 +1,1 @@
-export {clsx} from './clsx/clsx'
+export { clsx } from './clsx/clsx'

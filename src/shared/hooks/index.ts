@@ -1,1 +1,1 @@
-export {useCollapsed} from './useCollapsed/useCollapsed'
+export { useCollapsed } from './useCollapsed/useCollapsed'
