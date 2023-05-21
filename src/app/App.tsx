@@ -1,5 +1,6 @@
 import { clsx } from 'shared/lib'
 import { Suspense } from 'react'
+import { PageLoader } from 'widgets/PageLoader'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { useTheme } from 'app/providers/ThemeProvider'
@@ -12,10 +13,7 @@ export const App = () => {
 
   return (
     <div className={clsx('app', {}, theme)}>
-      <Suspense fallback={
-        <div>{''}</div>
-      }
-      >
+      <Suspense fallback={<PageLoader />}>
         <Navbar />
         <div className={'content-page'}>
           <Sidebar />

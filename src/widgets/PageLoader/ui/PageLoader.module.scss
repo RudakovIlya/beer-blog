@@ -1,0 +1,12 @@
+.page-loader {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  span {
+    width: 30px;
+    height: 30px;
+  }
+}

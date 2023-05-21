@@ -40,8 +40,10 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     'react/jsx-curly-brace-presence': [
       'error',
-      { props: 'always', children: 'always' },
+      { props: 'always', children: 'never' },
     ],
+    'react/self-closing-comp': 'off',
+    'react/no-array-index-key': 'warn',
     // common
     semi: [2, 'never'],
     indent: [2, 2],
@@ -51,6 +53,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
+    'arrow-body-style': ['error', 'always'],
     'max-len': ['error', { ignoreComments: true, code: 120, tabWidth: 2 }],
     // ts
     // i18next
