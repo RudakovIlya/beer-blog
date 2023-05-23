@@ -18,7 +18,6 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error) {
-    // Update state so the next render will show the fallback UI.
     return { hasError: true }
   }
 
@@ -28,7 +27,9 @@ export class ErrorBoundary extends Component<Props, State> {
 
   render() {
     const { hasError } = this.state
+
     const { children } = this.props
+
     if (hasError) {
       return <Suspense fallback={''}><PageError /></Suspense>
     }
