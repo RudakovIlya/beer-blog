@@ -1,5 +1,5 @@
 import { clsx } from 'shared/lib'
-import { Suspense, useEffect } from 'react'
+import { Suspense } from 'react'
 import { PageLoader } from 'widgets/PageLoader'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
