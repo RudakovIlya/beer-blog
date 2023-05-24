@@ -3,6 +3,7 @@ import { clsx } from 'shared/lib'
 import cls from './Button.module.scss'
 
 type ButtonVariant = 'clear' | 'icon' | 'primary' | 'secondary' | 'outline'
+
 type ButtonSize = 'small' | 'medium' | 'large'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
