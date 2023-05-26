@@ -9,7 +9,15 @@ module.exports = {
     'plugin:i18next/recommended',
     'airbnb',
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -57,8 +65,9 @@ module.exports = {
     'max-len': ['error', { ignoreComments: true, code: 120, tabWidth: 2 }],
     // ts
     // i18next
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
   },
+
   globals: {
     __IS_DEV__: true,
   },

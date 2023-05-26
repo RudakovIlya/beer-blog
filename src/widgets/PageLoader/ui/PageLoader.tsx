@@ -7,7 +7,7 @@ interface Props {
   className?: string
 }
 
-export const PageLoader : FC<Props> = ({ className }) => {
+export const PageLoader: FC<Props> = ({ className }) => {
   return (
     <div className={clsx(cls['page-loader'], {}, className)}>
       <Loader />
