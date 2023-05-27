@@ -14,7 +14,6 @@ i18n
       escapeValue: false, // not needed for react!!
     },
 
-    resources: { en: { translations: {} } },
   })
 
 export default i18n
