@@ -13,8 +13,11 @@ export const App = () => {
     <div className={clsx('app', {}, theme)}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
+
         <div className={'content-page'}>
+
           <Sidebar />
+
           <ContentProvider />
         </div>
       </Suspense>
