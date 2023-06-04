@@ -4,7 +4,7 @@ import { RouterProvider } from 'react-router-dom'
 
 import './app/styles/index.scss'
 import './shared/config/i18n/i18n'
-import { router } from 'app/providers/Router/ui/router'
+import { router } from 'app/providers/Router'
 
 render(
   <ThemeProvider>
