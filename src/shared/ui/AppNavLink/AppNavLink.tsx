@@ -8,11 +8,15 @@ interface Props extends NavLinkProps {
 }
 
 interface isActiveProps {
-isActive: boolean,
+  isActive: boolean,
   isPending: boolean
 }
 
-export const AppNavLink: FC<Props> = ({ className, children, ...otherProps }) => {
+export const AppNavLink: FC<Props> = ({
+  className,
+  children,
+  ...otherProps
+}) => {
   const activeClass = ({ isActive }: isActiveProps) => {
     return clsx(cls.navlink, {
       [cls.active]: isActive,

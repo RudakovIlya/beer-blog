@@ -4,7 +4,9 @@ export const useCollapsed = () => {
   const [collapsed, setCollapsed] = useState(false)
 
   const onToggle = useCallback(() => {
-    setCollapsed((prevState) => { return !prevState })
+    setCollapsed((prevState) => {
+      return !prevState
+    })
   }, [setCollapsed])
 
   return {

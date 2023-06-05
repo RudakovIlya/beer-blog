@@ -7,7 +7,7 @@ interface Props {
   className?: string
 }
 
-export const NotFoundPage : FC<Props> = ({ className }) => {
+export const NotFoundPage: FC<Props> = ({ className }) => {
   const { t } = useTranslation()
   return (
     <div className={clsx(cls['not-found'], {}, className)}>{t('Page not found!')}</div>

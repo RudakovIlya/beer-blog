@@ -9,7 +9,10 @@ interface UseThemeResult {
 }
 
 export const useTheme = (): UseThemeResult => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const {
+    theme,
+    setTheme,
+  } = useContext(ThemeContext)
 
   const onChangeTheme = () => {
     const newTheme = theme === 'light' ? THEME.DARK : THEME.LIGHT

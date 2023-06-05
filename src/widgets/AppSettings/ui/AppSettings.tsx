@@ -15,7 +15,10 @@ interface Props {
 
 export const AppSettings: FC<Props> = ({ className }) => {
   const { theme } = useTheme()
-  const { collapsed, onToggle } = useCollapsed()
+  const {
+    collapsed,
+    onToggle,
+  } = useCollapsed()
   return (
     <>
       <Button data-testid={'Toggle-AppSettings'} onClick={onToggle} className={cls.button}>

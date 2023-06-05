@@ -14,7 +14,11 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<Props> = (props) => {
   const {
-    className, variant = 'primary', size = 'medium', children, ...otherProps
+    className,
+    variant = 'primary',
+    size = 'medium',
+    children,
+    ...otherProps
   } = props
 
   const additionalClasses = [cls[variant], cls[size], className]

@@ -2,13 +2,12 @@ import { FC } from 'react'
 import { clsx } from 'shared/lib'
 import { useTranslation } from 'react-i18next'
 import { Button } from 'shared/ui/Button/Button'
-import cls from './PageError.module.scss'
 
 interface Props {
   className?: string
 }
 
-export const PageError : FC<Props> = ({ className }) => {
+export const PageError: FC<Props> = ({ className }) => {
   const { t } = useTranslation()
 
   const onReload = () => {

@@ -6,6 +6,8 @@ export const clsx = (cls: string, mods?: Mods, ...additional: string[]): string 
     ...additional,
     ...Object
       .keys(mods)
-      .filter((key) => { return mods[key] }),
+      .filter((key) => {
+        return mods[key]
+      }),
   ].join(' ')
 }

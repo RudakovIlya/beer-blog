@@ -10,7 +10,10 @@ interface Props {
 }
 
 export const Sidebar: FC<Props> = ({ className }) => {
-  const { collapsed, onToggle } = useCollapsed()
+  const {
+    collapsed,
+    onToggle,
+  } = useCollapsed()
   const { t } = useTranslation()
   return (
     <aside data-testid={'sidebar'} className={clsx(cls.sidebar, { [cls.collapsed]: collapsed }, className)}>

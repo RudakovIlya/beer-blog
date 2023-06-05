@@ -6,15 +6,16 @@ interface Props {
   className?: string
 }
 
-export const Loader : FC<Props> = ({ className }) => {
+export const Loader: FC<Props> = ({ className }) => {
   return (
     <>
       {
-        Array.from(new Array(3)).map(() => {
-          return (
-            <span key={`${Math.random()}`} className={clsx(cls.dot, {}, className)} />
-          )
-        })
+        Array.from(new Array(3))
+          .map(() => {
+            return (
+              <span key={`${Math.random()}`} className={clsx(cls.dot, {}, className)} />
+            )
+          })
       }
     </>
   )
