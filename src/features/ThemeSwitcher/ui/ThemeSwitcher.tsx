@@ -1,8 +1,9 @@
 import { FC } from 'react'
 import { clsx } from 'shared/lib'
-import { useTheme } from 'app/providers/ThemeProvider'
+
 import { MdOutlineBrightness6 } from 'react-icons/md'
 import { Button } from 'shared/ui/Button/Button'
+import { useTheme } from 'app/providers/ThemeProvider'
 import cls from './ThemeSwitcher.module.scss'
 
 interface Props {

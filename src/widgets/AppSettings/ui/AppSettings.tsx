@@ -2,11 +2,12 @@ import { FC } from 'react'
 import { clsx } from 'shared/lib'
 import { Button } from 'shared/ui/Button/Button'
 import { IoIosSettings } from 'react-icons/io'
-import { useTheme } from 'app/providers/ThemeProvider'
+
 import { useCollapsed } from 'shared/hooks'
 import { LangSwitcher } from 'features/LangSwitcher'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
 
+import { useTheme } from 'app/providers/ThemeProvider'
 import cls from './AppSettings.module.scss'
 
 interface Props {

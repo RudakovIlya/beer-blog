@@ -15,7 +15,6 @@
   },
   "keywords": [],
   "author": "Ilya Rudakov",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.1",
     "@babel/preset-env": "^7.22.2",

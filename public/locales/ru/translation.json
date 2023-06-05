@@ -1,12 +1,10 @@
 {
-  "translation": {
-    "language": "RU",
-    "home": "Главная",
-    "about": "О сайте",
-    "Hello world": "Привет мир!",
-    "Page not found!": "Страница не найдена!",
-    "Collapsed": "Свернуто",
-    "An unexpected error has occurred": "Произошла непредвиденная ошибка",
-    "Refresh the page": "Обновить страницу"
-  }
+  "language": "RU",
+  "home": "Главная",
+  "about": "О сайте",
+  "Hello world": "Привет мир!",
+  "Page not found!": "Страница не найдена!",
+  "Collapsed": "Свернуто",
+  "An unexpected error has occurred": "Произошла непредвиденная ошибка",
+  "Refresh the page": "Обновить страницу"
 }

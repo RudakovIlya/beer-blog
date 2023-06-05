@@ -3,8 +3,8 @@ import { Suspense } from 'react'
 import { PageLoader } from 'widgets/PageLoader'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { useTheme } from 'app/providers/ThemeProvider'
 import { ContentProvider } from 'app/providers/ContentProvider'
+import { useTheme } from 'app/providers/ThemeProvider'
 
 export const App = () => {
   const { theme } = useTheme()
