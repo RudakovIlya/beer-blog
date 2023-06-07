@@ -8,9 +8,7 @@ import { router } from 'app/providers/Router'
 
 render(
   <ThemeProvider>
-
     <RouterProvider router={router} />
-
   </ThemeProvider>,
   document.getElementById('root'),
 )
