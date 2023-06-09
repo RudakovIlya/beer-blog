@@ -1,5 +1,4 @@
 import { screen } from '@testing-library/react'
-
 import { renderWithTranslation } from 'shared/lib/renderWithTranslation/renderWithTranslation'
 import { LangSwitcher } from './LangSwitcher'
 
