@@ -38,18 +38,15 @@ module.exports = {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/button-has-type': 'warn',
     'react/require-default-props': 'off',
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
-      },
-    ],
+    'react/function-component-definition': [2, {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function',
+    }],
     'react/jsx-props-no-spreading': 'warn',
-    'react/jsx-curly-brace-presence': [
-      'error',
-      { props: 'always', children: 'never' },
-    ],
+    'react/jsx-curly-brace-presence': ['error', {
+      props: 'always',
+      children: 'never',
+    }],
     'react/self-closing-comp': 'off',
     'react/no-array-index-key': 'warn',
     // common
@@ -62,12 +59,19 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
     'arrow-body-style': ['error', 'always'],
-    'max-len': ['error', { ignoreComments: true, code: 120, tabWidth: 2 }],
+    'linebreak-style': ['error', 'windows'],
+    'max-len': ['error', {
+      ignoreComments: true,
+      code: 120,
+      tabWidth: 2,
+    }],
     // ts
     // i18next
-    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid'],
+    }],
   },
-
   globals: {
     __IS_DEV__: true,
   },

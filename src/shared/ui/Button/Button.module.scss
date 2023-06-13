@@ -1,10 +1,25 @@
 .button {
+  cursor: pointer;
+  border-radius: 8px;
+
   &.primary {
     color: red;
   }
 
+  &.clear {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
   &.small {
     color: orange;
+  }
+
+  &.outline {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
   }
 
   &:disabled {

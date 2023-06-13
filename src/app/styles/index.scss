@@ -2,6 +2,7 @@
 @import "variables/global";
 @import "themes/normal";
 @import "themes/dark";
+@import "storybook/storybook";
 
 .app {
   font: var(--font-m);
@@ -18,4 +19,9 @@
 .page {
   flex: 1;
   padding: 20px;
+}
+
+.storybook-class {
+  width: 30px;
+  height: 30px;
 }

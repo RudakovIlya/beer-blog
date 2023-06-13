@@ -5,7 +5,7 @@ export const clsx = (cls: string, mods?: Mods, ...additional: string[]): string 
     cls,
     ...additional,
     ...Object
-      .keys(mods)
+      .keys(mods || {})
       .filter((key) => {
         return mods[key]
       }),

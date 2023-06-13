@@ -6,4 +6,8 @@
   justify-content: center;
   background: var(--inverted-bg-color);
   border-radius: 8px 0 0 8px;
+
+  .icon {
+    fill: var(--inverted-secondary-color);
+  }
 }

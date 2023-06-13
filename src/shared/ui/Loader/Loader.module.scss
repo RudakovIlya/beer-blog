@@ -1,20 +1,24 @@
-.dot {
-  display: block;
-  background: var(--inverted-bg-color);
-  border-radius: 50%;
-  animation: loader-animation 1s infinite;
-  animation-delay: 0.1s;
+.wrapper {
+  display: flex;
 
-  &:nth-child(2) {
-    animation-delay: 0.2s;
-  }
+  .dot {
+    display: block;
+    background: var(--inverted-bg-color);
+    border-radius: 50%;
+    animation: loader-animation 1s infinite;
+    animation-delay: 0.1s;
 
-  &:nth-child(3) {
-    animation-delay: 0.3s;
-  }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
 
-  &:not(:last-child) {
-    margin-right: 10px;
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 }
 

@@ -47,6 +47,8 @@ input::-ms-clear {
 }
 
 button {
+  border: none;
+  outline: none;
   cursor: pointer;
   background-color: transparent;
 }

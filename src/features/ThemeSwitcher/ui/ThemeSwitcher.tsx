@@ -11,12 +11,11 @@ interface Props {
 
 export const ThemeSwitcher: FC<Props> = ({ className }) => {
   const {
-    theme,
     onChangeTheme,
   } = useTheme()
   return (
     <Button onClick={onChangeTheme} className={clsx(cls.switcher, {}, className)}>
-      <MdOutlineBrightness6 color={theme === 'dark' ? '#262626' : '#F3F6F9'} size={30} />
+      <MdOutlineBrightness6 className={clsx(cls.icon, {}, className)} size={30} />
     </Button>
   )
 }

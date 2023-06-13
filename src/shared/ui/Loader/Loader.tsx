@@ -8,7 +8,7 @@ interface Props {
 
 export const Loader: FC<Props> = ({ className }) => {
   return (
-    <>
+    <div className={clsx(cls.wrapper)}>
       {
         Array.from(new Array(3))
           .map(() => {
@@ -17,6 +17,6 @@ export const Loader: FC<Props> = ({ className }) => {
             )
           })
       }
-    </>
+    </div>
   )
 }
