@@ -16,8 +16,17 @@ export const Sidebar: FC<Props> = ({ className }) => {
   } = useCollapsed()
   const { t } = useTranslation()
   return (
-    <aside data-testid={'sidebar'} className={clsx(cls.sidebar, { [cls.collapsed]: collapsed }, className)}>
-      <button type={'button'} onClick={onToggle}>{t('Collapsed')}</button>
+    <aside
+      data-testid={'sidebar'}
+      className={clsx(cls.sidebar, { [cls.collapsed]: collapsed }, className)}
+    >
+      <button
+        type={'button'}
+        onClick={onToggle}
+        data-testid={'sidebar-toggle-button'}
+      >
+        {t('Collapsed')}
+      </button>
     </aside>
   )
 }

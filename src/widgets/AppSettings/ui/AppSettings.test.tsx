@@ -4,18 +4,22 @@ import { renderWithTranslation } from 'shared/lib/renderWithTranslation/renderWi
 import { AppSettings } from './AppSettings'
 
 describe('widgets/AppSettings/ui/AppSettings', () => {
-  test('button is expected to have text TEST', () => {
+  test('AppSettings should be in the document', () => {
     renderWithTranslation(<AppSettings />)
     expect(screen.getByTestId('AppSettings'))
       .toBeInTheDocument()
   })
-  test('button is expected to have text TEST1', () => {
+  test('AppSettings should go out when you click on the settings icon', () => {
     renderWithTranslation(<AppSettings />)
     const toggleButton = screen.getByTestId('Toggle-AppSettings')
+
     expect(screen.getByTestId('AppSettings'))
       .toBeInTheDocument()
+
     fireEvent.click(toggleButton)
+
     screen.debug()
+
     expect(screen.getByTestId('AppSettings'))
       .toHaveClass('open')
   })

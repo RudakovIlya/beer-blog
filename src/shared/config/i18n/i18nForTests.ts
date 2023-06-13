@@ -13,6 +13,7 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react!!
     },
+    resources: { en: { translationsNS: {} } },
 
   })
 

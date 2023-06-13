@@ -1,4 +1,4 @@
-const JestEmptyComponent = () => {
+const jestEmptyComponent = () => {
   return <div />
 }
-export default JestEmptyComponent
+export default jestEmptyComponent

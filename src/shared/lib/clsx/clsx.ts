@@ -9,5 +9,5 @@ export const clsx = (cls: string, mods?: Mods, ...additional: string[]): string 
       .filter((key) => {
         return mods[key]
       }),
-  ].join(' ')
+  ].join(' ').trim()
 }
