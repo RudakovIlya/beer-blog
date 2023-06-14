@@ -20,6 +20,7 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       __IS_DEV__: JSON.stringify(isDev),
     }),
   ]
+
   if (isDev) {
     plugins.push(
       new ReactRefreshPlugin({ overlay: false }),
@@ -29,5 +30,6 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       }),
     )
   }
+
   return plugins
 }
