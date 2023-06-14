@@ -11,7 +11,11 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "stylelint:scss": "npx stylelint \"**/*.scss\"",
     "stylelint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
-    "unit": "jest --config ./config/jest/jest.config.ts"
+    "test:unit": "jest --config ./config/jest/jest.config.ts",
+    "test:ui": "npx loki test",
+    "test:ui:ok": "npx loki approve",
+    "storybook": "storybook dev -p 6006 -c ./config/storybook",
+    "build-storybook": "storybook build -c ./config/storybook"
   },
   "keywords": [],
   "author": "Ilya Rudakov",
@@ -21,6 +25,14 @@
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addon-interactions": "^7.0.20",
+    "@storybook/addon-links": "^7.0.20",
+    "@storybook/addon-styling": "^1.3.0",
+    "@storybook/blocks": "^7.0.20",
+    "@storybook/react": "^7.0.20",
+    "@storybook/react-webpack5": "^7.0.20",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
@@ -54,6 +66,7 @@
     "regenerator-runtime": "^0.13.11",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.0",
+    "storybook": "^7.0.20",
     "style-loader": "^3.3.3",
     "stylelint": "^15.6.2",
     "stylelint-config-standard-scss": "^9.0.0",
@@ -74,5 +87,20 @@
     "react-i18next": "^12.3.1",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.2"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

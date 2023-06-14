@@ -11,7 +11,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{ts,tsx}', '**/src/**/*.stories.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
       },
@@ -34,6 +34,7 @@ module.exports = {
   rules: {
     // react
     'react/jsx-indent': [2, 2],
+    'react/jsx-no-useless-fragment': 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/button-has-type': 'warn',
@@ -62,6 +63,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
     'arrow-body-style': ['error', 'always'],
+    'global-require': 0,
     'max-len': ['error', { ignoreComments: true, code: 120, tabWidth: 2 }],
     // ts
     // i18next

@@ -20,7 +20,7 @@ export const Button: FC<Props> = (props) => {
   const additionalClasses = [cls[variant], cls[size], className]
 
   return (
-    <button {...otherProps} type={'button'} className={clsx(cls.button, {}, ...additionalClasses)}>
+    <button {...otherProps} className={clsx(cls.button, {}, ...additionalClasses)}>
       {children}
     </button>
   )
