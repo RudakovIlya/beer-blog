@@ -59,7 +59,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
     'arrow-body-style': ['error', 'always'],
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': ['error', 'unix'],
     'max-len': ['error', {
       ignoreComments: true,
       code: 120,
