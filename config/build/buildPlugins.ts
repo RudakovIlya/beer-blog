@@ -6,8 +6,8 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { BuildOptions } from './types/config'
 
 export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] => {
-  return [
-  /* new HtmlWebpackPlugin: Automatically includes scripts in our index.html */
+  const plugins = [
+    /* new HtmlWebpackPlugin: Automatically includes scripts in our index.html */
     new HtmlWebpackPlugin({ template: paths.html }),
     /* new ProgressPlugin: Shows the percentage progress of our build */
     new webpack.ProgressPlugin(),
@@ -19,10 +19,15 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    new ReactRefreshPlugin({ overlay: false }),
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
   ]
+  if (isDev) {
+    plugins.push(
+      new ReactRefreshPlugin({ overlay: false }),
+      new webpack.HotModuleReplacementPlugin(),
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      }),
+    )
+  }
+  return plugins
 }
