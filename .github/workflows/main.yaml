@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [ 18 ]
 
     steps:
       - uses: actions/setup-node@v2
@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm i
+        run: npm install
       - name: build production project
         run: npm run build:prod
       - name: linting typescript
