@@ -22,7 +22,12 @@ export const AppSettings: FC<Props> = ({ className }) => {
 
   return (
     <>
-      <Button data-testid={'Toggle-AppSettings'} onClick={onToggle} className={cls.button}>
+      <Button
+        onClick={onToggle}
+        className={cls.button}
+        background={'background-inverted'}
+        data-testid={'Toggle-AppSettings'}
+      >
         <IoIosSettings className={clsx(cls.icon, {}, theme)} size={30} />
       </Button>
       <div data-testid={'AppSettings'} className={clsx(cls.settings, { [cls.open]: collapsed }, className)}>

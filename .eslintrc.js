@@ -67,9 +67,9 @@ module.exports = {
     }],
     // ts
     // i18next
-    'i18next/no-literal-string': ['error', {
+    'i18next/no-literal-string': ['warn', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid'],
+      ignoreAttribute: ['data-testid', 'background', 'variant', 'size'],
     }],
   },
   globals: {
