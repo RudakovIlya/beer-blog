@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react'
-import { renderWithTranslation } from 'shared/lib/renderWithTranslation/renderWithTranslation'
+import { componentRender } from 'shared/config/tests/componentRender/componentRender'
 import { LangSwitcher } from './LangSwitcher'
 
 describe('features/LangSwitcher/ui/LangSwitcher', () => {
   test('button is expected to have text TEST', () => {
-    renderWithTranslation(<LangSwitcher />)
+    componentRender(<LangSwitcher />)
     expect(screen.getByTestId('LangSwitcher'))
       .toBeInTheDocument()
   })
