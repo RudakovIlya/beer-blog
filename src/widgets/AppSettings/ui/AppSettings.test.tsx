@@ -1,16 +1,16 @@
 import { fireEvent, screen } from '@testing-library/react'
 
-import { renderWithTranslation } from 'shared/lib/renderWithTranslation/renderWithTranslation'
+import { componentRender } from 'shared/config/tests/componentRender/componentRender'
 import { AppSettings } from './AppSettings'
 
 describe('widgets/AppSettings/ui/AppSettings', () => {
   test('AppSettings should be in the document', () => {
-    renderWithTranslation(<AppSettings />)
+    componentRender(<AppSettings />, { route: '' })
     expect(screen.getByTestId('AppSettings'))
       .toBeInTheDocument()
   })
   test('AppSettings should go out when you click on the settings icon', () => {
-    renderWithTranslation(<AppSettings />)
+    componentRender(<AppSettings />, { route: '' })
     const toggleButton = screen.getByTestId('Toggle-AppSettings')
 
     expect(screen.getByTestId('AppSettings'))
