@@ -1,3 +1,31 @@
+@import "../variables/global";
+@import "../reset";
+
+.app.light {
+  --bg-color: #f5f5f5;
+  --inverted-bg-color: #262626;
+  --primary-color: #030303;
+  --secondary-color: #212121;
+  --inverted-primary-color: #f3f6f9;
+  --inverted-secondary-color: #ebecef;
+}
+
+.app.dark {
+  --bg-color: #262626;
+  --inverted-bg-color: #f5f5f5;
+  --primary-color: #f3f6f9;
+  --secondary-color: #ebecef;
+  --inverted-primary-color: #030303;
+  --inverted-secondary-color: #212121;
+}
+
+.app {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font: var(--font-m);
+  min-height: 100vh;
+}
+
 .storybook-loader-class {
   width: 30px;
   height: 30px;

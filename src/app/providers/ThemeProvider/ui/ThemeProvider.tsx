@@ -1,12 +1,18 @@
-import { FC, useMemo, useState } from 'react'
+import {
+  PropsWithChildren, useMemo, useState,
+} from 'react'
 import {
   LOCAL_STORAGE_THEME_KEY, THEME, ThemeContext, ThemeType,
 } from '../lib/ThemeContext'
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeType || THEME.LIGHT
 
-export const ThemeProvider: FC = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeType>(defaultTheme)
+interface ThemeProviderProps {
+  initialTheme?: ThemeType
+}
+
+export const ThemeProvider = ({ initialTheme, children }: PropsWithChildren<ThemeProviderProps>) => {
+  const [theme, setTheme] = useState<ThemeType>(initialTheme || defaultTheme)
 
   const defaultProps = useMemo(() => {
     return {

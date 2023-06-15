@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, FC } from 'react'
 import { clsx } from 'shared/lib'
 import cls from './Button.module.scss'
 
-type ButtonVariant = 'clear' | 'icon' | 'primary' | 'secondary' | 'outline'
+type ButtonVariant = 'clear' | 'clear-inverted' | 'icon' | 'primary' | 'secondary' | 'outline'
 
 type ButtonSize = 'small' | 'medium' | 'large' | 'x-large'
 
@@ -22,7 +22,7 @@ export const Button: FC<Props> = (props) => {
     square = false,
     variant = 'primary',
     size = 'medium',
-    background = 'background',
+    background,
     children,
     ...otherProps
   } = props

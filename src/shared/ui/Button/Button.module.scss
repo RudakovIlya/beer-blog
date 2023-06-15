@@ -17,10 +17,19 @@
     cursor: pointer;
   }
 
-  &.clear {
+  &.clear,
+  &.clear-inverted {
     border: none;
     outline: none;
     background-color: transparent;
+  }
+
+  &.clear {
+    color: var(--primary-color);
+  }
+
+  &.clear-inverted {
+    color: var(--inverted-primary-color);
   }
 
   &.small {

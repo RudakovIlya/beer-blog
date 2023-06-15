@@ -1,4 +1,6 @@
-import { useContext } from 'react'
+import {
+  useCallback, useContext, useEffect,
+} from 'react'
 import {
   LOCAL_STORAGE_THEME_KEY, THEME, ThemeContext, ThemeType,
 } from './ThemeContext'
@@ -14,11 +16,15 @@ export const useTheme = (): UseThemeResult => {
     setTheme,
   } = useContext(ThemeContext)
 
-  const onChangeTheme = () => {
+  const onChangeTheme = useCallback(() => {
     const newTheme = theme === 'light' ? THEME.DARK : THEME.LIGHT
     setTheme(newTheme)
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
-  }
+  }, [setTheme, theme])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
 
   return {
     theme,

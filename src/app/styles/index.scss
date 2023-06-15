@@ -1,13 +1,16 @@
-@import "reset";
 @import "variables/global";
+@import "reset";
 @import "themes/normal";
 @import "themes/dark";
 @import "storybook/storybook";
 
-.app {
+body {
   font: var(--font-m);
-  background-color: var(--bg-color);
   color: var(--primary-color);
+}
+
+.app {
+  background-color: var(--bg-color);
   min-height: 100vh;
   transition: all 0.3s ease;
 }

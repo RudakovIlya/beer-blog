@@ -20,7 +20,7 @@ export const LangSwitcher: FC<Props> = ({ className }) => {
 
   return (
     <Button
-      variant={'clear'}
+      variant={'clear-inverted'}
       data-testid={'LangSwitcher'}
       onClick={toggleLang}
       background={'background-inverted'}

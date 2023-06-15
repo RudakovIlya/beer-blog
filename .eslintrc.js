@@ -7,11 +7,12 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:i18next/recommended',
+    'plugin:react-hooks/recommended',
     'airbnb',
   ],
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{test, stories}.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
       },
@@ -28,6 +29,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'react-hooks',
     '@typescript-eslint',
     'i18next',
   ],
@@ -43,12 +45,16 @@ module.exports = {
       unnamedComponents: 'arrow-function',
     }],
     'react/jsx-props-no-spreading': 'warn',
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     'react/jsx-curly-brace-presence': ['error', {
       props: 'always',
       children: 'never',
     }],
     'react/self-closing-comp': 'off',
     'react/no-array-index-key': 'warn',
+    // jsx-a11y
+    'jsx-a11y/no-static-element-interactions': 'off',
     // common
     semi: [2, 'never'],
     indent: [2, 2],

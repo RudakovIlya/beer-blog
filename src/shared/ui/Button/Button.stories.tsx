@@ -26,6 +26,13 @@ Clear.args = {
   variant: 'clear',
 }
 
+export const ClearInverted = Template.bind({})
+
+ClearInverted.args = {
+  variant: 'clear-inverted',
+}
+ClearInverted.decorators = [ThemeDecorator('dark')]
+
 export const Outline = Template.bind({})
 
 Outline.args = {
@@ -89,20 +96,21 @@ Large.args = {
 export const XLarge = Template.bind({})
 
 XLarge.args = {
+  variant: 'outline',
   size: 'x-large',
 }
 
 export const Square = Template.bind({})
 
-XLarge.args = {
-  type: '<',
+Square.args = {
+  children: '<',
+  variant: 'outline',
   square: true,
 }
 
 export const OutlineDark = Template.bind({})
 
 OutlineDark.args = {
-  type: 'button',
   variant: 'outline',
 }
 
