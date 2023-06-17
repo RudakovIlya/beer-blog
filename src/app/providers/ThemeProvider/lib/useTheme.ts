@@ -18,7 +18,9 @@ export const useTheme = (): UseThemeResult => {
 
   const onChangeTheme = useCallback(() => {
     const newTheme = theme === 'light' ? THEME.DARK : THEME.LIGHT
+
     setTheme(newTheme)
+
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
   }, [setTheme, theme])
 
