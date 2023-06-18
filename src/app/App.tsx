@@ -7,7 +7,7 @@ import { ContentProvider } from 'app/providers/ContentProvider'
 
 export const App = () => {
   return (
-    <div className={clsx('app')}>
+    <div id={'app'} className={clsx('app')}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
         <div className={'content-page'}>

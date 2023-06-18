@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { useTheme } from 'app/providers/ThemeProvider'
 import { Modal } from './Modal'
 
 export default {
@@ -12,16 +13,17 @@ export default {
   },
 } as ComponentMeta<typeof Modal>
 
-const Template: ComponentStory<typeof Modal> = (args) => { return <Modal {...args} /> }
+const Template: ComponentStory<typeof Modal> = (args) => {
+  useTheme()
+  return <Modal {...args} />
+}
 
 export const ModalLight = Template.bind({})
 
-ModalLight.args = {
-}
+ModalLight.args = {}
 
 export const ModalDark = Template.bind({})
 
-ModalDark.args = {
-}
+ModalDark.args = {}
 
 ModalDark.decorators = [ThemeDecorator('dark')]

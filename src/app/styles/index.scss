@@ -2,15 +2,14 @@
 @import "reset";
 @import "themes/normal";
 @import "themes/dark";
-@import "storybook/storybook";
 
 body {
-  font: var(--font-m);
-  color: var(--primary-color);
+  background-color: var(--bg-color);
 }
 
 .app {
-  background-color: var(--bg-color);
+  font: var(--font-m);
+  color: var(--primary-color);
   min-height: 100vh;
   transition: all 0.3s ease;
 }
