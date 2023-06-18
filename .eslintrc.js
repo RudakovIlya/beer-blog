@@ -71,6 +71,12 @@ module.exports = {
       code: 120,
       tabWidth: 2,
     }],
+    'no-param-reassign': ['error', {
+      props: true,
+      ignorePropertyModificationsFor: [
+        'state',
+      ],
+    }],
     // ts
     // i18next
     'i18next/no-literal-string': ['warn', {
