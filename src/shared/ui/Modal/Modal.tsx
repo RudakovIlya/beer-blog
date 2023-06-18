@@ -11,13 +11,15 @@ const ANIMATION_DELAY = 300
 interface Props {
   isOpen?: boolean
   onClose?: () => void
-  className?: string
+  className?: string,
+  lazy?: boolean
 }
 
 export const Modal = memo(({
-  isOpen, onClose, className, children,
+  isOpen, onClose, lazy, className, children,
 }: PropsWithChildren<Props>) => {
   const [isClosing, setIsClosing] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const timerRef = useRef<ReturnType<typeof setTimeout>>(null)
 
   const onCloseHandler = useCallback(() => {
@@ -43,13 +45,19 @@ export const Modal = memo(({
 
   useEffect(() => {
     if (isOpen) {
+      setIsMounted(true)
       window.addEventListener('keydown', onKeyDown)
     }
     return () => {
+      setIsMounted(false)
       clearTimeout(timerRef.current)
       window.removeEventListener('keydown', onKeyDown)
     }
   }, [isOpen, onKeyDown])
+
+  if (lazy && !isMounted) {
+    return null
+  }
 
   return (
     <Portal>

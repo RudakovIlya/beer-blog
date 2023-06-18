@@ -72,6 +72,7 @@ module.exports = {
       tabWidth: 2,
     }],
     'consistent-return': 0,
+    'no-shadow': 0,
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [
