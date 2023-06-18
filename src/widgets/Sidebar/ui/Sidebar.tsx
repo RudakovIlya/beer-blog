@@ -21,6 +21,7 @@ export const Sidebar: FC<Props> = ({ className }) => {
     onToggle,
   } = useCollapsed()
   const { t } = useTranslation()
+  console.log('sidebar')
   return (
     <aside
       data-testid={'sidebar'}

@@ -11,7 +11,7 @@ export interface renderWithRouterOptions {
   initialState?: DeepPartial<StateSchema>
 }
 
-export const componentRender = (component: ReactNode, options:renderWithRouterOptions) => {
+export const componentRender = (component: ReactNode, options: renderWithRouterOptions = { route: '/' }) => {
   const { route = '/', initialState } = options
   return render(
     <StoreProvider initialState={initialState as StateSchema}>
