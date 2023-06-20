@@ -1,8 +1,8 @@
 {
-  "name": "production-project",
+  "name": "beer-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.tsx",
+  "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3000",
     "start:dev:server": "node ./json-server/index.js",
@@ -53,7 +53,6 @@
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
     "babel-loader": "^9.1.2",
-    "babel-plugin-i18next-extract": "^0.9.0",
     "css-loader": "^6.6.0",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",

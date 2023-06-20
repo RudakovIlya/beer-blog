@@ -1,17 +1,22 @@
 import { render } from 'react-dom'
 import { ThemeProvider } from 'app/providers/ThemeProvider'
-import { RouterProvider } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import './app/styles/index.scss'
 import './shared/config/i18n/i18n'
-import { router } from 'app/providers/Router'
 import { StoreProvider } from 'app/providers/StoreProvider'
+import { App } from 'app/App'
+import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 
 render(
   <StoreProvider>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ErrorBoundary>
+    </BrowserRouter>
   </StoreProvider>,
   document.getElementById('root'),
 )

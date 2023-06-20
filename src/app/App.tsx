@@ -1,18 +1,17 @@
-import { clsx } from 'shared/lib'
 import { Suspense } from 'react'
 import { PageLoader } from 'widgets/PageLoader'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { ContentProvider } from 'app/providers/ContentProvider'
+import { AppRouter } from 'app/providers/Router'
 
 export const App = () => {
   return (
-    <div id={'app'} className={clsx('app')}>
+    <div id={'app'} className={'app'}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
         <div className={'content-page'}>
           <Sidebar />
-          <ContentProvider />
+          <AppRouter />
         </div>
       </Suspense>
     </div>

@@ -4,11 +4,11 @@ import { useCollapsed } from 'shared/hooks'
 
 import { useTranslation } from 'react-i18next'
 import { Button } from 'shared/ui/Button/Button'
-import { MdArrowForwardIos } from 'react-icons/md'
 import { AppNavLink } from 'shared/ui/AppNavLink/AppNavLink'
 import { ROUTES_PATHS } from 'app/providers/Router'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsCardList } from 'react-icons/bs'
+import { MdArrowForwardIos } from 'react-icons/md'
 import cls from './Sidebar.module.scss'
 
 interface Props {
@@ -21,7 +21,7 @@ export const Sidebar: FC<Props> = ({ className }) => {
     onToggle,
   } = useCollapsed()
   const { t } = useTranslation()
-  console.log('sidebar')
+
   return (
     <aside
       data-testid={'sidebar'}
