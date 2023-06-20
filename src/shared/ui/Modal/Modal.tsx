@@ -4,6 +4,8 @@ import {
 } from 'react'
 import { clsx } from 'shared/lib'
 import { Portal } from 'shared/ui/Portal/Portal'
+import { Button } from 'shared/ui/Button/Button'
+import { IoMdClose } from 'react-icons/io'
 import cls from './Modal.module.scss'
 
 const ANIMATION_DELAY = 300
@@ -39,7 +41,7 @@ export const Modal = memo(({
   }, [onCloseHandler])
 
   const mods:Record<string, boolean> = {
-    [cls.opened]: isOpen,
+    [cls.opened]: isMounted,
     [cls['is-closing']]: isClosing,
   }
 
@@ -55,7 +57,7 @@ export const Modal = memo(({
     }
   }, [isOpen, onKeyDown])
 
-  if (lazy && !isMounted) {
+  if (lazy && !isOpen) {
     return null
   }
 
@@ -65,6 +67,9 @@ export const Modal = memo(({
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div className={cls.overlay} onClick={onCloseHandler} />
         <div className={cls.content}>
+          <Button onClick={onCloseHandler} className={cls.button} square variant={'clear'}>
+            <IoMdClose size={25} fill={'currentColor'} />
+          </Button>
           {children}
         </div>
       </div>
