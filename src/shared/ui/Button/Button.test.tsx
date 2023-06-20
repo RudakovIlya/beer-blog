@@ -11,6 +11,5 @@ describe('shared/ui/Button', () => {
     render(<Button variant={'primary'}>TEST</Button>)
     expect(screen.getByText('TEST'))
       .toHaveClass('primary')
-    screen.debug()
   })
 })

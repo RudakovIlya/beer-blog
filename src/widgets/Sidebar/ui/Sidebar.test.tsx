@@ -17,8 +17,6 @@ describe('widgets/Sidebar/ui/Sidebar', () => {
 
     fireEvent.click(sidebarToggleButton)
 
-    screen.debug()
-
     expect(screen.getByTestId('sidebar'))
       .toHaveClass('collapsed')
   })

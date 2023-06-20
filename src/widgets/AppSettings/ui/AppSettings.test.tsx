@@ -18,8 +18,6 @@ describe('widgets/AppSettings/ui/AppSettings', () => {
 
     fireEvent.click(toggleButton)
 
-    screen.debug()
-
     expect(screen.getByTestId('AppSettings'))
       .toHaveClass('open')
   })
