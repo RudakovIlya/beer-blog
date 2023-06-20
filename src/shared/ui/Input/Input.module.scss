@@ -1,3 +1,15 @@
-.input {
-  color: red;
+.input-wrapper {
+  border-radius: 8px;
+
+  .input {
+    padding: 10px;
+    min-height: 25px;
+    border-radius: 8px;
+    background-color: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+  }
+
+  &:focus-within {
+    outline: 2px solid red;
+  }
 }

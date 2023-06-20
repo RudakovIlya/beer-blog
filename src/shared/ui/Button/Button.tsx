@@ -27,13 +27,13 @@ export const Button: FC<Props> = (props) => {
     ...otherProps
   } = props
 
-  const additionalClasses: string[] = [className, cls[variant], cls[background]]
+  const additionalClasses: string[] = [cls[variant], cls[background], className]
   const mods = {
     [cls.square]: square,
     [cls[size]]: size,
   }
   return (
-    <button {...otherProps} type={'button'} className={clsx(cls.button, mods, ...additionalClasses)}>
+    <button {...otherProps} className={clsx(cls.button, mods, ...additionalClasses)}>
       {children}
     </button>
   )

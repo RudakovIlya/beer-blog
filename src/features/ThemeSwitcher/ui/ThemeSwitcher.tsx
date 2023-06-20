@@ -15,8 +15,7 @@ export const ThemeSwitcher: FC<Props> = ({ className }) => {
   } = useTheme()
   return (
     <Button
-      variant={'clear'}
-      background={'background-inverted'}
+      variant={'clear-inverted'}
       onClick={onChangeTheme}
       className={clsx(cls.switcher, {}, className)}
     >

@@ -68,7 +68,7 @@ export const Modal = memo(({
         <div className={cls.overlay} onClick={onCloseHandler} />
         <div className={cls.content}>
           <Button onClick={onCloseHandler} className={cls.button} square variant={'clear'}>
-            <IoMdClose size={25} fill={'currentColor'} />
+            <IoMdClose size={20} fill={'currentColor'} />
           </Button>
           {children}
         </div>

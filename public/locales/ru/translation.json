@@ -7,5 +7,7 @@
   "Collapsed": "Свернуто",
   "An unexpected error has occurred": "Произошла непредвиденная ошибка",
   "Refresh the page": "Обновить страницу",
-  "sign in": "Войти"
+  "sign in": "Войти",
+  "Login": "Введите логин",
+  "Password": "Введите пароль"
 }

@@ -3,7 +3,11 @@
   flex-direction: column;
   min-width: 290px;
 
-  .input {
+  .input-wrapper {
+    .input {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }

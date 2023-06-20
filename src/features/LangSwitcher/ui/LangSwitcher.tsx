@@ -23,7 +23,6 @@ export const LangSwitcher: FC<Props> = ({ className }) => {
       variant={'clear-inverted'}
       data-testid={'LangSwitcher'}
       onClick={toggleLang}
-      background={'background-inverted'}
       className={clsx(cls.switcher, {}, className)}
     >
       {t('language')}

@@ -10,6 +10,8 @@
   --secondary-color: #ebecef;
   --inverted-primary-color: #030303;
   --inverted-secondary-color: #212121;
+  --color-control-bg-clear-hover: rgb(246 251 253 / 23%);
+  --color-control-bg-clear-inverted-hover: rgb(0 0 0 / 23%);
 }
 
 .app.light {
@@ -19,6 +21,8 @@
   --secondary-color: #212121;
   --inverted-primary-color: #f3f6f9;
   --inverted-secondary-color: #ebecef;
+  --color-control-bg-clear-hover: rgb(0 0 0 / 23%);
+  --color-control-bg-clear-inverted-hover: rgb(246 251 253 / 23%);
 }
 
 .app {

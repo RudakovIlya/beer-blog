@@ -10,21 +10,24 @@ interface Props extends HTMLInputProps{
   value?: string
   onChange?: (value: string) => void
   className?: string
+  wrapperClassName?: string
 }
 
 export const Input = memo(({
-  value, onChange, className, ...otherProps
+  value, onChange, className, wrapperClassName, ...otherProps
 }: PropsWithChildren<Props>) => {
   const onChangeValue = (event: ChangeEvent<HTMLInputElement>) => {
     onChange?.(event.currentTarget.value)
   }
 
   return (
-    <div className={clsx('', {}, className)}>
-      <div>
-
-      </div>
-      <input {...otherProps} value={value} onChange={onChangeValue} />
+    <div className={clsx(cls['input-wrapper'], {}, wrapperClassName)}>
+      <input
+        {...otherProps}
+        value={value}
+        onChange={onChangeValue}
+        className={clsx(cls.input, {}, className)}
+      />
     </div>
   )
 })

@@ -2,6 +2,7 @@
   cursor: pointer;
   border-radius: 8px;
   padding: 10px;
+  transition: all 0.3s ease;
 
   &.background {
     background-color: var(--bg-color);
@@ -26,10 +27,18 @@
 
   &.clear {
     color: var(--primary-color);
+
+    &:hover {
+      background-color: var(--color-control-bg-clear-hover);
+    }
   }
 
   &.clear-inverted {
     color: var(--inverted-primary-color);
+
+    &:hover {
+      background-color: var(--color-control-bg-clear-inverted-hover);
+    }
   }
 
   &.small {
