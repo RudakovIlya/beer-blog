@@ -15,11 +15,11 @@ export const ThemeSwitcher: FC<Props> = ({ className }) => {
   } = useTheme()
   return (
     <Button
-      variant={'clear-inverted'}
+      variant={'clear'}
       onClick={onChangeTheme}
       className={clsx(cls.switcher, {}, className)}
     >
-      <MdOutlineBrightness6 className={clsx(cls.icon, {}, className)} size={30} />
+      <MdOutlineBrightness6 fill={'currentColor'} className={clsx(cls.icon, {}, className)} size={30} />
     </Button>
   )
 }

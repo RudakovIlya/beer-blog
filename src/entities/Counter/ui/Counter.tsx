@@ -22,10 +22,10 @@ export const Counter = ({ className }: PropsWithChildren<Props>) => {
       <h1 data-testid={'value-title'}>
         {counter}
       </h1>
-      <Button square data-testid={'increment-btn'} background={'background-inverted'} onClick={increment}>
+      <Button data-testid={'increment-btn'} onClick={increment}>
         +
       </Button>
-      <Button square data-testid={'decrement-btn'} background={'background-inverted'} onClick={decrement}>
+      <Button data-testid={'decrement-btn'} onClick={decrement}>
         -
       </Button>
     </div>

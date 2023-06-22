@@ -43,8 +43,7 @@ export const Sidebar: FC<Props> = ({ className }) => {
 
       </nav>
       <Button
-        square
-        background={'background-inverted'}
+        variant={'ghost'}
         type={'button'}
         onClick={onToggle}
         className={cls['collapsed-btn']}

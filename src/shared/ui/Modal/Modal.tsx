@@ -67,7 +67,7 @@ export const Modal = memo(({
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div className={cls.overlay} onClick={onCloseHandler} />
         <div className={cls.content}>
-          <Button onClick={onCloseHandler} className={cls.button} square variant={'clear'}>
+          <Button variant={'clear'} onClick={onCloseHandler} className={cls.button}>
             <IoMdClose size={20} fill={'currentColor'} />
           </Button>
           {children}

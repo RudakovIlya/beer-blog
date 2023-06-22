@@ -3,10 +3,38 @@
 
   .dot {
     display: block;
-    background: var(--inverted-bg-color);
+    background-color: var(--color-control-bg-primary);
     border-radius: 50%;
     animation: loader-animation 1s infinite;
     animation-delay: 0.1s;
+
+    &.extra-small {
+      --loader-dot-size: 4px;
+
+      width: var(--loader-dot-size);
+      height: var(--loader-dot-size);
+    }
+
+    &.small {
+      --loader-dot-size: 8px;
+
+      width: var(--loader-dot-size);
+      height: var(--loader-dot-size);
+    }
+
+    &.medium {
+      --loader-dot-size: 16px;
+
+      width: var(--loader-dot-size);
+      height: var(--loader-dot-size);
+    }
+
+    &.large {
+      --loader-dot-size: 24px;
+
+      width: var(--loader-dot-size);
+      height: var(--loader-dot-size);
+    }
 
     &:nth-child(2) {
       animation-delay: 0.2s;
@@ -17,7 +45,7 @@
     }
 
     &:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 5px;
     }
   }
 }

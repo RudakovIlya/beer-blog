@@ -20,98 +20,58 @@ Primary.args = {
   variant: 'primary',
 }
 
+export const PrimaryDark = Template.bind({})
+
+PrimaryDark.args = {
+  variant: 'primary',
+}
+PrimaryDark.decorators = [ThemeDecorator('dark')]
+
+export const Secondary = Template.bind({})
+
+Secondary.args = {
+  variant: 'secondary',
+}
+
+export const SecondaryDark = Template.bind({})
+
+SecondaryDark.args = {
+  variant: 'secondary',
+}
+SecondaryDark.decorators = [ThemeDecorator('dark')]
+
 export const Clear = Template.bind({})
 
 Clear.args = {
   variant: 'clear',
 }
 
-export const ClearInverted = Template.bind({})
+export const ClearDark = Template.bind({})
 
-ClearInverted.args = {
-  variant: 'clear-inverted',
+ClearDark.args = {
+  variant: 'clear',
 }
-ClearInverted.decorators = [ThemeDecorator('dark')]
+ClearDark.decorators = [ThemeDecorator('dark')]
 
-export const Outline = Template.bind({})
+export const Ghost = Template.bind({})
 
-Outline.args = {
-  variant: 'outline',
-}
-
-export const OutlineSmall = Template.bind({})
-
-OutlineSmall.args = {
-  variant: 'outline',
-  size: 'small',
-}
-export const OutlineMedium = Template.bind({})
-
-OutlineMedium.args = {
-  variant: 'outline',
-  size: 'medium',
-}
-export const OutlineLarge = Template.bind({})
-
-OutlineLarge.args = {
-  variant: 'outline',
-  size: 'large',
-}
-export const OutlineXLarge = Template.bind({})
-
-OutlineXLarge.args = {
-  variant: 'outline',
-  size: 'x-large',
+Ghost.args = {
+  variant: 'ghost',
 }
 
-export const BackgroundTheme = Template.bind({})
+export const GhostDark = Template.bind({})
 
-BackgroundTheme.args = {
-  background: 'background',
+GhostDark.args = {
+  variant: 'ghost',
 }
-export const BackgroundInvertedTheme = Template.bind({})
+GhostDark.decorators = [ThemeDecorator('dark')]
 
-BackgroundInvertedTheme.args = {
-  background: 'background-inverted',
-}
-
-export const Small = Template.bind({})
-
-Small.args = {
-  size: 'small',
+export const Default = Template.bind({})
+Default.args = {
+  width: 'default',
 }
 
-export const Medium = Template.bind({})
-
-Medium.args = {
-  size: 'medium',
+export const Full = Template.bind({})
+Full.args = {
+  width: 'full',
 }
-
-export const Large = Template.bind({})
-
-Large.args = {
-  size: 'large',
-}
-
-export const XLarge = Template.bind({})
-
-XLarge.args = {
-  variant: 'outline',
-  size: 'x-large',
-}
-
-export const Square = Template.bind({})
-
-Square.args = {
-  children: '<',
-  variant: 'outline',
-  square: true,
-}
-
-export const OutlineDark = Template.bind({})
-
-OutlineDark.args = {
-  variant: 'outline',
-}
-
-OutlineDark.decorators = [ThemeDecorator('dark')]

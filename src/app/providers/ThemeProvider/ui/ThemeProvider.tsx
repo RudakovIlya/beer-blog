@@ -1,6 +1,4 @@
-import {
-  PropsWithChildren, useMemo, useState,
-} from 'react'
+import { PropsWithChildren, useMemo, useState } from 'react'
 import {
   LOCAL_STORAGE_THEME_KEY, THEME, ThemeContext, ThemeType,
 } from '../lib/ThemeContext'

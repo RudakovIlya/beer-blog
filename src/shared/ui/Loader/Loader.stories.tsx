@@ -7,7 +7,6 @@ export default {
   title: 'shared/Loader',
   component: Loader,
   args: {
-    className: 'storybook-loader-class',
   },
 } as ComponentMeta<typeof Loader>
 

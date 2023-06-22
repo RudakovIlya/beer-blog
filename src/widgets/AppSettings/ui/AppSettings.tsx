@@ -25,7 +25,7 @@ export const AppSettings: FC<Props> = ({ className }) => {
       <Button
         onClick={onToggle}
         className={cls.button}
-        background={'background-inverted'}
+        variant={'ghost'}
         data-testid={'Toggle-AppSettings'}
       >
         <IoIosSettings className={clsx(cls.icon, {}, theme)} size={30} />

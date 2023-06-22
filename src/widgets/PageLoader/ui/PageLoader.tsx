@@ -10,7 +10,7 @@ interface Props {
 export const PageLoader: FC<Props> = ({ className }) => {
   return (
     <div className={clsx(cls['page-loader'], {}, className)}>
-      <Loader />
+      <Loader size={'large'} />
     </div>
   )
 }

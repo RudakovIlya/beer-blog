@@ -1,10 +1,60 @@
-html[data-theme="light"] {
+[data-theme="light"] {
   --bg-color: #f5f5f5;
   --inverted-bg-color: #262626;
   --primary-color: #030303;
   --secondary-color: #212121;
   --inverted-primary-color: #f3f6f9;
   --inverted-secondary-color: #ebecef;
-  --color-control-bg-clear-hover: rgb(0 0 0 / 23%);
-  --color-control-bg-clear-inverted-hover: rgb(246 251 253 / 23%);
+
+  // color control
+  --color-control-bg-default: #fff;
+  --color-control-typo-default: #002033;
+  --color-control-typo-placeholder: rgb(0 32 51 / 35%);
+  --color-control-bg-border-default: rgb(0 66 105 / 28%);
+  --color-control-bg-border-default-hover: rgb(0 66 105 / 52%);
+  --color-control-bg-border-focus: #0091ff;
+  --color-control-bg-focus: rgb(0 120 210 / 30%);
+  --color-control-bg-active: rgb(0 120 210 / 50%);
+  --color-control-bg-primary: #0078d2;
+  --color-control-bg-primary-hover: #0091ff;
+  --color-control-typo-primary: #fff;
+  --color-control-typo-primary-hover: #fff;
+  --color-control-bg-secondary: hsl(0deg 0% 100% / 0%);
+  --color-control-bg-border-secondary: #0078d2;
+  --color-control-bg-border-secondary-hover: #0091ff;
+  --color-control-typo-secondary: #0078d2;
+  --color-control-typo-secondary-hover: #0091ff;
+  --color-control-bg-ghost: rgb(0 66 105 / 7%);
+  --color-control-bg-ghost-hover: rgb(0 66 105 / 5%);
+  --color-control-typo-ghost: rgb(0 57 92 / 80%);
+  --color-control-typo-ghost-hover: rgb(0 57 92 / 75%);
+  --color-control-bg-clear: rgb(0 66 105 / 0%);
+  --color-control-bg-clear-hover: rgb(0 66 105 / 5%);
+  --color-control-typo-clear: rgb(0 57 92 / 80%);
+  --color-control-typo-clear-hover: rgb(0 57 92 / 75%);
+  --color-control-bg-disable: rgb(0 66 105 / 7%);
+  --color-control-bg-border-disable: rgb(0 66 105 / 0%);
+  --color-control-typo-disable: rgb(0 32 51 / 26%);
+
+  // control sizes
+  --control-radius: 4px;
+  --control-border-width: 1px;
+
+  // color bg
+  --color-bg-default: #fff;
+  --color-bg-secondary: #ecf1f4;
+  --color-bg-brand: #0071b2;
+  --color-bg-link: #0078d2;
+  --color-bg-border: rgb(0 65 102 / 20%);
+  --color-bg-stripe: rgb(0 32 51 / 5%);
+  --color-bg-ghost: rgb(0 32 51 / 8%);
+  --color-bg-tone: rgb(0 32 51 / 85%);
+  --color-bg-soft: hsl(0deg 0% 100% / 90%);
+  --color-bg-system: #dee4e8;
+  --color-bg-normal: #56b9f2;
+  --color-bg-success: #22c38e;
+  --color-bg-caution: #f2c94c;
+  --color-bg-warning: #f38b00;
+  --color-bg-alert: #eb5757;
+  --color-bg-critical: #33000f;
 }

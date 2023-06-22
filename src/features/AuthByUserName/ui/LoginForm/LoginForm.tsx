@@ -1,5 +1,5 @@
 import {
-  PropsWithChildren, useEffect, useRef, useState,
+  PropsWithChildren, useState,
 } from 'react'
 import { clsx } from 'shared/lib'
 import { useTranslation } from 'react-i18next'
@@ -38,7 +38,7 @@ export const LoginForm = ({ className }: PropsWithChildren<Props>) => {
         placeholder={t('Password')}
         wrapperClassName={cls['input-wrapper']}
       />
-      <Button className={cls.button} background={'background-inverted'} type={'submit'}>
+      <Button variant={'ghost'} className={cls.button} type={'submit'}>
         {t('sign in')}
       </Button>
     </form>
