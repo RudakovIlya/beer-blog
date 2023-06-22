@@ -10,5 +10,7 @@
   "sign in": "Войти",
   "Login": "Введите логин",
   "Password": "Введите пароль",
-  "Beer Love": "Пивная любовь"
+  "Beer Love": "Пивная любовь",
+  "You entered an incorrect username or password": "Вы ввели неверный логин или пароль",
+  "logout": "Выйти"
 }

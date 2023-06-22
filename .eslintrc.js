@@ -83,7 +83,7 @@ module.exports = {
     // i18next
     'i18next/no-literal-string': ['warn', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'background', 'variant', 'size', 'fill'],
+      ignoreAttribute: ['data-testid', 'background', 'variant', 'size', 'fill', 'as', 'align'],
     }],
   },
   globals: {

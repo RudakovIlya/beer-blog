@@ -60,7 +60,6 @@ Ghost.args = {
 }
 
 export const GhostDark = Template.bind({})
-
 GhostDark.args = {
   variant: 'ghost',
 }
@@ -75,3 +74,19 @@ export const Full = Template.bind({})
 Full.args = {
   width: 'full',
 }
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  disabled: true,
+}
+
+export const IsLoading = Template.bind({})
+IsLoading.args = {
+  isLoading: true,
+}
+
+export const IsLoadingDark = Template.bind({})
+IsLoadingDark.args = {
+  isLoading: true,
+}
+IsLoadingDark.decorators = [ThemeDecorator('dark')]

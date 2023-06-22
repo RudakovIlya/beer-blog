@@ -62,4 +62,31 @@
     display: block;
     width: 100%;
   }
+
+  &.loading,
+  &.disabled {
+    background-color: var(--color-control-bg-disable);
+    border-color: transparent;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &.disabled {
+    color: var(--color-control-typo-disable);
+  }
+
+  &.loading {
+    color: transparent;
+
+    .dots-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .dot-loader {
+        background-color: var(--color-control-bg-disable);
+      }
+    }
+  }
 }

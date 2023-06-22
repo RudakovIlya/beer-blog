@@ -7,12 +7,13 @@ type LoaderSize = 'small' | 'medium' | 'large' | 'extra-small'
 interface Props {
   size?: LoaderSize
   className?: string
+  wrapperClassName?: string
 }
 
-export const Loader: FC<Props> = ({ size = 'medium', className }) => {
+export const Loader: FC<Props> = ({ size = 'medium', wrapperClassName, className }) => {
   const dotSize = clsx(cls.dot, {}, ...[cls[size], className])
   return (
-    <div className={clsx(cls.wrapper)}>
+    <div className={clsx(cls.wrapper, {}, wrapperClassName)}>
       {
         Array.from(new Array(3))
           .map(() => {

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useCallback } from 'react'
 import { clsx } from 'shared/lib'
 import { AppSettings } from 'widgets/AppSettings'
 import { useTranslation } from 'react-i18next'
@@ -8,6 +8,8 @@ import { LoginModal } from 'features/AuthByUserName'
 import { IoIosBeer } from 'react-icons/io'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { ROUTES_PATHS } from 'app/providers/Router'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUserAuthData, userActions } from 'entities/User'
 import cls from './Navbar.module.scss'
 
 interface Props {
@@ -16,9 +18,19 @@ interface Props {
 
 export const Navbar: FC<Props> = ({ className }) => {
   const { t } = useTranslation()
+  const dispatch = useDispatch()
+  const authData = useSelector(getUserAuthData)
+
   const {
-    onClose, isOpen, onOpen,
+    onClose,
+    isOpen,
+    onOpen,
   } = useModals()
+
+  const onLogout = useCallback(() => {
+    dispatch(userActions.logout())
+    onClose()
+  }, [dispatch, onClose])
 
   return (
     <nav className={clsx(cls.navbar, {}, className)}>
@@ -27,8 +39,13 @@ export const Navbar: FC<Props> = ({ className }) => {
         <span>{t('Beer Love')}</span>
       </AppLink>
       <AppSettings />
-      <Button variant={'ghost'} onClick={onOpen}>{t('sign in')}</Button>
-      <LoginModal isOpen={isOpen} onClose={onClose} />
+      <Button
+        variant={'ghost'}
+        onClick={authData ? onLogout : onOpen}
+      >
+        {authData ? t('logout') : t('sign in')}
+      </Button>
+      {!authData && <LoginModal isOpen={isOpen} onClose={onClose} />}
     </nav>
   )
 }
