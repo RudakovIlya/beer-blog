@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { clsx } from 'shared/lib'
 import { Button } from 'shared/ui/Button/Button'
-// import { IoIosSettings } from 'react-icons/io'
+import { IoIosSettings } from 'react-icons/io'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { useCollapsed } from 'shared/hooks'
 import { LangSwitcher } from 'features/LangSwitcher'
@@ -28,7 +28,7 @@ export const AppSettings: FC<Props> = ({ className }) => {
         variant={'ghost'}
         data-testid={'Toggle-AppSettings'}
       >
-        {/* <IoIosSettings className={clsx(cls.icon, {}, theme)} size={30} /> */}
+        <IoIosSettings className={clsx(cls.icon, {}, theme)} size={30} />
       </Button>
       <div data-testid={'AppSettings'} className={clsx(cls.settings, { [cls.open]: collapsed }, className)}>
         <LangSwitcher />
