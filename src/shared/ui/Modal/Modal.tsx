@@ -5,7 +5,7 @@ import {
 import { clsx } from 'shared/lib'
 import { Portal } from 'shared/ui/Portal/Portal'
 import { Button } from 'shared/ui/Button/Button'
-import { IoMdClose } from 'react-icons/io'
+// import { IoMdClose } from 'react-icons/io'
 import cls from './Modal.module.scss'
 
 const ANIMATION_DELAY = 300
@@ -68,7 +68,7 @@ export const Modal = memo(({
         <div className={cls.overlay} onClick={onCloseHandler} />
         <div className={cls.content}>
           <Button variant={'clear'} onClick={onCloseHandler} className={cls.button}>
-            <IoMdClose size={20} fill={'currentColor'} />
+            {/* <IoMdClose size={20} fill={'currentColor'} /> */}
           </Button>
           {children}
         </div>

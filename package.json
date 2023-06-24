@@ -31,6 +31,10 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@statoscope/stats-validator-plugin-webpack": "^5.26.2",
+    "@statoscope/stats-validator-reporter-console": "^5.22.0",
+    "@statoscope/stats-validator-reporter-stats-report": "^5.26.2",
+    "@statoscope/webpack-plugin": "^5.26.2",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -45,7 +49,6 @@
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
-    "@types/react-icons": "^3.0.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.0",
     "@types/webpack-bundle-analyzer": "^4.4.1",
@@ -94,8 +97,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
-    "react-icons": "^4.8.0",
-    "react-redux": "^8.1.0",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1"
   },
   "loki": {

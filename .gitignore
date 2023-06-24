@@ -22,3 +22,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.loki/report.html
+.loki/report.json
+/.storybook-static

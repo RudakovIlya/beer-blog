@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { clsx } from 'shared/lib'
 import { useTheme } from 'app/providers/ThemeProvider'
-import { MdOutlineBrightness6 } from 'react-icons/md'
+// import { MdOutlineBrightness6 } from 'react-icons/md'
 import { Button } from 'shared/ui/Button/Button'
 import cls from './ThemeSwitcher.module.scss'
 
@@ -19,7 +19,7 @@ export const ThemeSwitcher: FC<Props> = ({ className }) => {
       onClick={onChangeTheme}
       className={clsx(cls.switcher, {}, className)}
     >
-      <MdOutlineBrightness6 fill={'currentColor'} className={clsx(cls.icon, {}, className)} size={30} />
+      {/* <MdOutlineBrightness6 fill={'currentColor'} className={clsx(cls.icon, {}, className)} size={30} /> */}
     </Button>
   )
 }
