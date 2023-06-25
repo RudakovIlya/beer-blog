@@ -3,7 +3,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import StatoscopeWebpackPlugin from '@statoscope/webpack-plugin'
 import { BuildOptions } from './types/config'
 
 export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] => {
@@ -19,15 +18,6 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     /* webpack.DefinePlugin: Allows you to create global variables */
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
-    }),
-    new StatoscopeWebpackPlugin({
-      saveReportTo: 'test/report.html',
-      saveStatsTo: 'test/stats.json',
-      normalizeStats: true,
-      saveOnlyStats: true,
-      disableReportCompression: false,
-      watchMode: false,
-      open: 'file',
     }),
   ]
 

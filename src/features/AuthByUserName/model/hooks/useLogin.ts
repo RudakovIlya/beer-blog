@@ -1,20 +1,20 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { FormEvent, useCallback } from 'react'
 
-import { getIsLoading } from '../selectors/getIsLoading/getIsLoading'
+import { getLoginIsLoading } from '../selectors/getIsLoading/getLoginIsLoading'
+import { getLoginPassword } from '../selectors/getPassword/getLoginPassword'
+import { getLoginUsername } from '../selectors/getUsername/getLoginUsername'
+import { getLoginAuthError } from '../selectors/getAuthError/getLoginAuthError'
 import { loginByUsername } from '../services/loginByUsername/loginByUsername'
-import { getPassword } from '../selectors/getPassword/getPassword'
-import { getUsername } from '../selectors/getUsername/getUsername'
 import { loginActions } from '../slice/loginSlice'
-import { getAuthError } from '../selectors/getAuthError/getAuthError'
 
 export const useLogin = () => {
   const dispatch = useDispatch()
 
-  const password = useSelector(getPassword)
-  const username = useSelector(getUsername)
-  const isLoading = useSelector(getIsLoading)
-  const error = useSelector(getAuthError)
+  const password = useSelector(getLoginPassword)
+  const username = useSelector(getLoginUsername)
+  const isLoading = useSelector(getLoginIsLoading)
+  const error = useSelector(getLoginAuthError)
 
   const onChangeUsername = useCallback((username: string) => {
     dispatch(loginActions.setUsername({ username }))
@@ -27,7 +27,10 @@ export const useLogin = () => {
   const onSubmit = useCallback((event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     // @ts-ignore
-    dispatch(loginByUsername({ username, password }))
+    dispatch(loginByUsername({
+      username,
+      password,
+    }))
   }, [dispatch, username, password])
 
   return {

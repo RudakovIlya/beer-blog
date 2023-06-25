@@ -7,18 +7,33 @@ import { useTranslation } from 'react-i18next'
 import { Button } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
 import { Text } from 'shared/ui/Text/Text'
-import { useLogin } from '../../model/hooks/useLogin'
+import { useLogin } from 'features/AuthByUserName/model/hooks/useLogin'
+import { useDynamicModuleLoader } from 'shared/hooks'
+import { ReducerList } from 'shared/hooks/useDynamicModuleLoader/useDynamicModuleLoader'
+import { loginReducer } from '../../model/slice/loginSlice'
 import cls from './LoginForm.module.scss'
 
-interface Props {
+export interface Props {
   className?: string
 }
 
-export const LoginForm = memo(({ className }: PropsWithChildren<Props>) => {
+const initialReducer: ReducerList = {
+  login: loginReducer,
+}
+
+const LoginForm = memo(({ className }: PropsWithChildren<Props>) => {
   const { t } = useTranslation()
 
+  useDynamicModuleLoader({
+    reducers: initialReducer,
+    removeAfterUnmount: true,
+  })
+
   const {
-    onChangeUsername, onChangePassword, data, onSubmit,
+    onChangeUsername,
+    onChangePassword,
+    data,
+    onSubmit,
   } = useLogin()
 
   return (
@@ -60,3 +75,4 @@ export const LoginForm = memo(({ className }: PropsWithChildren<Props>) => {
     </form>
   )
 })
+export default LoginForm
