@@ -17,9 +17,13 @@ export const App = () => {
     <div id={'app'} className={'app'}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
+
         <div className={'content-page'}>
+
           <Sidebar />
+
           <AppRouter />
+
         </div>
       </Suspense>
     </div>
