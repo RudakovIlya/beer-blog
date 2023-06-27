@@ -12,5 +12,6 @@
   "Password": "Enter password",
   "Beer Love": "Beer Love",
   "You entered an incorrect username or password": "You entered an incorrect username or password",
-  "logout": "Logout"
+  "logout": "Logout",
+  "profile": "Profile"
 }

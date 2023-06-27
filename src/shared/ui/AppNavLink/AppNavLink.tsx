@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo, PropsWithChildren } from 'react'
 import { clsx } from 'shared/lib'
 import { NavLink, NavLinkProps } from 'react-router-dom'
 import cls from './AppNavLink.module.scss'
@@ -12,11 +12,11 @@ interface isActiveProps {
   isPending: boolean
 }
 
-export const AppNavLink: FC<Props> = ({
+export const AppNavLink = memo(({
   className,
   children,
   ...otherProps
-}) => {
+}: PropsWithChildren<Props>) => {
   const activeClass = ({ isActive }: isActiveProps) => {
     return clsx(cls.navlink, {
       [cls.active]: isActive,
@@ -27,4 +27,4 @@ export const AppNavLink: FC<Props> = ({
       {children}
     </NavLink>
   )
-}
+})

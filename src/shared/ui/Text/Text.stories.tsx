@@ -8,6 +8,12 @@ export default {
   args: {
     children: 'Lorem ipsum dolor sit amet.',
   },
+  argTypes: {
+    as: {
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'label'],
+      control: { type: 'radio' },
+    },
+  },
 } as ComponentMeta<typeof Text>
 
 const Template: ComponentStory<typeof Text> = (args) => {

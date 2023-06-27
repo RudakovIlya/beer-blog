@@ -12,21 +12,6 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 20px;
-
-    .item {
-      display: inline-flex;
-      align-items: center;
-      column-gap: 12px;
-
-      .link {
-        transition: opacity 0.3s ease;
-      }
-
-      .icon {
-        width: 25px;
-        height: 25px;
-      }
-    }
   }
 
   &.collapsed {
@@ -34,21 +19,6 @@
 
     .items {
       align-items: center;
-
-      .link {
-        opacity: 0;
-        position: absolute;
-        left: -9999px;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-      }
-
-      .icon {
-        width: 35px;
-        height: 35px;
-      }
     }
   }
 

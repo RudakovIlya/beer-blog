@@ -1,20 +1,21 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { FormEvent, useCallback } from 'react'
 
-import { getLoginIsLoading } from '../selectors/getIsLoading/getLoginIsLoading'
+import { useAppDispatch } from 'shared/hooks'
+import { getLoginError } from '../selectors/getLoginError/getLoginError'
+import { getLoginIsLoading } from '../selectors/getLoginIsLoading/getLoginIsLoading'
 import { getLoginPassword } from '../selectors/getPassword/getLoginPassword'
 import { getLoginUsername } from '../selectors/getUsername/getLoginUsername'
-import { getLoginAuthError } from '../selectors/getAuthError/getLoginAuthError'
 import { loginByUsername } from '../services/loginByUsername/loginByUsername'
 import { loginActions } from '../slice/loginSlice'
 
 export const useLogin = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const password = useSelector(getLoginPassword)
   const username = useSelector(getLoginUsername)
   const isLoading = useSelector(getLoginIsLoading)
-  const error = useSelector(getLoginAuthError)
+  const error = useSelector(getLoginError)
 
   const onChangeUsername = useCallback((username: string) => {
     dispatch(loginActions.setUsername({ username }))

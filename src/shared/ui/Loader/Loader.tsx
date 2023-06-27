@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import { clsx } from 'shared/lib'
+import { memo } from 'react'
 import cls from './Loader.module.scss'
 
 type LoaderSize = 'small' | 'medium' | 'large' | 'extra-small'
@@ -10,7 +10,11 @@ interface Props {
   wrapperClassName?: string
 }
 
-export const Loader: FC<Props> = ({ size = 'medium', wrapperClassName, className }) => {
+export const Loader = memo(({
+  size = 'medium',
+  wrapperClassName,
+  className,
+}: Props) => {
   const dotSize = clsx(cls.dot, {}, ...[cls[size], className])
   return (
     <div className={clsx(cls.wrapper, {}, wrapperClassName)}>
@@ -24,4 +28,4 @@ export const Loader: FC<Props> = ({ size = 'medium', wrapperClassName, className
       }
     </div>
   )
-}
+})

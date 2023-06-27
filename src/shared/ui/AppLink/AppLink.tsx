@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo, PropsWithChildren } from 'react'
 import { clsx } from 'shared/lib'
 import { Link, LinkProps } from 'react-router-dom'
 import cls from './AppLink.module.scss'
@@ -10,16 +10,16 @@ interface Props extends LinkProps {
   variant?: AppLinkVariant
 }
 
-export const AppLink: FC<Props> = ({
+export const AppLink = memo(({
   variant = 'primary',
   className,
   to,
   children,
   ...otherProps
-}) => {
+}:PropsWithChildren<Props>) => {
   return (
     <Link {...otherProps} to={to} className={clsx(cls.applink, {}, cls[variant], className)}>
       {children}
     </Link>
   )
-}
+})

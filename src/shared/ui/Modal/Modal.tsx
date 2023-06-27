@@ -1,5 +1,4 @@
 import {
-  memo,
   PropsWithChildren, useCallback, useEffect, useRef, useState,
 } from 'react'
 import { clsx } from 'shared/lib'
@@ -17,7 +16,7 @@ interface Props {
   lazy?: boolean
 }
 
-export const Modal = memo(({
+export const Modal = ({
   isOpen, onClose, lazy, className, children,
 }: PropsWithChildren<Props>) => {
   const [isClosing, setIsClosing] = useState(false)
@@ -75,4 +74,4 @@ export const Modal = memo(({
       </div>
     </Portal>
   )
-})
+}

@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
-import { useDispatch, useStore } from 'react-redux'
+import { useStore } from 'react-redux'
 import { ReduxStoreWithManager, StateSchemaKey } from 'app/providers/StoreProvider'
 import { Reducer } from '@reduxjs/toolkit'
+import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch'
 
 export type ReducerList = {
   [name in StateSchemaKey]?: Reducer
@@ -21,7 +22,7 @@ export const useDynamicModuleLoader = (config: UseDynamicModuleLoader) => {
   } = config
   const store = useStore() as ReduxStoreWithManager
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     Object.entries(reducers)
@@ -33,7 +34,7 @@ export const useDynamicModuleLoader = (config: UseDynamicModuleLoader) => {
       if (removeAfterUnmount) {
         Object.entries(reducers)
           .forEach(([name]: ReducersListEntry) => {
-            store.reducerManager.remove('login')
+            store.reducerManager.remove(name)
             dispatch({ type: `@@DESTROY ${name} reducer` })
           })
       }

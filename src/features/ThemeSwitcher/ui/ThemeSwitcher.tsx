@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 import { clsx } from 'shared/lib'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { MdOutlineBrightness6 } from 'react-icons/md'
@@ -9,7 +9,7 @@ interface Props {
   className?: string
 }
 
-export const ThemeSwitcher: FC<Props> = ({ className }) => {
+export const ThemeSwitcher = memo(({ className }: Props) => {
   const {
     onChangeTheme,
   } = useTheme()
@@ -22,4 +22,4 @@ export const ThemeSwitcher: FC<Props> = ({ className }) => {
       <MdOutlineBrightness6 fill={'currentColor'} className={clsx(cls.icon, {}, className)} size={30} />
     </Button>
   )
-}
+})

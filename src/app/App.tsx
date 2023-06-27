@@ -3,11 +3,11 @@ import { PageLoader } from 'widgets/PageLoader'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from 'app/providers/Router'
-import { useDispatch } from 'react-redux'
 import { userActions } from 'entities/User'
+import { useAppDispatch } from 'shared/hooks'
 
 export const App = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     dispatch(userActions.initAuthData())

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 import { clsx } from 'shared/lib'
 import { Button } from 'shared/ui/Button/Button'
 import { IoIosSettings } from 'react-icons/io'
@@ -13,7 +13,7 @@ interface Props {
   className?: string
 }
 
-export const AppSettings: FC<Props> = ({ className }) => {
+export const AppSettings = memo(({ className }: Props) => {
   const { theme } = useTheme()
   const {
     collapsed,
@@ -36,4 +36,4 @@ export const AppSettings: FC<Props> = ({ className }) => {
       </div>
     </>
   )
-}
+})

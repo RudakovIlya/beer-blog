@@ -24,12 +24,19 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+  "first": "Ilya",
+  "lastname": "Rudakov",
+  "age": 24,
+  "currency": "RUB",
+  "country": "Russia",
+  "city": "Moscow",
+  "username": "asap_alh",
+  "avatar": "https://i.imgur.com/M3tds82.jpg"
   },
   "users": [
     {
       "id": 1,
-      "username": "admin",
+      "username": "asap_alh",
       "password": "123"
     }
   ]

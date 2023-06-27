@@ -1,12 +1,12 @@
 import React, {
-  ElementType, PropsWithChildren, ComponentProps,
+  ElementType, PropsWithChildren, ComponentProps, memo,
 } from 'react'
 import { clsx } from 'shared/lib'
 import cls from './Text.module.scss'
 
 type TextAlignProps = 'center' | 'left' | 'right'
 
-type TextOwnProps<E extends ElementType = ElementType> ={
+type TextOwnProps<E extends ElementType = ElementType> = {
   variant?: string
   align?: TextAlignProps
   as?: E
@@ -14,9 +14,9 @@ type TextOwnProps<E extends ElementType = ElementType> ={
 
 type Props<E extends ElementType> = TextOwnProps<E> & Omit<ComponentProps<E>, keyof TextOwnProps>
 
-const defaultElement = 'div'
+const defaultElement = 'p'
 
-export const Text = <E extends ElementType = typeof defaultElement>({
+export const Text = memo(<E extends ElementType = typeof defaultElement>({
   as,
   variant,
   align = 'left',
@@ -32,4 +32,4 @@ export const Text = <E extends ElementType = typeof defaultElement>({
       {children}
     </TagName>
   )
-}
+})

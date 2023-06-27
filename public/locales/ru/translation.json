@@ -12,5 +12,6 @@
   "Password": "Введите пароль",
   "Beer Love": "Пивная любовь",
   "You entered an incorrect username or password": "Вы ввели неверный логин или пароль",
-  "logout": "Выйти"
+  "logout": "Выйти",
+  "profile": "Профиль"
 }

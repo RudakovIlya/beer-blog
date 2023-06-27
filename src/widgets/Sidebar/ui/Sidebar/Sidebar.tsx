@@ -1,26 +1,28 @@
-import { FC } from 'react'
+import { memo, useMemo } from 'react'
 import { clsx } from 'shared/lib'
 import { useCollapsed } from 'shared/hooks'
 
-import { useTranslation } from 'react-i18next'
 import { Button } from 'shared/ui/Button/Button'
-import { AppNavLink } from 'shared/ui/AppNavLink/AppNavLink'
-import { ROUTES_PATHS } from 'app/providers/Router'
-import { AiOutlineHome } from 'react-icons/ai'
-import { BsCardList } from 'react-icons/bs'
 import { MdArrowForwardIos } from 'react-icons/md'
+import { SidebarItem } from '../SidebarItem/SidebarItem'
 import cls from './Sidebar.module.scss'
+import { SidebarItemsList } from '../../model/items'
 
 interface Props {
   className?: string
 }
 
-export const Sidebar: FC<Props> = ({ className }) => {
+export const Sidebar = memo(({ className }: Props) => {
   const {
     collapsed,
     onToggle,
   } = useCollapsed()
-  const { t } = useTranslation()
+
+  const sidebarItems = useMemo(() => {
+    return SidebarItemsList.map((item) => {
+      return <SidebarItem key={item.path} collapsed={collapsed} item={item} />
+    })
+  }, [collapsed])
 
   return (
     <aside
@@ -28,19 +30,7 @@ export const Sidebar: FC<Props> = ({ className }) => {
       className={clsx(cls.sidebar, { [cls.collapsed]: collapsed }, className)}
     >
       <nav className={cls.items}>
-        <AppNavLink className={cls.item} to={ROUTES_PATHS.main}>
-          <AiOutlineHome className={cls.icon} />
-          <span className={cls.link}>
-            {t('home')}
-          </span>
-        </AppNavLink>
-        <AppNavLink className={cls.item} to={ROUTES_PATHS.about}>
-          <BsCardList className={cls.icon} />
-          <span className={cls.link}>
-            {t('about')}
-          </span>
-        </AppNavLink>
-
+        {sidebarItems}
       </nav>
       <Button
         variant={'ghost'}
@@ -53,4 +43,4 @@ export const Sidebar: FC<Props> = ({ className }) => {
       </Button>
     </aside>
   )
-}
+})

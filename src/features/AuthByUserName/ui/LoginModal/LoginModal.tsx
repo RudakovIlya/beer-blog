@@ -1,6 +1,6 @@
 import { clsx } from 'shared/lib'
 import { Modal } from 'shared/ui/Modal/Modal'
-import { Suspense } from 'react'
+import { memo, Suspense } from 'react'
 import { Loader } from 'shared/ui/Loader/Loader'
 import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async'
 import cls from './LoginModal.module.scss'
@@ -11,7 +11,7 @@ interface Props {
   className?: string
 }
 
-export const LoginModal = ({ isOpen, onClose, className }: Props) => {
+export const LoginModal = memo(({ isOpen, onClose, className }: Props) => {
   return (
     <Modal lazy isOpen={isOpen} onClose={onClose} className={clsx(cls['login-modal'], {}, className)}>
       <Suspense fallback={<Loader size={'large'} />}>
@@ -19,4 +19,4 @@ export const LoginModal = ({ isOpen, onClose, className }: Props) => {
       </Suspense>
     </Modal>
   )
-}
+})
