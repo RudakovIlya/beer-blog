@@ -18,17 +18,17 @@ export const useTheme = (): UseThemeResult => {
   const onChangeTheme = useCallback(() => {
     const newTheme = theme === 'light' ? THEME.DARK : THEME.LIGHT
 
-    setTheme(newTheme)
+    setTheme?.(newTheme)
 
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
   }, [setTheme, theme])
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
+    document.documentElement.setAttribute('data-theme', theme || THEME.LIGHT)
   }, [theme])
 
   return {
-    theme,
+    theme: theme || THEME.LIGHT,
     onChangeTheme,
   }
 }

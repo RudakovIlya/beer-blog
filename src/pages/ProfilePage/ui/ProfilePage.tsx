@@ -1,9 +1,9 @@
-import { memo, PropsWithChildren } from 'react'
+import { memo, PropsWithChildren, useEffect } from 'react'
 import { clsx } from 'shared/lib'
-import { useTranslation } from 'react-i18next'
-import { useDynamicModuleLoader } from 'shared/hooks'
-import { profileReducer } from 'entities/Profile'
+import { useAppDispatch, useDynamicModuleLoader } from 'shared/hooks'
+
 import { ReducerList } from 'shared/hooks/useDynamicModuleLoader/useDynamicModuleLoader'
+import { fetchProfileData, ProfileCard, profileReducer } from 'entities/Profile'
 
 interface Props {
   className?: string
@@ -14,14 +14,20 @@ const initialReducer: ReducerList = {
 }
 
 const ProfilePage = memo(({ className }: PropsWithChildren<Props>) => {
+  const dispatch = useAppDispatch()
+
   useDynamicModuleLoader({
     reducers: initialReducer,
     removeAfterUnmount: true,
   })
 
+  useEffect(() => {
+    dispatch(fetchProfileData())
+  }, [dispatch])
+
   return (
     <div className={clsx('', {}, className)}>
-      ProfilePage
+      <ProfileCard />
     </div>
   )
 })

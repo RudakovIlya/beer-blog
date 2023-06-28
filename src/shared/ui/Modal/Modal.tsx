@@ -21,7 +21,7 @@ export const Modal = ({
 }: PropsWithChildren<Props>) => {
   const [isClosing, setIsClosing] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
-  const timerRef = useRef<ReturnType<typeof setTimeout>>(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>()
 
   const onCloseHandler = useCallback(() => {
     if (onClose) {

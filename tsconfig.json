@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "strict": true,
     /* noImplicitAny: Highlights places where the type is not specified */
     "noImplicitAny": true,
     "module": "ESNext",

@@ -32,7 +32,7 @@ export const Button = memo((props: PropsWithChildren<Props>) => {
     ...otherProps
   } = props
 
-  const additionalClasses: string[] = [cls[variant], cls[width], cls[size], className]
+  const additionalClasses: Array<string | undefined> = [cls[variant], cls[width], cls[size], className]
 
   const mods = {
     [cls.loading]: isLoading,

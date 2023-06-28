@@ -16,7 +16,6 @@ const Template: ComponentStory<typeof AppNavLink> = (args) => { return <AppNavLi
 export const Primary = Template.bind({})
 
 Primary.args = {
-  variant: 'primary',
   children: 'NavLink',
 }
 
@@ -25,6 +24,5 @@ Primary.decorators = [ThemeDecorator('dark')]
 export const Secondary = Template.bind({})
 
 Secondary.args = {
-  variant: 'secondary',
   children: 'NavLink',
 }

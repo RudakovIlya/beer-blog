@@ -1,6 +1,5 @@
 import { screen } from '@testing-library/react'
 import { componentRender } from 'shared/config/tests/componentRender/componentRender'
-import { DeepPartial } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { userEvent } from '@storybook/testing-library'
 import { Counter } from './Counter'

@@ -58,6 +58,7 @@ module.exports = {
     // common
     semi: [2, 'never'],
     indent: [2, 2],
+    'no-undef': 0,
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'import/extensions': 'off',
@@ -88,5 +89,6 @@ module.exports = {
   },
   globals: {
     __IS_DEV__: true,
+    __API__: true,
   },
 }
