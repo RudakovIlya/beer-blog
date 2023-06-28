@@ -1,20 +1,29 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ProfileCard } from './ProfileCard'
 
 export default {
   title: 'entities/ProfileCard',
   component: ProfileCard,
+  decorators: [StoreDecorator({
+    profile: {
+      data: {
+        first: 'Ilya',
+        lastname: 'Rudakov',
+      },
+    },
+  })],
 } as ComponentMeta<typeof ProfileCard>
 
-const Template: ComponentStory<typeof ProfileCard> = () => { return <ProfileCard /> }
+const Template: ComponentStory<typeof ProfileCard> = (args) => { return <ProfileCard {...args} /> }
 
-export const Light = Template.bind({})
+export const Fulfilled = Template.bind({})
 
-Light.args = {
+Fulfilled.args = {
 }
 
-export const Dark = Template.bind({})
+export const Empty = Template.bind({})
 
-Dark.decorators = [ThemeDecorator('dark')]
+Empty.decorators = [ThemeDecorator('dark')]

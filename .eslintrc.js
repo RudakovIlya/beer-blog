@@ -78,6 +78,7 @@ module.exports = {
       props: true,
       ignorePropertyModificationsFor: [
         'state',
+        'config',
       ],
     }],
     // ts

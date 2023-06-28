@@ -22,7 +22,7 @@ const ProfilePage = memo(({ className }: PropsWithChildren<Props>) => {
   })
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    // dispatch(fetchProfileData())
   }, [dispatch])
 
   return (
