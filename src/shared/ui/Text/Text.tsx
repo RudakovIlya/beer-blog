@@ -73,7 +73,7 @@ type TextOwnProps<E extends ElementType = ElementType> = {
   align?: TextPropAlign
   cursor?: TextPropCursor
   decoration?: TextPropDecoration
-  display: TextPropDisplay
+  display?: TextPropDisplay
   lineHeight?: TextPropLineHeight
   as?: E
 }

@@ -62,7 +62,6 @@ const LoginForm = memo(({ className }: PropsWithChildren<Props>) => {
         placeholder={t('Password')}
         wrapperClassName={cls['input-wrapper']}
       />
-      <Text as={'a'} variant={'d'} />
       <Button
         type={'submit'}
         variant={'ghost'}
