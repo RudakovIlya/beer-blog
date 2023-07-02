@@ -11,9 +11,11 @@ render(
   <BrowserRouter>
     <StoreProvider>
       <ErrorBoundary>
+
         <ThemeProvider>
           <App />
         </ThemeProvider>
+
       </ErrorBoundary>
     </StoreProvider>
   </BrowserRouter>,
