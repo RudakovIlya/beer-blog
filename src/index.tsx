@@ -9,19 +9,13 @@ import './shared/config/i18n/i18n'
 
 render(
   <BrowserRouter>
-
     <StoreProvider>
-
       <ErrorBoundary>
-
         <ThemeProvider>
           <App />
         </ThemeProvider>
-
       </ErrorBoundary>
-
     </StoreProvider>
-
   </BrowserRouter>,
   document.getElementById('root'),
 )

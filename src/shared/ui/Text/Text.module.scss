@@ -12,4 +12,83 @@
   &.center {
     text-align: center;
   }
+
+  &.pointer {
+    cursor: pointer;
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+
+  // display
+
+  &.block {
+    display: block;
+  }
+
+  &.inline-block {
+    display: inline-block;
+  }
+
+  &.inline {
+    display: inline;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  // variant
+  &.primary {
+    color: var(--color-typo-primary);
+  }
+
+  &.secondary {
+    color: var(--color-typo-secondary);
+  }
+
+  &.brand {
+    color: var(--color-typo-brand);
+  }
+
+  &.ghost {
+    color: var(--color-typo-ghost);
+  }
+
+  &.link {
+    color: var(--color-typo-link);
+
+    &:hover {
+      color: var(--color-typo-link-hover);
+    }
+  }
+
+  &.system {
+    color: var(--color-typo-system);
+  }
+
+  &.normal {
+    color: var(--color-typo-normal);
+  }
+
+  &.success {
+    color: var(--color-typo-success);
+  }
+
+  &.warning {
+    color: var(--color-typo-warning);
+  }
+
+  &.alert {
+    color: var(--color-typo-alert);
+  }
+
+  &.caution {
+    color: var(--color-typo-caution);
+  }
+
+  &.critical {
+    color: var(--color-typo-critical);
+  }
 }

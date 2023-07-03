@@ -1,3 +1,23 @@
 .card {
-  color: red;
+  border: 2px solid var(--color-bg-border);
+  padding: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+
+  &.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+  }
+
+  &.editing {
+    border: 2px solid var(--color-bg-normal);
+  }
+
+  .input {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Text } from './Text'
 
 export default {
@@ -10,7 +11,7 @@ export default {
   },
   argTypes: {
     as: {
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'label'],
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'label', 'span'],
       control: { type: 'select' },
     },
   },
@@ -23,3 +24,7 @@ const Template: ComponentStory<typeof Text> = (args) => {
 export const Primary = Template.bind({})
 
 Primary.args = {}
+
+export const Dark = Template.bind({})
+
+Dark.decorators = [ThemeDecorator('dark')]

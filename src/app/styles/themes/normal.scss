@@ -17,6 +17,7 @@
   --color-control-bg-active: rgb(0 120 210 / 50%);
   --color-control-bg-primary: #0078d2;
   --color-control-bg-primary-hover: #0091ff;
+  --color-control-bg-alert: #fe4343;
   --color-control-typo-primary: #fff;
   --color-control-typo-primary-hover: #fff;
   --color-control-bg-secondary: hsl(0deg 0% 100% / 0%);
@@ -57,4 +58,18 @@
   --color-bg-warning: #f38b00;
   --color-bg-alert: #eb5757;
   --color-bg-critical: #33000f;
+  --color-typo-primary: #002033;
+  --color-typo-secondary: rgb(0 32 51 / 60%);
+  --color-typo-ghost: rgb(0 32 51 / 30%);
+  --color-typo-brand: #0071b2;
+  --color-typo-system: #97b2c4;
+  --color-typo-normal: #33b4ff;
+  --color-typo-success: #09b37b;
+  --color-typo-caution: #ffa10a;
+  --color-typo-warning: #e87502;
+  --color-typo-alert: #eb3333;
+  --color-typo-critical: #33000f;
+  --color-typo-link: #0078d2;
+  --color-typo-link-minor: #1c5682;
+  --color-typo-link-hover: #008efa;
 }

@@ -13,5 +13,7 @@
   "Beer Love": "Beer Love",
   "You entered an incorrect username or password": "You entered an incorrect username or password",
   "logout": "Logout",
-  "profile": "Profile"
+  "specify currency": "Specify currency",
+  "specify country": "Specify country",
+  "Profile": "Profile"
 }

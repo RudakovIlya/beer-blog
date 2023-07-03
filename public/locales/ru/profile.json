@@ -2,5 +2,14 @@
   "profile": "Профиль",
   "edit": "Редактировать",
   "your name": "Ваше имя",
-  "your last name": "Ваша фамилия"
+  "your last name": "Ваша фамилия",
+  "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
+  "Try refreshing the page": "Попробуйте обновить страницу",
+  "cancel": "Отменить",
+  "save": "Сохранить",
+  "your age": "Ваш возраст",
+  "your city": "Ваш город",
+  "your username": "Ваше имя профиля",
+  "your avatar link": "Ваша ссылка на аватар",
+  "Profile": "Профиль"
 }

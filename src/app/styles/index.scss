@@ -1,7 +1,7 @@
 @import "variables/global";
-@import "reset";
 @import "themes/normal";
 @import "themes/dark";
+@import "reset";
 
 body {
   background-color: var(--color-bg-default);
@@ -9,7 +9,6 @@ body {
 
 .app {
   font: var(--font-m);
-  color: var(--primary-color);
   background-color: var(--color-bg-default);
   min-height: 100vh;
   transition: all 0.3s ease;

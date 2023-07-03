@@ -24,14 +24,14 @@
     }
   ],
   "profile": {
-  "first": "Ilya",
-  "lastname": "Rudakov",
-  "age": 24,
-  "currency": "RUB",
-  "country": "Russia",
-  "city": "Moscow",
-  "username": "asap_alh",
-  "avatar": "https://i.imgur.com/M3tds82.jpg"
+    "first": "Ilya",
+    "lastname": "",
+    "age": 24,
+    "currency": "EUR",
+    "country": "Armenia",
+    "city": "Abinsk",
+    "username": "asap_alh",
+    "avatar": ""
   },
   "users": [
     {

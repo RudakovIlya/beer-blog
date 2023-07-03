@@ -1,14 +1,14 @@
 import React, {
-  ElementType, PropsWithChildren, ComponentProps, memo, CSSProperties,
+  ElementType, PropsWithChildren, ComponentProps, memo,
 } from 'react'
 import { clsx } from 'shared/lib'
 import cls from './Text.module.scss'
 
 export type TextPropAlign = 'left' | 'center' | 'right';
 
-export type TextPropCursor = 'pointer'
+export type TextPropCursor = 'pointer' | 'none'
 
-export type TextPropDecoration = 'underline'
+export type TextPropDecoration = 'underline' | 'none'
 
 export type TextPropLineHeight = '2xs' | 'xs' | 's' | 'm' | 'l';
 
@@ -25,48 +25,33 @@ export type TextPropSize =
   '5xl' |
   '6xl'
 
-export type TextPropSpacing = 'xs'| 's'| 'm'| 'l'
+export type TextPropSpacing = 'xs' | 's' | 'm' | 'l'
 
-export const textPropType = ['blockquote', 'p', 'h3', 'h2', 'h1'] as const
-export type TextPropType = typeof textPropType[number];
+export type TextPropVariant = 'primary' |
+  'secondary' |
+  'brand' |
+  'ghost' |
+  'link' |
+  'linkMinor' |
+  'system' |
+  'normal' |
+  'success' |
+  'warning' |
+  'alert' |
+  'caution' |
+  'critical'
 
-export const textPropVariant = [
-  'primary',
-  'secondary',
-  'brand',
-  'ghost',
-  'link',
-  'linkMinor',
-  'system',
-  'normal',
-  'success',
-  'warning',
-  'alert',
-  'caution',
-  'critical',
-] as const
-export type TextPropVariant = typeof textPropVariant[number];
-export const textPropVariantDefault: TextPropVariant = textPropVariant[0]
+export type TextPropWeight = 'thin' |
+  'light' |
+  'regular' |
+  'medium' |
+  'semibold' |
+  'bold' |
+  'black'
 
-export const textPropWeight = [
-  'thin',
-  'light',
-  'regular',
-  'medium',
-  'semibold',
-  'bold',
-  'black',
-] as const
-export type TextPropWeight = typeof textPropWeight[number];
+export type TextPropTransform = 'uppercase' | 'lowercase'
 
-export const textPropTransform = ['uppercase'] as const
-export type TextPropTransform = typeof textPropTransform[number];
-
-export const textPropWidth = ['default'] as const
-export type TextPropWidth = typeof textPropWidth[number];
-
-export const textPropDisplay = ['block', 'inlineBlock', 'inline'] as const
-export type TextPropDisplay = typeof textPropDisplay[number];
+export type TextPropDisplay = 'block' | 'inline-block' | 'inline'
 
 type TextOwnProps<E extends ElementType = ElementType> = {
   variant?: TextPropVariant
@@ -74,7 +59,12 @@ type TextOwnProps<E extends ElementType = ElementType> = {
   cursor?: TextPropCursor
   decoration?: TextPropDecoration
   display?: TextPropDisplay
+  transform?: TextPropTransform
+  weight?: TextPropWeight
+  fontSize?: TextPropSize
+  spacing?: TextPropSpacing
   lineHeight?: TextPropLineHeight
+  className?: string
   as?: E
 }
 
@@ -84,14 +74,23 @@ const defaultElement = 'p'
 
 export const Text = memo(<E extends ElementType = typeof defaultElement>({
   as,
-  variant = textPropVariantDefault,
+  variant = 'primary',
   align = 'left',
-  display,
+  display = 'block',
   className,
   children,
+  cursor = 'none',
+  decoration = 'none',
+  transform = 'lowercase',
+  weight,
+  fontSize,
+  spacing,
+  lineHeight,
   ...otherProps
 }: PropsWithChildren<Props<E>>) => {
-  const additionalClasses = [cls[align], className]
+  const additionalClasses = [
+    cls[align], cls[transform], cls[variant], cls[display], cls[cursor], cls[decoration],
+    className]
 
   const TagName = as || defaultElement
   return (

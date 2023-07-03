@@ -1,18 +1,18 @@
 .navlink {
   display: inline-block;
   position: relative;
-  color: var(--inverted-secondary-color);
+  color: var(--color-typo-primary);
   transition: width 0.2s ease;
 
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -7px;
     left: 0;
     width: 0;
     height: 2px;
     border-right: 5px;
-    background-color: var(--inverted-secondary-color);
+    background-color: var(--color-typo-primary);
     transition: width 0.3s ease;
   }
 

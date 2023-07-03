@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 780px;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    column-gap: 10px;
+  }
+}

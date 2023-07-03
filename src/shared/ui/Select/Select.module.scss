@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  .select {
+    background: none;
+    outline: none;
+    color: var(--primary-color);
+    padding: 2px 10px 2px 2px;
+  }
+
+  .option {
+    color: var(--inverted-primary-color);
+    background-color: var(--inverted-bg-color);
+  }
+}

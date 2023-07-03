@@ -41,7 +41,7 @@ const LoginForm = memo(({ className }: PropsWithChildren<Props>) => {
       <Text className={clsx(cls.title)} align={'center'} as={'h2'}>{t('sign in')}</Text>
       {data.error
         && (
-          <Text className={clsx(cls.error)} style={{ color: 'red' }}>
+          <Text className={clsx(cls.error)} align={'center'} variant={'alert'}>
             {t('You entered an incorrect username or password')}
           </Text>
         )}

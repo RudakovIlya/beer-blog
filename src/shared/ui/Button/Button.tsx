@@ -18,6 +18,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   isLoading?: boolean
   disabled?: boolean
+  isCancel?: boolean
 }
 
 export const Button = memo((props: PropsWithChildren<Props>) => {
@@ -28,6 +29,7 @@ export const Button = memo((props: PropsWithChildren<Props>) => {
     size = 'medium',
     isLoading,
     disabled,
+    isCancel,
     children,
     ...otherProps
   } = props
@@ -37,6 +39,7 @@ export const Button = memo((props: PropsWithChildren<Props>) => {
   const mods = {
     [cls.loading]: isLoading,
     [cls.disabled]: disabled,
+    [cls.alert]: isCancel,
   }
   return (
     <button

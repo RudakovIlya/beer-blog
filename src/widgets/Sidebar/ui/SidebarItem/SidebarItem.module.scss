@@ -4,10 +4,12 @@
   column-gap: 12px;
 
   .link {
+    color: inherit;
     transition: opacity 0.3s ease;
   }
 
   .icon {
+    color: inherit;
     width: 25px;
     height: 25px;
   }
@@ -24,6 +26,7 @@
     }
 
     .icon {
+      color: inherit;
       width: 35px;
       height: 35px;
     }

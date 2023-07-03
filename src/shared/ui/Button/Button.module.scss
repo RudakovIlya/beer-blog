@@ -21,6 +21,14 @@
     background-color: var(--color-control-bg-primary);
     color: var(--color-control-typo-primary);
 
+    &.alert {
+      background-color: var(--color-control-bg-alert);
+
+      &:hover {
+        background-color: var(--color-control-bg-alert-hover);
+      }
+    }
+
     &:hover {
       background-color: var(--color-control-bg-primary-hover);
     }
@@ -50,6 +58,15 @@
     background-color: var(--color-control-bg-secondary);
     border: var(--control-border-width) solid var(--color-control-bg-border-secondary);
     color: var(--color-control-typo-secondary);
+
+    &.alert {
+      border: var(--control-border-width) solid var(--color-control-bg-alert);
+      color: var(--color-typo-alert);
+
+      &:hover {
+        border-color: var(--color-control-bg-alert-hover);
+      }
+    }
 
     &:hover {
       background-color: var(--color-control-bg-secondary-hover);

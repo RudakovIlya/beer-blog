@@ -2,5 +2,14 @@
   "profile": "Profile",
   "edit": "Edit",
   "your name": "Your name",
-  "your last name": "Your last name"
+  "your last name": "Your last name",
+  "An error occurred while loading the profile": "An error occurred while loading the profile",
+  "Try refreshing the page": "Try refreshing the page",
+  "cancel": "Cancel",
+  "save": "Save",
+  "your age": "Your age",
+  "your city": "Your city",
+  "your username": "Your username",
+  "your avatar link": "Your avatar link",
+  "Profile": "Profile"
 }

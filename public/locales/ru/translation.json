@@ -13,5 +13,7 @@
   "Beer Love": "Пивная любовь",
   "You entered an incorrect username or password": "Вы ввели неверный логин или пароль",
   "logout": "Выйти",
-  "profile": "Профиль"
+  "specify currency": "Укажите валюту",
+  "specify country": "Укажите страну",
+  "Profile": "Профиль"
 }

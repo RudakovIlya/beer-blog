@@ -1,9 +1,11 @@
 .wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   .dot {
     display: block;
-    background-color: var(--color-control-bg-primary);
+    background-color: var(--color-typo-primary);
     border-radius: 50%;
     animation: loader-animation 1s infinite;
     animation-delay: 0.1s;
