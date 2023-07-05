@@ -1,4 +1,4 @@
-import { loginByUsername } from 'features/AuthByUserName/model/services/loginByUsername/loginByUsername'
+import { loginByUsername } from '../services/loginByUsername/loginByUsername'
 import { LoginSchema } from '../types/loginSchema'
 import { loginReducer, loginActions } from './loginSlice'
 
@@ -40,22 +40,32 @@ describe('loginSlice', () => {
       })
   })
   test('should be set error', () => {
-    const state: DeepPartial<LoginSchema> = {
-    }
+    const state: DeepPartial<LoginSchema> = {}
 
     expect(loginReducer(state as LoginSchema, loginByUsername.pending))
       .toEqual({
         error: undefined,
         isLoading: true,
       })
-    expect(loginReducer(state as LoginSchema, loginByUsername.fulfilled))
+
+    expect(loginReducer(state as LoginSchema, loginByUsername.fulfilled({
+      id: 1,
+      username: 'admin',
+    }, '', {
+      username: 'admin',
+      password: '123',
+    })))
       .toEqual({
         error: undefined,
         isLoading: false,
       })
-    expect(loginReducer(state as LoginSchema, loginByUsername.rejected))
+
+    expect(loginReducer(state as LoginSchema, {
+      type: loginByUsername.rejected.type,
+      payload: 'Error',
+    }))
       .toEqual({
-        error: undefined, // TODO: Проверить и исправить! Должна быть строка, а не undefined
+        error: 'Error',
         isLoading: false,
       })
   })

@@ -22,14 +22,14 @@ export const loginByUsername = createAppAsyncThunk<User, LoginByUsernameProps>(
         username, password,
       })
       if (!data) {
-        throw new Error()
+        throw new Error('Error')
       }
       localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(data))
       dispatch(userActions.setAuthData(data))
 
       return data
     } catch (e) {
-      return rejectWithValue('error')
+      return rejectWithValue('Error')
     }
   },
 )

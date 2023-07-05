@@ -10,28 +10,40 @@ import {
   getProfileIsLoading, getProfileReadonly,
   ProfileCard,
   profileActions,
-  profileReducer,
+  profileReducer, getProfileValidateErrors,
 } from 'entities/Profile'
 import { useSelector } from 'react-redux'
 import { CurrencyType } from 'entities/Currency'
 import { CountryType } from 'entities/Country'
+import { Text } from 'shared/ui/Text/Text'
+import { useTranslation } from 'react-i18next'
+import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 
 interface Props {
-  className?: string
+
 }
 
 const initialReducer: ReducerList = {
   profile: profileReducer,
 }
 
-const ProfilePage = memo(({ className }: PropsWithChildren<Props>) => {
+const ProfilePage = memo((props: PropsWithChildren<Props>) => {
   const dispatch = useAppDispatch()
-
+  const { t } = useTranslation('profile')
   const formData = useSelector(getProfileForm)
   const isLoading = useSelector(getProfileIsLoading)
   const error = useSelector(getProfileError)
   const readOnly = useSelector(getProfileReadonly)
+  const validateErrors = useSelector(getProfileValidateErrors)
+
+  const validateErrorsTranslations = {
+    [ValidateProfileError.SERVER_ERROR]: t('server error'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('incorrect user data'),
+    [ValidateProfileError.INCORRECT_AGE]: t('incorrect age'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('incorrect country'),
+    [ValidateProfileError.NO_DATA]: t('no data'),
+  }
 
   const onChangeFirstname = useCallback((value: string) => {
     dispatch(profileActions.updateProfile({ first: value }))
@@ -73,12 +85,24 @@ const ProfilePage = memo(({ className }: PropsWithChildren<Props>) => {
   })
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [dispatch])
 
   return (
     <>
       <ProfilePageHeader />
+      {validateErrors?.length && validateErrors?.map((error) => {
+        return (
+          <Text
+            key={error}
+            variant={'alert'}
+          >
+            {validateErrorsTranslations[error]}
+          </Text>
+        )
+      })}
       <ProfileCard
         data={formData}
         error={error}

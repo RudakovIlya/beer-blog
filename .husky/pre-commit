@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run lint:ts
-npm run stylelint:scss
-npm run test:unit
+pnpm run lint:ts
+pnpm run stylelint:scss
+pnpm run test:unit

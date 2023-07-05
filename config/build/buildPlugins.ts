@@ -5,7 +5,9 @@ import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { BuildOptions } from './types/config'
 
-export const buildPlugins = ({ paths, isDev, apiURL }: BuildOptions): webpack.WebpackPluginInstance[] => {
+export const buildPlugins = ({
+  paths, isDev, apiURL, project,
+}: BuildOptions): webpack.WebpackPluginInstance[] => {
   const plugins = [
     /* new HtmlWebpackPlugin: Automatically includes scripts in our index.html */
     new HtmlWebpackPlugin({ template: paths.html }),
@@ -19,6 +21,7 @@ export const buildPlugins = ({ paths, isDev, apiURL }: BuildOptions): webpack.We
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiURL),
+      __PROJECT__: JSON.stringify(project),
     }),
   ]
 

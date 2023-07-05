@@ -11,5 +11,10 @@
   "your city": "Ваш город",
   "your username": "Ваше имя профиля",
   "your avatar link": "Ваша ссылка на аватар",
-  "Profile": "Профиль"
+  "Profile": "Профиль",
+  "server error": "Ошибка сервера",
+  "incorrect user data": "Неверные данные пользователя",
+  "incorrect age": "Неверный возраст",
+  "incorrect country": "Неверная страна",
+  "no data": "Нет данных"
 }
