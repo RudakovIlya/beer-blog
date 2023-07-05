@@ -3,9 +3,10 @@ import { createContext } from 'react'
 export const THEME = {
   LIGHT: 'light',
   DARK: 'dark',
+  ORANGE: 'orange',
 } as const
 
-export type ThemeType = 'light' | 'dark'
+export type ThemeType = 'light' | 'dark' | 'orange'
 
 export interface IThemeContext {
   theme?: ThemeType

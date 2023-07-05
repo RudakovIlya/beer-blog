@@ -16,7 +16,26 @@ export const useTheme = (): UseThemeResult => {
     setTheme,
   } = useContext(ThemeContext)
   const onChangeTheme = useCallback(() => {
-    const newTheme = theme === 'light' ? THEME.DARK : THEME.LIGHT
+    let newTheme: ThemeType = theme!
+
+    switch (newTheme) {
+    case THEME.DARK: {
+      newTheme = THEME.LIGHT
+      break
+    }
+    case THEME.LIGHT: {
+      newTheme = THEME.ORANGE
+      break
+    }
+    case THEME.ORANGE: {
+      newTheme = THEME.DARK
+      break
+    }
+    default: {
+      newTheme = THEME.LIGHT
+      break
+    }
+    }
 
     setTheme?.(newTheme)
 

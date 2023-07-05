@@ -1,0 +1,70 @@
+[data-theme="orange"] {
+  // color control
+  --color-control-bg-default: #fff;
+  --color-control-typo-default: #002033;
+  --color-control-typo-placeholder: rgb(0 32 51 / 35%);
+  --color-control-bg-border-default: rgb(0 66 105 / 28%);
+  --color-control-bg-border-default-hover: rgb(0 66 105 / 52%);
+  --color-control-bg-border-focus: #0091ff;
+  --color-control-bg-focus: rgb(0 120 210 / 30%);
+  --color-control-bg-active: rgb(0 120 210 / 50%);
+  --color-control-bg-primary: #0078d2;
+  --color-control-bg-primary-hover: #0091ff;
+  --color-control-bg-alert: #fe4343;
+  --color-control-typo-primary: #fff;
+  --color-control-typo-primary-hover: #fff;
+  --color-control-bg-secondary: hsl(0deg 0% 100% / 0%);
+  --color-control-bg-border-secondary: #0078d2;
+  --color-control-bg-border-secondary-hover: #0091ff;
+  --color-control-typo-secondary: #0078d2;
+  --color-control-typo-secondary-hover: #0091ff;
+  --color-control-bg-ghost: rgb(0 66 105 / 7%);
+  --color-control-bg-ghost-hover: rgb(0 66 105 / 5%);
+  --color-control-typo-ghost: rgb(0 57 92 / 80%);
+  --color-control-typo-ghost-hover: rgb(0 57 92 / 75%);
+  --color-control-bg-clear: rgb(0 66 105 / 0%);
+  --color-control-bg-clear-hover: rgb(0 66 105 / 5%);
+  --color-control-typo-clear: rgb(0 57 92 / 80%);
+  --color-control-typo-clear-hover: rgb(0 57 92 / 75%);
+  --color-control-bg-disable: rgb(0 66 105 / 7%);
+  --color-control-bg-border-disable: rgb(0 66 105 / 0%);
+  --color-control-typo-disable: rgb(0 32 51 / 26%);
+
+  // control sizes
+  --control-radius: 4px;
+  --control-border-width: 1px;
+
+  // color bg
+  --color-bg-default: #ff9421;
+  --color-bg-secondary: #fbf7f4;
+  --color-bg-brand: #0071b2;
+  --color-bg-link: #0078d2;
+  --color-bg-border: rgb(251 247 244 / 50%);
+  --color-bg-stripe: rgb(0 32 51 / 5%);
+  --color-bg-ghost: rgb(0 32 51 / 8%);
+  --color-bg-tone: rgb(0 32 51 / 85%);
+  --color-bg-soft: hsl(0deg 0% 100% / 90%);
+  --color-bg-system: #dee4e8;
+  --color-bg-normal: #56b9f2;
+  --color-bg-success: #22c38e;
+  --color-bg-caution: #f2c94c;
+  --color-bg-warning: #f38b00;
+  --color-bg-alert: #eb5757;
+  --color-bg-critical: #33000f;
+
+  // typography
+  --color-typo-primary: #fbf7f4;
+  --color-typo-secondary: rgb(0 32 51 / 60%);
+  --color-typo-ghost: rgb(0 32 51 / 30%);
+  --color-typo-brand: #0071b2;
+  --color-typo-system: #97b2c4;
+  --color-typo-normal: #33b4ff;
+  --color-typo-success: #09b37b;
+  --color-typo-caution: #ffa10a;
+  --color-typo-warning: #e87502;
+  --color-typo-alert: #eb3333;
+  --color-typo-critical: #33000f;
+  --color-typo-link: #0078d2;
+  --color-typo-link-minor: #1c5682;
+  --color-typo-link-hover: #008efa;
+}
