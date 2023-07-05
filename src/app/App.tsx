@@ -3,11 +3,14 @@ import { PageLoader } from 'widgets/PageLoader'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from 'app/providers/Router'
-import { userActions } from 'entities/User'
+import { getUserMounted, userActions } from 'entities/User'
 import { useAppDispatch } from 'shared/hooks'
+import { useSelector } from 'react-redux'
 
 export const App = () => {
   const dispatch = useAppDispatch()
+
+  const isMounted = useSelector(getUserMounted)
 
   useEffect(() => {
     dispatch(userActions.initAuthData())
@@ -19,7 +22,7 @@ export const App = () => {
         <Navbar />
         <div className={'content-page'}>
           <Sidebar />
-          <AppRouter />
+          {isMounted && <AppRouter />}
         </div>
       </Suspense>
     </div>

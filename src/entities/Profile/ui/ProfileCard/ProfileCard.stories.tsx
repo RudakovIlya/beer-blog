@@ -13,7 +13,6 @@ const data = {
   country: 'Russia',
   city: 'Abinsk',
   username: 'asap_alh',
-  avatar: '',
 }
 
 export default {
