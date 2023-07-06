@@ -13,6 +13,7 @@ const data = {
   country: 'Russia',
   city: 'Abinsk',
   username: 'asap_alh',
+  avatar,
 }
 
 export default {
@@ -55,15 +56,10 @@ IsLoading.args = {
 export const Readonly = Template.bind({})
 
 Readonly.args = {
-  readOnly: true,
-}
-
-export const WithAvatar = Template.bind({})
-
-WithAvatar.args = {
 // @ts-ignore
   data: {
     ...data,
-    avatar,
+    avatar: '',
   },
+  readOnly: true,
 }
