@@ -28,6 +28,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
       path: paths.build,
       /* clean: Cleans up redundant files in build */
       clean: true,
+      publicPath: '/',
     },
     plugins: buildPlugins(options),
     /* devtool: Allows you to track in which file an error occurred, because.

@@ -3,6 +3,7 @@ import { ROUTES_PATHS } from 'app/providers/Router'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsCardList } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
+import { RiArticleLine } from 'react-icons/ri'
 
 export interface SidebarItemType {
   path: string
@@ -26,6 +27,12 @@ export const SidebarItemsList: SidebarItemType[] = [
     path: ROUTES_PATHS.profile,
     text: 'Profile',
     icon: CgProfile,
+    isAuthOnly: true,
+  },
+  {
+    path: ROUTES_PATHS.articles,
+    text: 'articles',
+    icon: RiArticleLine,
     isAuthOnly: true,
   },
 ]
