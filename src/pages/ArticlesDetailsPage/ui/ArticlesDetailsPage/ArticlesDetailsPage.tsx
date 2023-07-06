@@ -1,19 +1,19 @@
 import { memo } from 'react'
-import { clsx } from 'shared/lib'
 import { useTranslation } from 'react-i18next'
-import cls from './ArticlesDetailsPage.module.scss'
+import { ArticleDetails } from 'entities/Article'
+import { useParams } from 'react-router-dom'
+import { Text } from 'shared/ui/Text/Text'
 
-interface Props {
-  className?: string
-}
-
-const ArticlesDetailsPage = ({ className }: Props) => {
+const ArticlesDetailsPage = () => {
   const { t } = useTranslation('article-details')
+  const { id } = useParams<{ id: string }>()
+
+  if (!id || Number.isNaN(+id)) {
+    return <Text align={'center'} as={'h1'} variant={'caution'}>{t('article not found')}</Text>
+  }
 
   return (
-    <div className={clsx(cls.articles, {}, className)}>
-      ArticlesDetailsPage
-    </div>
+    <ArticleDetails id={id} />
   )
 }
 export default memo(ArticlesDetailsPage)

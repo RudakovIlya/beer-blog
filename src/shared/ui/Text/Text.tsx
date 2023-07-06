@@ -15,15 +15,15 @@ export type TextPropLineHeight = '2xs' | 'xs' | 's' | 'm' | 'l';
 export type TextPropSize =
   's' |
   'xs' |
-  '2xs' |
+  'f2xs' |
   'm' |
   'l' |
   'xl' |
-  '2xl' |
-  '3xl' |
-  '4xl' |
-  '5xl' |
-  '6xl'
+  'f2xl' |
+  'f3xl' |
+  'f4xl' |
+  'f5xl' |
+  'f6xl'
 
 export type TextPropSpacing = 'xs' | 's' | 'm' | 'l'
 
@@ -83,13 +83,17 @@ export const Text = memo(<E extends ElementType = typeof defaultElement>({
   decoration = 'none',
   transform = 'lowercase',
   weight,
-  fontSize,
+  fontSize = 'm',
   spacing,
-  lineHeight,
+  lineHeight = 'm',
   ...otherProps
 }: PropsWithChildren<Props<E>>) => {
   const additionalClasses = [
-    cls[align], cls[transform], cls[variant], cls[display], cls[cursor], cls[decoration],
+    cls[align], cls[transform],
+    cls['line-height'],
+    cls['font-size'],
+    cls[fontSize],
+    cls[lineHeight], cls[variant], cls[display], cls[cursor], cls[decoration],
     className]
 
   const TagName = as || defaultElement

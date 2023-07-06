@@ -1,0 +1,11 @@
+.article-details {
+  min-height: 100%;
+}
+
+.skeleton-avatar {
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

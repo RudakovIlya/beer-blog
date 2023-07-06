@@ -55,7 +55,6 @@ export const profileSlice = createSlice({
       })
       .addCase(updateProfileData.rejected, (state, action) => {
         state.isLoading = false
-        console.log(action.payload)
         state.validateErrors = action.payload
       })
   },

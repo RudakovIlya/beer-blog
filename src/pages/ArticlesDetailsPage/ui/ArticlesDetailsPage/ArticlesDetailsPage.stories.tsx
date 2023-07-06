@@ -8,14 +8,10 @@ export default {
   args: {},
 } as ComponentMeta<typeof ArticlesDetailsPage>
 
-const Template: ComponentStory<typeof ArticlesDetailsPage> = (args) => {
-  return <ArticlesDetailsPage {...args} />
+const Template: ComponentStory<typeof ArticlesDetailsPage> = () => {
+  return <ArticlesDetailsPage />
 }
 
 export const ArticlesDetailsPageLight = Template.bind({})
 
-ArticlesDetailsPageLight.args = {}
-
 export const ArticlesDetailsPageDark = Template.bind({})
-
-ArticlesDetailsPageDark.args = {}
