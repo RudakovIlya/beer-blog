@@ -2,7 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-import avatar from 'shared/assets/tests/avatar_image_for_storybook.png'
 import { ProfileCard } from './ProfileCard'
 
 const data = {
@@ -13,7 +12,6 @@ const data = {
   country: 'Russia',
   city: 'Abinsk',
   username: 'asap_alh',
-  avatar,
 }
 
 export default {
