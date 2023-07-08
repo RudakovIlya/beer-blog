@@ -1,12 +1,13 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ArticleDetails } from './ArticleDetails'
 
 export default {
   title: 'entities/ArticleDetails',
   component: ArticleDetails,
   args: {},
+  decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ArticleDetails>
 
 const Template: ComponentStory<typeof ArticleDetails> = (args) => {

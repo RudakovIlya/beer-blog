@@ -46,7 +46,7 @@ export const ArticleDetails = memo(({
     }
   }, [dispatch, id])
 
-  if (1) {
+  if (isLoading) {
     return (
       <>
         <SkeletonCircle className={cls['skeleton-avatar']} size={200} />

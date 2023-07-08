@@ -5,17 +5,20 @@ import { SkeletonCircle } from './SkeletonCircle'
 export default {
   title: 'shared/SkeletonCircle',
   component: SkeletonCircle,
-  args: {},
+  args: {
+    size: '50px',
+  },
+  argTypes: {
+    size: {
+      control: { type: 'text' },
+    },
+  },
 } as ComponentMeta<typeof SkeletonCircle>
 
 const Template: ComponentStory<typeof SkeletonCircle> = (args) => {
   return <SkeletonCircle {...args} />
 }
 
-export const SkeletonCircleLight = Template.bind({})
+export const SkeletonCircleDefault = Template.bind({})
 
-SkeletonCircleLight.args = {}
-
-export const SkeletonCircleDark = Template.bind({})
-
-SkeletonCircleDark.args = {}
+SkeletonCircleDefault.args = {}
