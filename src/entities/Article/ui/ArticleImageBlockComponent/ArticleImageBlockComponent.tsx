@@ -1,17 +1,20 @@
-import { PropsWithChildren } from 'react'
+import { memo } from 'react'
 import { clsx } from 'shared/lib'
-import { useTranslation } from 'react-i18next'
+import { Text } from 'shared/ui/Text/Text'
+import { ArticleImageBlock } from '../../model/types/article'
 import cls from './ArticleImageBlockComponent.module.scss'
 
 interface Props {
   className?: string
+  block: ArticleImageBlock
 }
 
-export const ArticleImageBlockComponent = ({ className }: PropsWithChildren<Props>) => {
-  const { t } = useTranslation()
-
+export const ArticleImageBlockComponent = memo(({ block, className }: Props) => {
+  const { src, title } = block
   return (
-    <div className={clsx(cls.ArticleImageBlockComponent, {}, className)}>
+    <div className={clsx(cls['article-image'], undefined, className)}>
+      <img src={src} alt={title} className={cls.img} />
+      {title && <Text fontSize={'fxs'} className={cls.description}>{title}</Text>}
     </div>
   )
-}
+})

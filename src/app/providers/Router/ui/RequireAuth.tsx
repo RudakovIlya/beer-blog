@@ -7,6 +7,7 @@ import { ROUTES_PATHS } from '../config/routeConfig'
 export const RequireAuth = ({ children }: PropsWithChildren<any>) => {
   const auth = useSelector(getUserAuthData)
   const location = useLocation()
+
   if (!auth) {
     return <Navigate to={ROUTES_PATHS.main} state={{ from: location }} replace />
   }

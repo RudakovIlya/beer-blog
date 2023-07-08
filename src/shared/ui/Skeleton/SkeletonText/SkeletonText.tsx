@@ -33,7 +33,7 @@ export const SkeletonText = memo((props: Props) => {
     fontSize = 'm',
     lineHeight = 'm',
     className,
-    rows,
+    rows = 1,
   } = props
 
   const varFontSize = `var(--size-text-${fontSize})`

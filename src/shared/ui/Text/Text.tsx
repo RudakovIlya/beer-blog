@@ -1,5 +1,5 @@
 import React, {
-  ElementType, PropsWithChildren, ComponentProps, memo,
+  ElementType, PropsWithChildren, ComponentProps, memo, useMemo,
 } from 'react'
 import { clsx } from 'shared/lib'
 import cls from './Text.module.scss'
@@ -10,15 +10,15 @@ export type TextPropCursor = 'pointer' | 'none'
 
 export type TextPropDecoration = 'underline' | 'none'
 
-export type TextPropLineHeight = '2xs' | 'xs' | 's' | 'm' | 'l';
+export type TextPropLineHeight = 'lh2xs' | 'lhxs' | 'lhs' | 'lhm' | 'lhl';
 
 export type TextPropSize =
-  's' |
-  'xs' |
+  'fs' |
+  'fxs' |
   'f2xs' |
-  'm' |
-  'l' |
-  'xl' |
+  'fm' |
+  'fl' |
+  'fxl' |
   'f2xl' |
   'f3xl' |
   'f4xl' |
@@ -41,7 +41,8 @@ export type TextPropVariant = 'primary' |
   'caution' |
   'critical'
 
-export type TextPropWeight = 'thin' |
+export type TextPropWeight =
+  'thin' |
   'light' |
   'regular' |
   'medium' |
@@ -82,23 +83,30 @@ export const Text = memo(<E extends ElementType = typeof defaultElement>({
   cursor = 'none',
   decoration = 'none',
   transform = 'lowercase',
-  weight,
-  fontSize = 'm',
+  weight = 'regular',
+  fontSize = 'fm',
   spacing,
-  lineHeight = 'm',
+  lineHeight = 'lhm',
   ...otherProps
 }: PropsWithChildren<Props<E>>) => {
-  const additionalClasses = [
-    cls[align], cls[transform],
-    cls['line-height'],
-    cls['font-size'],
-    cls[fontSize],
-    cls[lineHeight], cls[variant], cls[display], cls[cursor], cls[decoration],
-    className]
+  const additionalClasses = useMemo(() => {
+    return [
+      cls[align],
+      cls[transform],
+      cls[fontSize],
+      cls[weight],
+      cls[lineHeight],
+      cls[variant],
+      cls[display],
+      cls[cursor],
+      cls[decoration],
+      className,
+    ]
+  }, [align, className, cursor, decoration, display, fontSize, lineHeight, transform, variant, weight])
 
   const TagName = as || defaultElement
   return (
-    <TagName {...otherProps} className={clsx(cls.text, {}, ...additionalClasses)}>
+    <TagName {...otherProps} className={clsx('', undefined, ...additionalClasses)}>
       {children}
     </TagName>
   )

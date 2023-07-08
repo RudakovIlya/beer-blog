@@ -1,5 +1,5 @@
 import {
-  memo, PropsWithChildren, useCallback, useEffect,
+  memo, useCallback, useEffect,
 } from 'react'
 import { useAppDispatch, useDynamicModuleLoader } from 'shared/hooks'
 
@@ -20,15 +20,11 @@ import { useTranslation } from 'react-i18next'
 import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 
-interface Props {
-
-}
-
 const initialReducer: ReducerList = {
   profile: profileReducer,
 }
 
-const ProfilePage = memo((props: PropsWithChildren<Props>) => {
+const ProfilePage = memo(() => {
   const dispatch = useAppDispatch()
   const { t } = useTranslation('profile')
   const formData = useSelector(getProfileForm)

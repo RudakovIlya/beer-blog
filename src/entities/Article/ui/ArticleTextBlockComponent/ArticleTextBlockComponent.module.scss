@@ -1,3 +1,15 @@
 .article-text {
   color: red;
+
+  .title {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .paragraph {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }

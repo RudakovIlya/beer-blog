@@ -56,17 +56,17 @@
   --font-weight-text-regular: normal;
   --font-weight-text-medium: 500;
   --font-weight-text-semibold: 600;
-  --font-weight-text-bold: bold;
+  --font-weight-text-bold: 700;
   --font-weight-text-extrabold: 800;
   --font-weight-text-black: 900;
 
   // font-size
   --size-text-f2xs: 10px;
-  --size-text-xs: 12px;
-  --size-text-s: 14px;
-  --size-text-m: 16px;
-  --size-text-l: 18px;
-  --size-text-xl: 20px;
+  --size-text-fxs: 12px;
+  --size-text-fs: 14px;
+  --size-text-fm: 16px;
+  --size-text-fl: 18px;
+  --size-text-fxl: 20px;
   --size-text-f2xl: 24px;
   --size-text-f3xl: 32px;
   --size-text-f4xl: 48px;
@@ -74,9 +74,9 @@
   --size-text-f6xl: 96px;
 
   // line-height
-  --line-height-text-2xs: 1.1em;
-  --line-height-text-xs: 1.2em;
-  --line-height-text-s: 1.4em;
-  --line-height-text-m: 1.5em;
-  --line-height-text-l: 1.6em;
+  --line-height-text-lh2xs: 1.1em;
+  --line-height-text-lhxs: 1.2em;
+  --line-height-text-lhs: 1.4em;
+  --line-height-text-lhm: 1.5em;
+  --line-height-text-lhl: 1.6em;
 }

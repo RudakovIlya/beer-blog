@@ -31,11 +31,12 @@ type ArticleType = 'IT' | 'BEER' | 'FISHING'
 
 export interface Article {
   id: string;
-  title: string;
-  subtitle: string;
-  img: string;
-  views: number;
-  createdAt: string;
-  type: ArticleType[];
-  blocks: ArticleBlock[];
+  author: string
+  title: string
+  subtitle: string
+  img: string
+  views: number
+  createdAt: string
+  type: ArticleType[]
+  blocks: ArticleBlock[]
 }

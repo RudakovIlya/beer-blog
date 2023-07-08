@@ -5,7 +5,11 @@ import { SkeletonText } from './SkeletonText'
 export default {
   title: 'shared/SkeletonText',
   component: SkeletonText,
-  args: {},
+  args: {
+    rows: 1,
+    fontSize: 'f2xl',
+    lineHeight: 'lhl',
+  },
 } as ComponentMeta<typeof SkeletonText>
 
 const Template: ComponentStory<typeof SkeletonText> = (args) => {

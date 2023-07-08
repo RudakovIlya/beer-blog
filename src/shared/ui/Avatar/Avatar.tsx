@@ -48,7 +48,7 @@ export const Avatar = (props: Props) => {
       style={{
         width: inlineSize,
         height: inlineSize,
-        backgroundColor: `var(--avatar-color-${colorIndex})`,
+        backgroundColor: !src ? `var(--avatar-color-${colorIndex})` : undefined,
         ...style,
       }}
       className={clsx(cls.avatar, {}, ...additionalClasses)}

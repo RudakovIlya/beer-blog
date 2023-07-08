@@ -1,153 +1,172 @@
-.text {
-  &.left {
-    text-align: left;
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+// variant
+.primary {
+  color: var(--color-typo-primary);
+}
+
+.secondary {
+  color: var(--color-typo-secondary);
+}
+
+.brand {
+  color: var(--color-typo-brand);
+}
+
+.ghost {
+  color: var(--color-typo-ghost);
+}
+
+.link {
+  color: var(--color-typo-link);
+
+  &:hover {
+    color: var(--color-typo-link-hover);
   }
+}
 
-  &.right {
-    text-align: right;
-  }
+.system {
+  color: var(--color-typo-system);
+}
 
-  &.center {
-    text-align: center;
-  }
+.normal {
+  color: var(--color-typo-normal);
+}
 
-  &.pointer {
-    cursor: pointer;
-  }
+.success {
+  color: var(--color-typo-success);
+}
 
-  &.underline {
-    text-decoration: underline;
-  }
+.warning {
+  color: var(--color-typo-warning);
+}
 
-  // display
+.alert {
+  color: var(--color-typo-alert);
+}
 
-  &.block {
-    display: block;
-  }
+.caution {
+  color: var(--color-typo-caution);
+}
 
-  &.inline-block {
-    display: inline-block;
-  }
+.critical {
+  color: var(--color-typo-critical);
+}
 
-  &.inline {
-    display: inline;
-  }
+.lhxs {
+  line-height: var(--line-height-text-xs);
+}
 
-  &.uppercase {
-    text-transform: uppercase;
-  }
+.lhs {
+  line-height: var(--line-height-text-lhs);
+}
 
-  // variant
-  &.primary {
-    color: var(--color-typo-primary);
-  }
+.lhm {
+  line-height: var(--line-height-text-lhm);
+}
 
-  &.secondary {
-    color: var(--color-typo-secondary);
-  }
+.lhl {
+  line-height: var(--line-height-text-lhl);
+}
 
-  &.brand {
-    color: var(--color-typo-brand);
-  }
+.fxs {
+  font-size: var(--size-text-fxs);
+}
 
-  &.ghost {
-    color: var(--color-typo-ghost);
-  }
+.fs {
+  font-size: var(--size-text-fs);
+}
 
-  &.link {
-    color: var(--color-typo-link);
+.fm {
+  font-size: var(--size-text-fm);
+}
 
-    &:hover {
-      color: var(--color-typo-link-hover);
-    }
-  }
+.fl {
+  font-size: var(--size-text-fl);
+}
 
-  &.system {
-    color: var(--color-typo-system);
-  }
+.fxl {
+  font-size: var(--size-text-fxl);
+}
 
-  &.normal {
-    color: var(--color-typo-normal);
-  }
+.f2xl {
+  font-size: var(--size-text-f2xl);
+}
 
-  &.success {
-    color: var(--color-typo-success);
-  }
+.f3xl {
+  font-size: var(--size-text-f3xl);
+}
 
-  &.warning {
-    color: var(--color-typo-warning);
-  }
+.f4xl {
+  font-size: var(--size-text-f4xl);
+}
 
-  &.alert {
-    color: var(--color-typo-alert);
-  }
+.f5xl {
+  font-size: var(--size-text-f5xl);
+}
 
-  &.caution {
-    color: var(--color-typo-caution);
-  }
+.f6xl {
+  font-size: var(--size-text-f6xl);
+}
 
-  &.critical {
-    color: var(--color-typo-critical);
-  }
+.thin {
+  font-weight: 100;
+}
 
-  // line-height
-  &.line-height {
-    &.xs {
-      line-height: var(--line-height-text-xs);
-    }
+.light {
+  font-weight: 300;
+}
 
-    &.s {
-      line-height: var(--line-height-text-s);
-    }
+.regular {
+  font-weight: 400;
+}
 
-    &.m {
-      line-height: var(--line-height-text-m);
-    }
+.medium {
+  font-weight: 500;
+}
 
-    &.l {
-      line-height: var(--line-height-text-l);
-    }
-  }
+.semibold {
+  font-weight: 600;
+}
 
-  &.font-size {
-    &.xs {
-      font-size: var(--size-text-xs);
-    }
+.bold {
+  font-weight: 700;
+}
 
-    &.s {
-      font-size: var(--size-text-s);
-    }
-
-    &.m {
-      font-size: var(--size-text-m);
-    }
-
-    &.l {
-      font-size: var(--size-text-l);
-    }
-
-    &.xl {
-      font-size: var(--size-text-xl);
-    }
-
-    &.f2xl {
-      font-size: var(--size-text-2xl);
-    }
-
-    &.f3xl {
-      font-size: var(--size-text-3xl);
-    }
-
-    &.f4xl {
-      font-size: var(--size-text-4xl);
-    }
-
-    &.f5xl {
-      font-size: var(--size-text-5xl);
-    }
-
-    &.f6xl {
-      font-size: var(--size-text-6xl);
-    }
-  }
+.black {
+  font-weight: 900;
 }

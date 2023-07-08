@@ -39,6 +39,7 @@
   "articles": [
     {
       "id": "1",
+      "author": "Timur Ulbi",
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
@@ -110,6 +111,7 @@
     },
     {
       "id": "2",
+      "author": "",
       "title": "Beer news",
       "subtitle": "КАКОЕ ПИВО ЛУЧШЕ – БУТЫЛОЧНОЕ ИЛИ БАНОЧНОЕ?",
       "img": "https://beerbottle.ru/wp-content/uploads/2021/10/bottle_or_can.jpg",
@@ -123,31 +125,245 @@
           "id": "1",
           "type": "TEXT",
           "title": "",
-          "paragraphs": ""
+          "paragraphs": [
+            "Очень часто можно услышать, что бутылочное пиво лучше баночного. На самом деле, такое утверждение или вопрос не корректны. Пиво в банки и бутылки (и даже в кеги) разливается одно и тоже. Другой вопрос – какая тара лучше сохраняет пиво?\nАдепты преимущества стекла над банкой, приводят один и тот же аргумент – пиво в банке имеет металлический привкус. Так ли это? Давайте разберёмся.",
+            "Вернёмся к истории пива в банках. Впервые пиво разлили в жестяную банку 24 января 1935 года. Прошу обратить внимание, это была именно жестяная банка! Современная, из алюминия появилась только в 1958 году и переход на этот удобный и лёгкий метал растянулся на десятилетия.",
+            "В России, точней в СССР первое баночное пиво появилось в 1980 году, когда к Олимпиаде был налажен выпуск пива «Золотое Кольцо». Это была та же жестяная банка. Выпускали его не долго. Жести такого качества и толщины, которые требовались для пивной банки, в СССР не производили, а закупать за валюту было не целесообразно. В итоге, первая (и последняя) баночная линия в СССР бесславно сгинула во дворе какого-то завода.",
+            "В современной России, первыми на розлив пива в банку перешла компания Очаково. Это уже была современная алюминиевая банка. В настоящее время, практически все пивные банки выпускаются из алюминия. Исключение составляют литровые банки пива Жигули Барное, «коллекционной» серии. Они делаются из специальной жести.",
+            "Теперь разберём преимущества и недостатки розлива как в банку, так и в бутылку.",
+            "Пиво в бутылке более эстетично выглядит. У баночного пива репутация более «простого» формата. Стекло более нейтральный материал, чем жесть и даже алюминий. Но действительно ли алюминиевая банка даёт некий привкус? Нет!",
+            "Алюминий сам по себе не имеет какого-то привкуса и самое главное, в природных условиях изделия из этого метала не могут существовать без тончайшей, но очень прочной плёнки окисла. Алюминий мгновенно окисляется в кислородной среде. Эта тончайшая плёнка предотвращает его дальнейшее окисление и так же не имеет никакого вкуса.",
+            "Что бы убедиться в этом, достаточно попробовать на вкус алюминиевую ложку или вилку. Да, сенсорно вы поймёте, что это некий металл, но никакого привкуса во рту не останется, в отличии от железной или медной посуды и приборов.",
+            "Кроме того, внутренняя поверхность пивной алюминиевой банки покрыта специальным пищевым лаком, что так же уменьшает контакт пива с металлом. Противники банки утверждают, что при ударе, лак отслаивается и пиво начинает реагировать с алюминием.",
+            "Опять же — это не так. Покрытие очень прочное и надо сильно постараться, чтобы оно отслоилось или в нём появилась сколь-нибудь значимая трещина. Но и в этом случае, ничего страшного не произойдёт. Поверхность контакта слишком мала, а кислотность пива не на столько сильна, чтобы запустить реакцию (плюс, не забываем о плёнке окисла).",
+            "Кроме того, что алюминиевая банка никак не влияет на вкус пива, у неё имеются и несколько несомненных достоинств, которых лишена бутылка. Ещё раз – бутылочное или баночное?!",
+            "1. Банка не пропускает свет. Это очень важно! Свет губительно действует на пиво. Под действием ультрафиолета, содержащиеся в пиве хмелевые кислоты начинают разлагаться и из-за этого пиво приобретает неприятный запах и привкус «скунса». Именно по этому бутылки как правило делаются из тёмного стекла. Есть и прозрачные, но пиво разлитое в такую тару варится с использованием специального изомеризированного хмелевого масла. Большинство же пива на свету портится.",
+            "2. При розливе в банку, в пиво попадает меньше кислорода, чем при розливе в бутылку. Современные линии розлива позволяют снизить процент попадания кислорода в готовое пиво до совсем микроскопических значений, но тем не менее, даже этого количества хватает, чтобы со временем пиво изменило свой вкус. Баночное пиво в этом, даёт фору стеклу.\", \"Так почему же многие утверждают, что могут отличить пиво из банки от пива из бутылки? Баночное и бутылочное могут различаться уровнем карбонизации (в пиве из банки содержание СО2 может быть выше), но большинство людей это почувствовать не могут.\"",
+            "Это больше проблема восприятия. Если провести слепой тест – “бутылочное или баночное?” и если пиво в обоих упаковках правильно хранилось, то разницы никто не заметит. Учитывая приведённые выше два фактора, которыми обладает алюминиевая банка и условия хранения пива в рознице – лучше отдать предпочтение пиву в банке!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "author": "Bernard Marr",
+      "title": "How Artificial Intelligence Is Used To Make Beer",
+      "subtitle": "",
+      "img": "https://bernardmarr.com/wp-content/uploads/2021/07/Author-Bernard-Marr.png",
+      "views": 1432,
+      "createdAt": "05.09.2022",
+      "type": [
+        "BEER",
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "",
+          "paragraphs": [
+            "There are many ways artificial intelligence (AI) and machine learning can make our world more productive and effective. There are even breweries that are using AI to enhance beer production. Is this brilliant or unbelievable? While it’s admittedly too soon to tell, using data to inform brewmasters’ decisions and the possibility of personalised brews makes AI-brewed beer definitely intriguing. "
+          ]
         },
         {
           "id": "2",
+          "type": "IMAGE",
+          "src": "https://bernardmarr.com/img/How%20Artificial%20Intelligence%20Is%20Used%20To%20Make%20Beer.png"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Beer Brewed by Artificial Intelligence",
+          "paragraphs": [
+            "Since brewing beer is an art and a science, artificial intelligence offers a powerful helping hand in the latter. After talking about how multinational breweries used data to inform their advertising decisions, Hew Leith and Rob McInerney, founders of IntelligentX, believed a better way to use data was to improve the beer itself. So, that’s what they decided to do. IntelligentX has the distinction of creating the world’s first beer that used AI algorithms and machine learning to help adjust its recipe.",
+            "IntelligentX creates four different varieties of beer—Black AI, Golden AI, Pale AI, and Amber AI. They ask customers to follow the URL link provided on the bottles to give their feedback through the Facebook Messenger app about the beer they try. By answering a series of 10 questions, the 80 percent of customers who have followed the link have given the company more than 100,000 data points.",
+            "This data is processed by an AI algorithm, and then the brewer decides whether or not to heed the algorithm’s advice. Instead of replacing a brewmaster, Leith and McInerney believe AI gives insights to help a brewmaster be better equipped to make decisions based on customer feedback. Ultimately, once the company is able to scale, it could be possible to order a beer based on a recipe customised to your preferences."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "title": "Carlsberg’s Beer Fingerprinting Project",
+          "paragraphs": [
+            "Carlsberg, a Copenhagen-based brewery, began a multimillion-dollar three-year Beer Fingerprinting Project in partnership with Microsoft, Aarhus University and the Technical University of Denmark. Each day, they create 1,000 different beer samples and hope the Beer Fingerprinting Project will change the way new beers are created. The project uses sensors that can determine the flavour fingerprint of each sample and analyse different yeasts. The data is collected by an AI system, and it is ultimately expected that new brews will be developed from the information. Not only does the system allow products to get to market faster it can also help ensure the highest quality."
+          ]
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "The Perfect IPA",
+          "paragraphs": [
+            "Another brewer, this one in Virginia, uses machine learning to develop the perfect IPA. Champion Brewing company teamed up with machine learning company Metis Machine in an effort to brew their new ML IPA (yes, the ML stands for machine learning). The first step in the process was to input information about the ten best-selling IPAs nationally as well as data on the ten worst-selling brands. Then, based on the data, the algorithm determined the best recipe to become the nation’s best IPA.",
+            "Data was also leaned on in another AI-beer brewing endeavour. This experiment combined publicly available Brewdog beer recipes and beer ratings from Untapped to create and train an artificial neural beer network. The network would then be used to evaluate new beer recipes and determine which ones were more likely to get high ratings. This experiment concluded that AI could be a powerful tool to help a human brewer develop new beers or optimise existing ones, but wouldn’t take the place of humans."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "TEXT",
+          "title": "Robotic Barkeep",
+          "paragraphs": [
+            "It turns out the foam on a freshly poured beer affects people’s enjoyment of it. To determine what makes a perfect foam, an Australian research team created RoboBEER, a robot who can pour a beer with such precision to create consistent foam pour after pour. The researchers created a video of RoboBEER pouring a beer and tracked the bubble size, beer colour, and other attributes and then showed the video to research participants and asked for participant feedback regarding their thoughts on the clarity and quality of the beer. The researchers also taped their reaction as they watched RoboBEER pour. An AI machine analysed the biometric factors recorded from the research participants as they watched the video. There were 28 pieces of RoboBEER and biometric data for each viewer that were fed to a neural network to determine what they thought about the beer without having them actually taste the beer or complete a lengthy questionnaire. The neural network was able to predict within 80 percent accuracy whether someone liked a beer’s foam height. The team also found that they could predict with 90 percent accuracy a beer’s likability just using the RoboBEER data."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "author": "Ian Dean",
+      "title": "This parody AI beer ad is nightmare fuel, so why do I love it so much?",
+      "subtitle": "AI is defining a new art style.",
+      "img": "",
+      "views": 532,
+      "createdAt": "02.05.2023",
+      "type": [
+        "BEER",
+        "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
           "type": "TEXT",
           "title": "",
-          "paragraphs": ""
+          "paragraphs": [
+            "Here's another little gem that's terrifying in the way only AI-generated art and video can be. A parody of beer commercials, it's an AI-generated horror show, and I can't stop watching.",
+            "The ad (for a fake beer brand) has all the hallmarks we've come to expect from Ai-generated images and video: spaghetti hands (tick), Alien-mouths (tick), toothy grins (tick), floating objects (tick, tick, tick). AI still has a blank spot for creating lifelike humans or even realistic beer cans – these ones float and warp like gluey, buttery cylinders (see our pick of the best AI art tutorials to learn more about how the tech works).",
+            "This fake AI beer commercial is the work of mixed-media agency Private Island, who created it as a parody of both American beer commercials and AI art. They used Stable Diffusion, Control Net and Runway Gen 2.",
+            "It begins as a sleepy BBQ and ends in an explosive, fiery apocalypse like a scene from Terminator 2. \"This is what hell looks like,\" wrote one Twitter user. \"At least we know now.\" Another Twitter user joked, \"Does the LSD come with the beer or is that BYO?\""
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "title": "(Image credit: Private Island)",
+          "src": "https://cdn.mos.cms.futurecdn.net/fsgRdofVAVZHu6puMR9C6k-970-80.jpg.webp"
         },
         {
           "id": "3",
           "type": "TEXT",
           "title": "",
-          "paragraphs": ""
+          "paragraphs": [
+            "In one shot a woman sups at the side of a beer can with gusto, two men draw on a floating glass beer bong, a severed hand floats in beer glass and no-one cares; a man sucks beer through thin air and an eleven-fingered hand offers a guest a cold brew. It is horrific, but this AI-generated nonsense is also scarily engaging.",
+            "The speedy cuts and chops and edits escalate the pace of the commercial to the point of a hedonistic surge of beer-fuelled chaos. Yes, it's terrifying but it's also incredibly engaging. There's a decadent, unrestrained AI eye behind this chaos and I think we may be stumbling into a new CG aesthetic."
+          ]
         },
         {
           "id": "4",
-          "type": "TEXT",
-          "title": "",
-          "paragraphs": ""
+          "type": "IMAGE",
+          "title": "(Image credit: Private Island)",
+          "src": "https://cdn.mos.cms.futurecdn.net/pCEyfTXCV7u5Agc7FCiCk9-970-80.jpg.webp"
         },
         {
           "id": "5",
           "type": "TEXT",
           "title": "",
-          "paragraphs": ""
+          "paragraphs": [
+            "We could be on the verge of a new trend with this weird unreal aesthetic. As a greater number of people create clips with this wild look, and the more viral these videos become, it's only a matter of time before this 'style' is aped by the agency of a major brand, if only to be subversive."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "IMAGE",
+          "title": "(Image credit: Private Island)",
+          "src": "https://cdn.mos.cms.futurecdn.net/yXRSE3xrHiH9dAYoj3horG-970-80.jpg.webp"
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "title": "",
+          "paragraphs": [
+            "\"We are creating a series of in-house experiments that help us figure out how these tools can be used in production – Synthetic Summer is our most recent,\" said Director and co-founder Chris Boyle in an article for Stash Media. He added: \"If 2022 was the year generative image stills went mainstream, 2023 will for sure be the same with motion.\"",
+            "As AI becomes more freely available and trusted brands other ethical apps and uses, such as Adobe Firefly and Nvidia Picasso, it feels like we're on the verge of something new happening. I don't imagine this will be the demise of the need for real artists, in fact as more bizarre AI art is created the likelihood is art from actual humans, and physical art in particular, will become more sought after and prized. Now, excuse me, but I need to rewatch this silliness again."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "author": "Роман Василевский",
+      "title": "Вкусное пиво из К&Б. Лето 2023",
+      "subtitle": "AI is defining a new art style.",
+      "img": "https://beerfromworld.com/img/blocks/2df5013196c62e54b94e589aef31bb0f.jpg",
+      "views": 1532,
+      "createdAt": "02.07.2023",
+      "type": [
+        "BEER"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "",
+          "paragraphs": [
+            "Друзья, всем привет! Сегодняшнее пейсательство будет полностью посвящено актуализации вменяемого пива из красно-белых реабилитационных центров, по состоянию на лето 2023. Данная информация будет полезна больше для новой аудитории моего канала, однако, думаю, что и наши дорогие постоянные подписчики, обязательно пейсательство прочитают.",
+            "Всё дело в том, что на наш официальный сайт \"С Миру по Пиву!\" сейчас часто заходят по запросу: \"какое вкусное пиво можно купить в К&Б?\" и попадают на старую статью, пива из которой уже давно след простыл... Итак, поехали! Актуальная информация на начало июля 2023."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "TEXT",
+          "title": "Пиво \"Хоп Райдер\" (Германия)",
+          "paragraphs": [
+          ]
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "title": "Пиво \"Хоп Райдер\"",
+          "src": "https://beerfromworld.com/img/blocks/1c5fc8b8c36ee2782533da7a3871ba9f.jpg"
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "title": "Пиво \"Хоп Райдер\" (Германия)",
+          "paragraphs": [
+            "Время летит незаметно и вот уже целых 3 года с нами немецкие \"Обезьяны\" от пивоварни \"Айхбаум\" г. Мангейм. Невразумительный \"Winter Ale\", не попавший в стиль \"NEPA\" и \"Beastly Red\" исчезли, а \"коллекцию\" пополнили: Summer Ale и Extra Stout (мы не пробовали).",
+            "\"Session IPA\" - аромат приятный, хмелевой, тропический. Вкус легкий, немного водянистый, тропический, с ярко выраженным грейпфрутом в послевкусии. В принципе, именно таким и должен быть \"Сессионный Ай Пи Эй\";",
+            "\"Wheat Pale Ale\" - аромат приятный, хмелевой - \"цитрусы\". Во вкусе приятный хмель, чуточку кориандра и банана. В целом неплохо, однако вкус выглядит несколько пустовато и водянисто. Не хватает нажористости. В целом, легкая и приятная охмелённая \"пшеничка\";",
+            "\"Summer Ale\" - в приятном аромате прослеживается нотка гвоздики, а также фрукты, где отчётливо выделяется абрикос. Вкус приятный, с такой же ноткой гвоздики, абрикосом и чуть вяжущим аккуратным хмельком в послевкусии. Хорошая вещь для лета!"
+          ]
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Пиво \"Фельдшлёсхен\" (Германия)",
+          "paragraphs": [
+          ]
+        },
+        {
+          "id": "6",
+          "type": "IMAGE",
+          "title": "Пиво \"Фельдшлёсхен\"",
+          "src": "https://beerfromworld.com/img/blocks/e8a1495dcf25a3649046ad6b3663dc16.jpg"
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "title": "Пиво \"Фельдшлёсхен\" (Германия)",
+          "paragraphs": [
+            "А эти знаменитые немцы из Дрездена с нами уже лет 5. Пугает, правда, тот факт, что в приложении К&Б они почему-то отсутствуют (IPAлит Матвеевич сейчас держится рукой за сердце). Если пропадут - будет прискорбно, т.к. хороший немецкий Пилз и обалденный Урбок на полках наших магазинов не валяются!",
+            "У нас пока в наличии во всех КБРЦ имеется Pilsner (классический ячменный пилс с ощутимой хмелевой горечью) и Pale Wheat (вполне вменяемая пшеничка). Стоимость 54 рубля - это нереально хорошо, учитывая, что разный российский региональный шлак стоит дороже. Black, IPA и Cherry у нас исчезли, но кое-где, пока ещё встречаются два замечательных крепких пивцерина: Урбок с Майбоком. Хочется верить, что они будут во всех КБРЦ на постоянной основе."
+          ]
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Пиво \"Баренхайм\" (Германия)",
+          "paragraphs": [
+          ]
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Пиво \"Баренхайм\"",
+          "src": "https://beerfromworld.com/img/blocks/bda89d819a1b477227db7cca3f986472.jpg"
+        },
+        {
+          "id": "10",
+          "type": "TEXT",
+          "title": "",
+          "paragraphs": [
+            "\"Баренхайм Келлербир\" - в аромате характерный мощный немецкий солод, с яркой ноткой ячменя. Во вкусе сладость солода, нотки белого хлеба, в послевкусии ощутимая хмелевая горчинка, которая выглядит довольно грубовато. Вполне себе Келлербир. Понятное дело, не лучший представитель данного стиля, но далеко и не самый плохой;", "Пиво \"Баренхайм Урхелл\" - аромат мощный, ячменный. Также прослеживаются медовые, луговые оттенки. Во вкусе ячменный солод и грубоватый, ячменный хмелёк в послевкусии. Да, это - хеллес и опять же далеко не самый лучший и при этом далеко не самый плохой;", "\"Баренхайм Резерв\" - аромат очень похож на аромат Урхелл: зерно, сладость солода, нотки мёда. Вкус тоже напоминает хеллес, правда, выглядит он интереснее: более насыщенный, плотный и содержательный. Сладковатые солодовые нотки, мёд, хмелевая горечь помягче;", "Пиво \"Баренхайм Фестбир\" - аромат характерный для немецкого пива - зерновой, ячменный. Небольшая солодовая мыльность, а также небольшая тостовость, характерная для данного стиля. Вкус сладкий, солодовый, прослеживается ячмень и небольшая, действительно, сдержанная хмелевая горчинка в послевкусии. Спиртуозности во вкусоароматике не замечено. Вполне себе нормальный фестивальный пивцерин, каким он и должен быть."
+          ]
         }
       ]
     }

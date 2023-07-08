@@ -31,7 +31,7 @@ export class ErrorBoundary extends Component<Props, State> {
     const { children } = this.props
 
     if (hasError) {
-      return <Suspense fallback={''}><PageError /></Suspense>
+      return <Suspense fallback={null}><PageError /></Suspense>
     }
 
     return children

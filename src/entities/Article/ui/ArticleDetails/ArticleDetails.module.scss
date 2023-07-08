@@ -1,11 +1,36 @@
 .article-details {
   min-height: 100%;
+
+  .info-block {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+    }
+  }
+
+  .block {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
-.skeleton-avatar {
+.avatar {
   margin: 0 auto;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+}
+
+.title,
+.subtitle {
+  &:not(:last-child) {
+    margin-bottom: 10px;
   }
 }

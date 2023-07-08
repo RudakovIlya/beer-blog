@@ -4,13 +4,13 @@ import { clsx } from 'shared/lib'
 type Props = {
   className?: string;
   width?: CSSProperties['width'];
-  height: CSSProperties['height'];
+  height?: CSSProperties['height'];
 };
 
 export const SkeletonBrick = ({
   className,
   width = '100%',
-  height,
+  height = '50px',
 }: Props) => {
   return (
     <div

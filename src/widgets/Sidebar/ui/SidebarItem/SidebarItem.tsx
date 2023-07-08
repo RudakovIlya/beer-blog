@@ -17,9 +17,11 @@ interface Props {
 export const SidebarItem = memo(({ item, collapsed }: Props) => {
   const { t } = useTranslation()
   const isAuth = useSelector(getUserAuthData)
-  const { text, path, icon: Icon } = item
+  const {
+    text, path, icon: Icon, isAuthOnly,
+  } = item
 
-  if (!isAuth && item.isAuthOnly) {
+  if (!isAuth && isAuthOnly) {
     return null
   }
   return (

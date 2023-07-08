@@ -16,5 +16,7 @@
   "specify currency": "Specify currency",
   "specify country": "Specify country",
   "Profile": "Profile",
-  "articles": "Articles"
+  "articles": "Articles",
+  "copy": "Copy",
+  "copied": "Copied"
 }

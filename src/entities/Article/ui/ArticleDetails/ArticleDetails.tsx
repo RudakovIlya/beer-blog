@@ -1,11 +1,16 @@
-import { memo, useEffect } from 'react'
+import { memo, useCallback, useEffect } from 'react'
 import { clsx } from 'shared/lib'
 import { useAppDispatch, useDynamicModuleLoader } from 'shared/hooks'
 import { ReducerList } from 'shared/hooks/useDynamicModuleLoader/useDynamicModuleLoader'
 import { useSelector } from 'react-redux'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { SkeletonCircle, SkeletonText } from 'shared/ui/Skeleton'
+import { SkeletonBrick, SkeletonCircle, SkeletonText } from 'shared/ui/Skeleton'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
+import { AiOutlineCalendar, AiOutlineEye } from 'react-icons/ai'
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import {
   getArticleDetailsData,
   getArticleDetailsError,
@@ -14,6 +19,7 @@ import {
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import cls from './ArticleDetails.module.scss'
+import { ArticleBlock } from '../../model/types/article'
 
 interface Props {
   id: string
@@ -35,6 +41,23 @@ export const ArticleDetails = memo(({
   const error = useSelector(getArticleDetailsError)
   const article = useSelector(getArticleDetailsData)
 
+  const renderBlock = useCallback((block: ArticleBlock) => {
+    switch (block.type) {
+    case 'CODE': {
+      return <ArticleCodeBlockComponent key={block.id} className={cls.block} block={block} />
+    }
+    case 'IMAGE': {
+      return <ArticleImageBlockComponent key={block.id} className={cls.block} block={block} />
+    }
+    case 'TEXT': {
+      return <ArticleTextBlockComponent key={block.id} className={cls.block} block={block} />
+    }
+    default: {
+      return null
+    }
+    }
+  }, [])
+
   useDynamicModuleLoader({
     reducers,
     removeAfterUnmount: true,
@@ -49,8 +72,10 @@ export const ArticleDetails = memo(({
   if (isLoading) {
     return (
       <>
-        <SkeletonCircle className={cls['skeleton-avatar']} size={200} />
-        <SkeletonText fontSize={'xl'} lineHeight={'l'} rows={25} />
+        <SkeletonCircle className={cls.avatar} size={200} />
+        <SkeletonBrick width={'30%'} height={30} className={cls.title} />
+        <SkeletonBrick width={'70%'} height={30} className={cls.subtitle} />
+        <SkeletonText fontSize={'fs'} lineHeight={'lhl'} rows={25} />
       </>
     )
   }
@@ -59,7 +84,7 @@ export const ArticleDetails = memo(({
     return (
       <Text
         as={'h1'}
-        fontSize={'xl'}
+        fontSize={'fxl'}
         weight={'bold'}
         align={'center'}
         variant={'alert'}
@@ -70,7 +95,42 @@ export const ArticleDetails = memo(({
   }
 
   return (
-    <div className={clsx(cls['article-details'], {}, className)}>
+    <div className={clsx(cls['article-details'], undefined, className)}>
+      <Avatar
+        style={{ fontSize: 'var(--size-text-f5xl)' }}
+        inlineSize={200}
+        src={article?.img}
+        name={article?.author}
+        className={cls.avatar}
+      />
+      <Text as={'h1'} fontSize={'f3xl'} weight={'bold'} className={cls.title}>
+        {article?.title}
+      </Text>
+      <Text as={'p'} fontSize={'fl'} className={cls.subtitle}>
+        {article?.subtitle}
+      </Text>
+      <div className={cls['info-block']}>
+        <div className={cls.info}>
+          <AiOutlineEye size={20} color={'var(--color-typo-primary)'} />
+          <Text as={'p'} lineHeight={'lhl'}>
+            {article?.views}
+          </Text>
+        </div>
+        <div className={cls.info}>
+          <AiOutlineCalendar size={20} color={'var(--color-typo-primary)'} />
+          <Text as={'p'} lineHeight={'lhl'}>
+            {article?.createdAt}
+          </Text>
+        </div>
+        <div className={cls.info}>
+          <Text as={'p'} fontSize={'fl'} className={cls.subtitle}>
+            {t('author')}
+            : &nbsp;
+            {article?.author}
+          </Text>
+        </div>
+      </div>
+      {article?.blocks.map(renderBlock)}
     </div>
   )
 })
