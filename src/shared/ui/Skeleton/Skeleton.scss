@@ -6,8 +6,8 @@
     linear-gradient(
       to right,
       transparent 0%,
-      var(--color-bg-stripe) calc(0.2 * var(--loader-width)),
-      var(--color-bg-ghost) calc(0.6 * var(--loader-width)),
+      var(--color-bg-stripe) 100px,
+      var(--color-bg-ghost) 60px,
       transparent var(--loader-width)
     );
   background-color: var(--color-bg-system);
