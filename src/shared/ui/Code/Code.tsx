@@ -25,6 +25,7 @@ export const Code = memo(({
     await navigator.clipboard.writeText(children as string)
     setIsCopy(true)
   }, [children])
+
   const colorIcon = isCopy ? 'var(--color-typo-success)' : 'var(--color-typo-primary)'
 
   return (
