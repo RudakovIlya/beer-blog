@@ -11,6 +11,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
     paths,
     isDev,
   } = options
+
   return {
     mode,
     /* entry: Entry is the starting point of the application */
