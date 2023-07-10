@@ -6,8 +6,11 @@ import { buildPlugins } from './buildPlugins'
 import { buildDevServer } from './buildDevServer'
 
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
-  const { mode, paths, isDev } = options
-
+  const {
+    mode,
+    paths,
+    isDev,
+  } = options
   return {
     mode,
     /* entry: Entry is the starting point of the application */
