@@ -25,7 +25,7 @@ export const Authorized = Template.bind({})
 Authorized.decorators = [StoreDecorator({
   user: {
     authData: {
-      id: 1,
+      id: '1',
       username: 'admin',
     },
   },

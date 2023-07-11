@@ -11,11 +11,10 @@ interface Props {
 }
 
 export const ArticleTextBlockComponent = memo(({ block, className }: Props) => {
-  const { t } = useTranslation()
   const { title, paragraphs } = block
   return (
     <section className={clsx(cls['article-text'], {}, className)}>
-      {title && <Text as={'h2'} weight={'medium'} fontSize={'f2xl'} className={cls.title}>{title}</Text>}
+      {title && <Text as={'h2'} weight={'medium'} fontSize={'xl2'} className={cls.title}>{title}</Text>}
       {paragraphs.map((paragraph, i) => {
         return <Text key={paragraph} className={cls.paragraph}>{paragraph}</Text>
       })}

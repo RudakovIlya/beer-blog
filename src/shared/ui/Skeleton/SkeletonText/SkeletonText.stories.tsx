@@ -7,8 +7,8 @@ export default {
   component: SkeletonText,
   args: {
     rows: 1,
-    fontSize: 'f2xl',
-    lineHeight: 'lhl',
+    fontSize: 'xl2',
+    lineHeight: 'l',
   },
 } as ComponentMeta<typeof SkeletonText>
 

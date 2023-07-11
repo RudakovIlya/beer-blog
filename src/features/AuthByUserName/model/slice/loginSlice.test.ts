@@ -49,7 +49,7 @@ describe('loginSlice', () => {
       })
 
     expect(loginReducer(state as LoginSchema, loginByUsername.fulfilled({
-      id: 1,
+      id: '1',
       username: 'admin',
     }, '', {
       username: 'admin',

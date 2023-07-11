@@ -26,14 +26,14 @@
     {
       "id": "2",
       "text": "some comment 2",
-      "articleId": "2",
-      "userId": "2"
+      "articleId": "1",
+      "userId": "1"
     },
     {
       "id": "3",
       "text": "some comment 3",
-      "articleId": "3",
-      "userId": "3"
+      "articleId": "1",
+      "userId": "1"
     }
   ],
   "articles": [
@@ -380,16 +380,18 @@
   },
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "asap_alh",
       "password": "123",
-      "role": "admin"
+      "role": "admin",
+      "avatar": "https://cbgd.ask.fm/43f/85b91/93cf/4cba/b7c9/32f99747fe23/original/4167297.jpg"
     },
     {
-      "id": 1,
+      "id": "2",
       "username": "asap",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "avatar": "https://www.factsfan.ru/wp-content/uploads/2022/05/0.39.jpg"
     }
   ]
 }

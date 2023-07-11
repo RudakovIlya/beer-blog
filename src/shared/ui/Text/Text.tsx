@@ -2,6 +2,7 @@ import {
   ElementType, PropsWithChildren, ComponentProps, memo, useMemo,
 } from 'react'
 import { clsx } from 'shared/lib'
+import { addPrefixOnClass } from 'shared/lib/addPrefixOnClass/addPrefixOnClass'
 import cls from './Text.module.scss'
 
 export type TextPropAlign = 'left' | 'center' | 'right';
@@ -10,20 +11,20 @@ export type TextPropCursor = 'pointer' | 'none'
 
 export type TextPropDecoration = 'underline' | 'none'
 
-export type TextPropLineHeight = 'lh2xs' | 'lhxs' | 'lhs' | 'lhm' | 'lhl';
+export type TextPropLineHeight = '2xs' | 'xs' | 's' | 'm' | 'l';
 
 export type TextPropSize =
-  'fs' |
-  'fxs' |
-  'f2xs' |
-  'fm' |
-  'fl' |
-  'fxl' |
-  'f2xl' |
-  'f3xl' |
-  'f4xl' |
-  'f5xl' |
-  'f6xl'
+  's' |
+  'xs' |
+  'xs2' |
+  'm' |
+  'l' |
+  'xl' |
+  'xl2' |
+  'xl3' |
+  'xl4' |
+  'xl5' |
+  'xl6'
 
 export type TextPropSpacing = 'xs' | 's' | 'm' | 'l'
 
@@ -84,18 +85,19 @@ export const Text = memo(<E extends ElementType = typeof defaultElement>({
   decoration = 'none',
   transform = 'lowercase',
   weight = 'regular',
-  fontSize = 'fm',
+  fontSize = 'm',
   spacing,
-  lineHeight = 'lhm',
+  lineHeight = 'm',
   ...otherProps
 }: PropsWithChildren<Props<E>>) => {
   const additionalClasses = useMemo(() => {
     return [
       cls[align],
       cls[transform],
-      cls[fontSize],
-      cls[weight],
+      cls[addPrefixOnClass('size', fontSize)],
+      cls[addPrefixOnClass('line-height', lineHeight)],
       cls[lineHeight],
+      cls[weight],
       cls[variant],
       cls[display],
       cls[cursor],

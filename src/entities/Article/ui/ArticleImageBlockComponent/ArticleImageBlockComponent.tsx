@@ -14,7 +14,7 @@ export const ArticleImageBlockComponent = memo(({ block, className }: Props) => 
   return (
     <div className={clsx(cls['article-image'], undefined, className)}>
       <img src={src} alt={title} className={cls.img} />
-      {title && <Text fontSize={'fxs'} className={cls.description}>{title}</Text>}
+      {title && <Text fontSize={'xs'} className={cls.description}>{title}</Text>}
     </div>
   )
 })

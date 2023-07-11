@@ -6,7 +6,7 @@ import cls from './SkeletonText.module.scss'
 
 interface Props {
   className?: string;
-  rows: number;
+  rows?: number;
   fontSize?: TextPropSize;
   lineHeight?: TextPropLineHeight;
 }
@@ -28,12 +28,11 @@ const getRowWidth = (index: number, total: number) => {
   }
 }
 
-export const SkeletonText = memo((props: Props) => {
+export const SkeletonText = memo(({ rows = 1, ...props }: Props) => {
   const {
     fontSize = 'm',
     lineHeight = 'm',
     className,
-    rows = 1,
   } = props
 
   const varFontSize = `var(--size-text-${fontSize})`

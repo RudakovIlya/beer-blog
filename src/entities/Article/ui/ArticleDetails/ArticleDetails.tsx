@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect } from 'react'
+import { memo, useEffect } from 'react'
 import { clsx } from 'shared/lib'
 import { useAppDispatch, useDynamicModuleLoader } from 'shared/hooks'
 import { ReducerList } from 'shared/hooks/useDynamicModuleLoader/useDynamicModuleLoader'
@@ -30,6 +30,23 @@ const reducers: ReducerList = {
   articleDetails: articleDetailsReducer,
 }
 
+const renderBlock = (block: ArticleBlock) => {
+  switch (block.type) {
+  case 'CODE': {
+    return <ArticleCodeBlockComponent key={block.id} className={cls.block} block={block} />
+  }
+  case 'IMAGE': {
+    return <ArticleImageBlockComponent key={block.id} className={cls.block} block={block} />
+  }
+  case 'TEXT': {
+    return <ArticleTextBlockComponent key={block.id} className={cls.block} block={block} />
+  }
+  default: {
+    return null
+  }
+  }
+}
+
 export const ArticleDetails = memo(({
   id,
   className,
@@ -40,23 +57,6 @@ export const ArticleDetails = memo(({
   const isLoading = useSelector(getArticleDetailsIsLoading)
   const error = useSelector(getArticleDetailsError)
   const article = useSelector(getArticleDetailsData)
-
-  const renderBlock = useCallback((block: ArticleBlock) => {
-    switch (block.type) {
-    case 'CODE': {
-      return <ArticleCodeBlockComponent key={block.id} className={cls.block} block={block} />
-    }
-    case 'IMAGE': {
-      return <ArticleImageBlockComponent key={block.id} className={cls.block} block={block} />
-    }
-    case 'TEXT': {
-      return <ArticleTextBlockComponent key={block.id} className={cls.block} block={block} />
-    }
-    default: {
-      return null
-    }
-    }
-  }, [])
 
   useDynamicModuleLoader({
     reducers,
@@ -75,7 +75,7 @@ export const ArticleDetails = memo(({
         <SkeletonCircle className={cls.avatar} size={200} />
         <SkeletonBrick width={'30%'} height={30} className={cls.title} />
         <SkeletonBrick width={'70%'} height={30} className={cls.subtitle} />
-        <SkeletonText fontSize={'fs'} lineHeight={'lhl'} rows={25} />
+        <SkeletonText fontSize={'s'} lineHeight={'l'} rows={25} />
       </>
     )
   }
@@ -84,7 +84,7 @@ export const ArticleDetails = memo(({
     return (
       <Text
         as={'h1'}
-        fontSize={'fxl'}
+        fontSize={'xl'}
         weight={'bold'}
         align={'center'}
         variant={'alert'}
@@ -103,27 +103,27 @@ export const ArticleDetails = memo(({
         name={article?.author}
         className={cls.avatar}
       />
-      <Text as={'h1'} fontSize={'f3xl'} weight={'bold'} className={cls.title}>
+      <Text as={'h1'} fontSize={'xl3'} weight={'bold'} className={cls.title}>
         {article?.title}
       </Text>
-      <Text as={'p'} fontSize={'fl'} className={cls.subtitle}>
+      <Text as={'p'} fontSize={'l'} className={cls.subtitle}>
         {article?.subtitle}
       </Text>
       <div className={cls['info-block']}>
         <div className={cls.info}>
           <AiOutlineEye size={20} color={'var(--color-typo-primary)'} />
-          <Text as={'p'} lineHeight={'lhl'}>
+          <Text as={'p'} lineHeight={'l'}>
             {article?.views}
           </Text>
         </div>
         <div className={cls.info}>
           <AiOutlineCalendar size={20} color={'var(--color-typo-primary)'} />
-          <Text as={'p'} lineHeight={'lhl'}>
+          <Text as={'p'} lineHeight={'l'}>
             {article?.createdAt}
           </Text>
         </div>
         <div className={cls.info}>
-          <Text as={'p'} fontSize={'fl'} className={cls.subtitle}>
+          <Text as={'p'} fontSize={'l'} className={cls.subtitle}>
             {t('author')}
             : &nbsp;
             {article?.author}
