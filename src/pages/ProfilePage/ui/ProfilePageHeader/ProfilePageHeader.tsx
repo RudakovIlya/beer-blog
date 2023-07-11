@@ -1,4 +1,4 @@
-import { PropsWithChildren, useCallback } from 'react'
+import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Text } from 'shared/ui/Text/Text'
 import { Button } from 'shared/ui/Button/Button'

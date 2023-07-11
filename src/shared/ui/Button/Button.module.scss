@@ -17,93 +17,94 @@
   white-space: nowrap;
 
   // variant
-  &.primary {
-    background-color: var(--color-control-bg-primary);
-    color: var(--color-control-typo-primary);
+}
 
-    &.alert {
-      background-color: var(--color-control-bg-alert);
+.primary {
+  background-color: var(--color-control-bg-primary);
+  color: var(--color-control-typo-primary);
 
-      &:hover {
-        background-color: var(--color-control-bg-alert-hover);
-      }
-    }
+  &.alert {
+    background-color: var(--color-control-bg-alert);
 
     &:hover {
-      background-color: var(--color-control-bg-primary-hover);
+      background-color: var(--color-control-bg-alert-hover);
     }
   }
 
-  &.clear {
-    --color-hover: var(--color-control-typo-clear-hover);
+  &:hover {
+    background-color: var(--color-control-bg-primary-hover);
+  }
+}
 
-    background-color: var(--color-control-bg-clear);
-    color: var(--color-control-typo-clear);
+.clear {
+  --color-hover: var(--color-control-typo-clear-hover);
+
+  background-color: var(--color-control-bg-clear);
+  color: var(--color-control-typo-clear);
+
+  &:hover {
+    background-color: var(--color-control-bg-clear-hover);
+  }
+}
+
+.ghost {
+  background-color: var(--color-control-bg-ghost);
+  color: var(--color-control-typo-ghost);
+
+  &:hover {
+    background-color: var(--color-control-bg-ghost-hover);
+  }
+}
+
+.secondary {
+  background-color: var(--color-control-bg-secondary);
+  border: var(--control-border-width) solid var(--color-control-bg-border-secondary);
+  color: var(--color-control-typo-secondary);
+
+  &.alert {
+    border: var(--control-border-width) solid var(--color-control-bg-alert);
+    color: var(--color-typo-alert);
 
     &:hover {
-      background-color: var(--color-control-bg-clear-hover);
+      border-color: var(--color-control-bg-alert-hover);
     }
   }
 
-  &.ghost {
-    background-color: var(--color-control-bg-ghost);
-    color: var(--color-control-typo-ghost);
-
-    &:hover {
-      background-color: var(--color-control-bg-ghost-hover);
-    }
+  &:hover {
+    background-color: var(--color-control-bg-secondary-hover);
+    border-color: var(--color-control-bg-border-secondary-hover);
   }
+}
 
-  &.secondary {
-    background-color: var(--color-control-bg-secondary);
-    border: var(--control-border-width) solid var(--color-control-bg-border-secondary);
-    color: var(--color-control-typo-secondary);
+// width
+.full {
+  display: block;
+  width: 100%;
+}
 
-    &.alert {
-      border: var(--control-border-width) solid var(--color-control-bg-alert);
-      color: var(--color-typo-alert);
+.loading,
+.disabled {
+  background-color: var(--color-control-bg-disable);
+  border-color: transparent;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
-      &:hover {
-        border-color: var(--color-control-bg-alert-hover);
-      }
-    }
+.disabled {
+  color: var(--color-control-typo-disable);
+}
 
-    &:hover {
-      background-color: var(--color-control-bg-secondary-hover);
-      border-color: var(--color-control-bg-border-secondary-hover);
-    }
-  }
+.loading {
+  color: transparent;
 
-  // width
-  &.full {
-    display: block;
-    width: 100%;
-  }
+  .dots-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-  &.loading,
-  &.disabled {
-    background-color: var(--color-control-bg-disable);
-    border-color: transparent;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  &.disabled {
-    color: var(--color-control-typo-disable);
-  }
-
-  &.loading {
-    color: transparent;
-
-    .dots-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      .dot-loader {
-        background-color: var(--color-control-bg-disable);
-      }
+    .dot-loader {
+      background-color: var(--color-control-bg-disable);
     }
   }
 }

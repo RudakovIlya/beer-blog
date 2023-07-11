@@ -10,34 +10,6 @@
     animation: loader-animation 1s infinite;
     animation-delay: 0.1s;
 
-    &.extra-small {
-      --loader-dot-size: 4px;
-
-      width: var(--loader-dot-size);
-      height: var(--loader-dot-size);
-    }
-
-    &.small {
-      --loader-dot-size: 8px;
-
-      width: var(--loader-dot-size);
-      height: var(--loader-dot-size);
-    }
-
-    &.medium {
-      --loader-dot-size: 16px;
-
-      width: var(--loader-dot-size);
-      height: var(--loader-dot-size);
-    }
-
-    &.large {
-      --loader-dot-size: 24px;
-
-      width: var(--loader-dot-size);
-      height: var(--loader-dot-size);
-    }
-
     &:nth-child(2) {
       animation-delay: 0.2s;
     }
@@ -50,6 +22,34 @@
       margin-right: 5px;
     }
   }
+}
+
+.extra-small {
+  --loader-dot-size: 4px;
+
+  width: var(--loader-dot-size);
+  height: var(--loader-dot-size);
+}
+
+.small {
+  --loader-dot-size: 8px;
+
+  width: var(--loader-dot-size);
+  height: var(--loader-dot-size);
+}
+
+.medium {
+  --loader-dot-size: 16px;
+
+  width: var(--loader-dot-size);
+  height: var(--loader-dot-size);
+}
+
+.large {
+  --loader-dot-size: 24px;
+
+  width: var(--loader-dot-size);
+  height: var(--loader-dot-size);
 }
 
 @keyframes loader-animation {

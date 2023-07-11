@@ -1,4 +1,4 @@
-import React, {
+import {
   ElementType, PropsWithChildren, ComponentProps, memo, useMemo,
 } from 'react'
 import { clsx } from 'shared/lib'

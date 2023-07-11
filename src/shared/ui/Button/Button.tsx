@@ -41,6 +41,7 @@ export const Button = memo((props: PropsWithChildren<Props>) => {
     [cls.disabled]: disabled,
     [cls.alert]: isCancel,
   }
+
   return (
     <button
       {...otherProps}
