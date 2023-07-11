@@ -86,7 +86,7 @@ jobs:
           version: "7.x"
       - name: Install dependencies
         run: pnpm i
-      - name: screenshot testing
-        run: pnpm run test:ui:ci
       - name: build storybook
         run: pnpm run storybook:build
+      - name: screenshot testing
+        run: pnpm run test:ui:ci
