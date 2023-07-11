@@ -1,16 +1,17 @@
-name: linting, testing, building
+name: CI
+
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
-  pipline:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 18.x ]
-
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -25,13 +26,67 @@ jobs:
         run: pnpm i
       - name: build production project
         run: pnpm run build:prod
+
+  linting:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: "7.x"
+      - name: Install dependencies
+        run: pnpm i
       - name: linting typescript
         run: pnpm run lint:ts
       - name: linting scss
         run: pnpm run stylelint:scss
+
+  testing:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: "7.x"
+      - name: Install dependencies
+        run: pnpm i
       - name: unit testing
         run: pnpm run test:unit
-      - name: build storybook
-        run: pnpm run storybook:build
+
+  storybook:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: "7.x"
+      - name: Install dependencies
+        run: pnpm i
       - name: screenshot testing
         run: pnpm run test:ui:ci
+      - name: build storybook
+        run: pnpm run storybook:build

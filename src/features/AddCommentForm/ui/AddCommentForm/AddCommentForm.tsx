@@ -12,7 +12,6 @@ import { getAddCommentFormText } from '../../model/selectors/getAddCommentFormDa
 interface Props {
   isLoading?: boolean
   onSubmit?: (text: string) => void
-  className?: string
 }
 
 const reducers: ReducerList = {
