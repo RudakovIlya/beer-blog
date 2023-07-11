@@ -13,6 +13,7 @@ const data = {
   city: 'Abinsk',
   username: 'asap_alh',
   avatar: '',
+  id: '1',
 }
 
 describe('updateProfileData', () => {

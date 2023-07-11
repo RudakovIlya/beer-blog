@@ -61,7 +61,7 @@ describe('profileSlice', () => {
   })
   test('test update profile service with pending status', () => {
     const state: DeepPartial<ProfileSchema> = {
-      isLoading: true,
+      isLoading: false,
       validateErrors: [ValidateProfileError.SERVER_ERROR],
     }
     expect(profileReducer(state as ProfileSchema, updateProfileData.pending))

@@ -1,13 +1,13 @@
 import { createAppAsyncThunk } from 'shared/lib'
 import { Profile } from '../../types/profile'
 
-export const fetchProfileData = createAppAsyncThunk<Profile, void>(
+export const fetchProfileData = createAppAsyncThunk<Profile, string>(
   'profile/fetchProfileData',
-  async (_, thunkAPI) => {
+  async (userId, thunkAPI) => {
     const { extra, rejectWithValue } = thunkAPI
 
     try {
-      const { data } = await extra.api.get<Profile>('profile')
+      const { data } = await extra.api.get<Profile>(`profile/${userId}`)
       if (!data) {
         throw new Error()
       }

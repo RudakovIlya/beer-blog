@@ -4,7 +4,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { CommentItem } from './CommentItem'
 
 export default {
-  title: 'entities/CommentItem',
+  title: 'entities/Comment/CommentItem',
   component: CommentItem,
   args: {
     comment: {

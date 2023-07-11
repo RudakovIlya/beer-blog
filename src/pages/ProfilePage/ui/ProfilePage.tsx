@@ -1,5 +1,5 @@
 import {
-  memo, useCallback, useEffect,
+  memo, useCallback,
 } from 'react'
 import { useAppDispatch, useDynamicModuleLoader } from 'shared/hooks'
 
@@ -18,6 +18,8 @@ import { CountryType } from 'entities/Country'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { ValidateProfileError } from 'entities/Profile/model/types/profile'
+import { useInitialEffect } from 'shared/hooks/useInitialEffect/useInitialEffect'
+import { useParams } from 'react-router-dom'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 
 const initialReducer: ReducerList = {
@@ -27,6 +29,7 @@ const initialReducer: ReducerList = {
 const ProfilePage = memo(() => {
   const dispatch = useAppDispatch()
   const { t } = useTranslation('profile')
+  const { id } = useParams<{id: string}>()
   const formData = useSelector(getProfileForm)
   const isLoading = useSelector(getProfileIsLoading)
   const error = useSelector(getProfileError)
@@ -80,11 +83,11 @@ const ProfilePage = memo(() => {
     removeAfterUnmount: true,
   })
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData())
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id))
     }
-  }, [dispatch])
+  })
 
   return (
     <>

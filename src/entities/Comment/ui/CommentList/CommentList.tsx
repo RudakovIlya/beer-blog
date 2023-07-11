@@ -20,6 +20,16 @@ export const CommentList = memo((props: PropsWithChildren<Props>) => {
   const { t } = useTranslation('article-details')
   const isNotEmpty = comments?.length
 
+  if (isLoading) {
+    return (
+      <div className={clsx(cls['comment-list'])}>
+        <CommentItem isLoading />
+        <CommentItem isLoading />
+        <CommentItem isLoading />
+      </div>
+    )
+  }
+
   return (
     <div className={clsx(cls['comment-list'])}>
       {isNotEmpty

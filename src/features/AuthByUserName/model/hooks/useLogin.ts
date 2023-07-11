@@ -27,7 +27,7 @@ export const useLogin = () => {
 
   const onSubmit = useCallback((event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    // @ts-ignore
+
     dispatch(loginByUsername({
       username,
       password,

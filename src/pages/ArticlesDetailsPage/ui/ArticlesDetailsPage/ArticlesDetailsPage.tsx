@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ArticleDetails } from 'entities/Article'
 import { useParams } from 'react-router-dom'
@@ -8,12 +8,16 @@ import { useAppDispatch, useDynamicModuleLoader } from 'shared/hooks'
 import { ReducerList } from 'shared/hooks/useDynamicModuleLoader/useDynamicModuleLoader'
 import { useSelector } from 'react-redux'
 import { useInitialEffect } from 'shared/hooks/useInitialEffect/useInitialEffect'
+import { AddCommentForm } from 'features/AddCommentForm'
 import {
   fetchCommentsByArticleId,
-} from 'pages/ArticlesDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import cls from './ArticlesDetailsPage.module.scss'
+} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { articleDetailsCommentReducer, getArticleComments } from '../../model/slice/articleDetailsCommentSlice'
-import { getCommentsIsLoading } from '../../model/selectors/comments'
+import { getCommentsError, getCommentsIsLoading } from '../../model/selectors/comments'
+import {
+  addCommentForArticle,
+} from '../../model/services/addCommentForArticle/addCommentForArticle'
+import cls from './ArticlesDetailsPage.module.scss'
 
 const reducers: ReducerList = {
   articleDetailsComments: articleDetailsCommentReducer,
@@ -25,7 +29,12 @@ const ArticlesDetailsPage = () => {
 
   const comments = useSelector(getArticleComments.selectAll)
   const isLoading = useSelector(getCommentsIsLoading)
+  const error = useSelector(getCommentsError)
   const dispatch = useAppDispatch()
+
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text))
+  }, [dispatch])
 
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id!))
@@ -36,7 +45,7 @@ const ArticlesDetailsPage = () => {
     removeAfterUnmount: true,
   })
 
-  if (!id || Number.isNaN(+id)) {
+  if (!id || Number.isNaN(+id) || error) {
     return <Text align={'center'} as={'h1'} variant={'caution'}>{t('article not found')}</Text>
   }
 
@@ -44,6 +53,7 @@ const ArticlesDetailsPage = () => {
     <>
       <ArticleDetails id={id} />
       <Text as={'h2'} className={cls.title} weight={'medium'} fontSize={'xl2'}>{t('comments')}</Text>
+      <AddCommentForm onSubmit={onSendComment} isLoading={isLoading} />
       <CommentList comments={comments} isLoading={isLoading} />
     </>
   )

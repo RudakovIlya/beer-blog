@@ -16,7 +16,7 @@ interface UseDynamicModuleLoader {
 export const useDynamicModuleLoader = (config: UseDynamicModuleLoader) => {
   const {
     reducers,
-    removeAfterUnmount,
+    removeAfterUnmount = true,
   } = config
   const store = useStore() as ReduxStoreWithManager
 
