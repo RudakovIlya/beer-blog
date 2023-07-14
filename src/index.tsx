@@ -12,7 +12,9 @@ render(
     <StoreProvider>
       <ErrorBoundary>
         <ThemeProvider>
+
           <App />
+
         </ThemeProvider>
       </ErrorBoundary>
     </StoreProvider>
