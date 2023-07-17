@@ -32,6 +32,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.12.1
   axios: ^1.4.0
   babel-loader: ^9.1.2
+  chromatic: ^6.19.9
   concurrently: ^8.2.0
   css-loader: ^6.6.0
   eslint: ^8.10.0
@@ -117,6 +118,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.60.1_2mcdevolkkvjpqnuwsqd5ntrqi
   '@typescript-eslint/parser': 5.60.1_2jcgcerbs6bi4debdtwega5q6u
   babel-loader: 9.1.2_4oy3qd54wjgkpm4romijmime4e
+  chromatic: 6.19.9
   concurrently: 8.2.0
   css-loader: 6.8.1_webpack@5.88.0
   eslint: 8.43.0
@@ -6469,6 +6471,11 @@ packages:
   /chownr/2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /chromatic/6.19.9:
+    resolution: {integrity: sha512-UHrPbPoLnJwd063cRSO0U865VhcATykpMiHsAnNFz5EFRsBvM9wefqyS2Z6W8Ti9J7Fjrf4MV4PA+Q5k2lhFfQ==}
+    hasBin: true
     dev: true
 
   /chrome-launcher/0.14.2:

@@ -23,10 +23,13 @@
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "chromatic": "npx chromatic --project-token=chpt_373d450917c2b6e"
   },
   "keywords": [],
-  "author": "Ilya Rudakov",
+  "author": {
+    "name": "Ilya Rudakov"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
@@ -57,6 +60,7 @@
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
     "babel-loader": "^9.1.2",
+    "chromatic": "^6.19.9",
     "concurrently": "^8.2.0",
     "css-loader": "^6.6.0",
     "eslint": "^8.10.0",
@@ -120,5 +124,7 @@
         "preset": "iPhone 7"
       }
     }
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "beer-blog@1.0.0"
 }
