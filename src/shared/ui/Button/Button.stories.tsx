@@ -89,4 +89,5 @@ export const IsLoadingDark = Template.bind({})
 IsLoadingDark.args = {
   isLoading: true,
 }
+
 IsLoadingDark.decorators = [ThemeDecorator('dark')]
