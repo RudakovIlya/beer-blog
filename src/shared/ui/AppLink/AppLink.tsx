@@ -19,7 +19,9 @@ export const AppLink = memo(({
 }:PropsWithChildren<Props>) => {
   return (
     <Link {...otherProps} to={to} className={clsx(cls.applink, {}, cls[variant], className)}>
+      
       {children}
+      
     </Link>
   )
 })
