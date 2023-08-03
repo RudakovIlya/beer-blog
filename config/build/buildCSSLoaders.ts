@@ -2,6 +2,7 @@ import webpack from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export const buildCSSLoaders = (isDev: boolean): webpack.RuleSetRule => {
+
   return {
     test: /\.(sa|sc|c)ss$/,
     use: [
