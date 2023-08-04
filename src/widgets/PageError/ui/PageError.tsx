@@ -13,9 +13,7 @@ export const PageError: FC<Props> = ({ className }) => {
   const { t } = useTranslation()
 
   const onReload = () => {
-    
     window.location.reload()
-    
   }
 
   return (
